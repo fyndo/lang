@@ -1,0 +1,138 @@
+Symbol,Voicing,Place_of_Articulation,Manner_of_Articulation,Height,Backness,Rounding
+p,voiceless,bilabial,plosive,,,
+b,voiced,bilabial,plosive,,,
+t,voiceless,dental;alveolar,plosive,,,
+d,voiced,dental;alveolar,plosive,,,
+ʈ,voiceless,retroflex,plosive,,,
+ɖ,voiced,retroflex,plosive,,,
+c,voiceless,palatal,plosive,,,
+ɟ,voiced,palatal,plosive,,,
+k,voiceless,velar,plosive,,,
+ɡ,voiced,velar,plosive,,,
+q,voiceless,uvular,plosive,,,
+ɢ,voiced,uvular,plosive,,,
+ʔ,,glottal,plosive,,,
+m,voiced,bilabial,nasal,,,
+ɱ,voiced,labiodental,nasal,,,
+n,voiced,dental;alveolar,nasal,,,
+ɳ,voiced,retroflex,nasal,,,
+ɲ,voiced,palatal,nasal,,,
+ŋ,voiced,velar,nasal,,,
+ɴ,voiced,uvular,nasal,,,
+ʙ,voiced,bilabial,trill,,,
+r,voiced,dental;alveolar,trill,,,
+ʀ,voiced,uvular,trill,,,
+ɾ,voiced,dental;alveolar,tap,,,
+ɽ,voiced,retroflex,flap,,,
+ɸ,voiceless,bilabial,fricative,,,
+β,voiced,bilabial,fricative,,,
+f,voiceless,labiodental,fricative,,,
+v,voiced,labiodental,fricative,,,
+θ,voiceless,dental,fricative,,,
+ð,voiced,dental,fricative,,,
+s,voiceless,alveolar,fricative,,,
+z,voiced,alveolar,fricative,,,
+ʃ,voiceless,postalveolar,fricative,,,
+ʒ,voiced,postalveolar,fricative,,,
+ʂ,voiceless,retroflex,fricative,,,
+ʐ,voiced,retroflex,fricative,,,
+ç,voiceless,palatal,fricative,,,
+ʝ,voiced,palatal,fricative,,,
+x,voiceless,palatal,fricative,,,
+ɣ,voiced,velar,fricative,,,
+χ,voiceless,uvular,fricative,,,
+ʁ,voiced,uvular,fricative,,,
+ħ,voiceless,pharyngeal,fricative,,,
+ʕ,voiced,pharyngeal,fricative;approximant,,,
+h,voiceless,glottal,fricative,,,
+ɦ,voiced,glottal,fricative,,,
+ɬ,voiceless,dental;alveolar,lateral fricative,,,
+ɮ,voiced,dental;alveolar,lateral fricative,,,
+ʋ,voiced,labiodental,approximant,,,
+ɹ,voiced,dental;alveolar,approximant,,,
+ɻ,voiced,retroflex,approximant,,,
+j,voiced,palatal,approximant,,,
+ɰ,voiced,velar,approximant,,,
+l,voiced,dental;alveolar,lateral approximant,,,
+ɭ,voiced,retroflex,lateral approximant,,,
+ʎ,voiced,palatal,lateral approximant,,,
+ʟ,voiced,velar,lateral approximant,,,
+ƥ,voiceless,bilabial,implosive,,,
+ɓ,voiced,bilabial,implosive,,,
+ƭ,voiceless,dental;alveolar,implosive,,,
+ɗ,voiced,dental;alveolar,implosive,,,
+ƈ,voiceless,palatal,implosive,,,
+ʄ,voiced,palatal,implosive,,,
+ƙ,voiceless,velar,implosive,,,
+ɠ,voiced,velar,implosive,,,
+ʠ,voiceless,uvular,implosive,,,
+ʛ,voiced,uvular,implosive,,,
+ʍ,voiceless,labial-velar,fricative,,,
+w,voiced,labial-velar,approximant,,,
+ɥ,voiced,labial-palatal,approximant,,,
+ʜ,voiceless,epiglottal,fricative,,,
+ʡ,,epiglottal,plosive,,,
+ʢ,voiced,epiglottal,fricative;approximant,,,
+ɧ,voiceless,simultaneous postalveolar and velar,fricative,,,
+ʘ,,bilabial,click,,,
+ǀ,,dental,click,,,
+ǃ,,(post)alveolar,click,,,
+ǂ,,palatoalveolar,click,,,
+ǁ,,alveolar,lateral click,,,
+ɺ,voiced,alveolar,lateral flap,,,
+ɕ,voiceless,alveolo-palatal,fricative,,,
+ʑ,voiced,alveolo-palatal,fricative,,,
+ⱱ,voiced,labiodental,flap,,,
+ʇ,,dental,click,,,
+ʗ,,postalveolar,click,,,
+ʖ,,alveolar,lateral click,,,
+ƫ,voiceless,dental;alveolar,plosive,,,
+ɫ,voiced,dental;alveolar,lateral approximant,,,
+ʦ,voiceless,dental;alveolar,affricate,,,
+ʣ,voiced,alveolar,affricate,,,
+ʧ,voiceless,postalveolar,affricate,,,
+ʤ,voiced,postalveolar,affricate,,,
+ʨ,voiceless,alveolo-palatal,affricate,,,
+ʥ,voiced,alveolo-palatal,affricate,,,
+ᶑ,voiced,retroflex,imposive,,,
+ȶ,voiceless,alveolo-palatal,stop,,,
+ȡ,voiced,alveolo-palatal,stop,,,
+ȵ,voiced,alveolo-palatal,nasal,,,
+ƛ,voiceless,dental;alveolar,lateral affricate,,,
+λ,voiceless,dental;alveolar,lateral fricative,,,
+ž,voiced,postalveolar,,,,
+š,voiceless,postalveolar,fricative,,,
+ǰ,voiced,postalveolar,affricate,,,
+č,voiceless,postalveolar,affricate,,,
+i,,,,close,front,unrounded
+e,,,,close-mid,front,unrounded
+ɛ,,,,open-mid,front,unrounded
+a,,,,open,front,unrounded
+ɑ,,,,open,back,unrounded
+ɔ,,,,open-mid,back,rounded
+o,,,,close-mid,back,rounded
+u,,,,close,back,rounded
+y,,,,close,front,rounded
+ø,,,,close-mid,front,rounded
+œ,,,,open-mid,front,rounded
+ɶ,,,,open,front,rounded
+ɒ,,,,open,back,rounded
+ʌ,,,,open-mid,back,unrounded
+ɤ,,,,close-mid,back,unrounded
+ɯ,,,,close,back,unrounded
+ɨ,,,,close,central,unrounded
+ʉ,,,,close,central,rounded
+ɪ,,,,near-close,near-front,unrounded
+ʏ,,,,near-close,near-front,rounded
+ʊ,,,,near-close,near-back,rounded
+ə,,,,mid,central,
+ɵ,,,,close-mid,central,rounded
+ɐ,,,,near-open,central,
+æ,,,,near-open,front,unrounded
+ɜ,,,,open-mid,central,unrounded
+ɚ,,,,mid,central,
+ɞ,,,,open-mid,central,rounded
+ʚ,,,,open-mid,central,rounded
+ɘ,,,,close-mid,central,unrounded
+ɷ,,,,near-close,near-back,rounded
+ɩ,,,,near-close,near-front,unrounded

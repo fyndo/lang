@@ -1,0 +1,140 @@
+Symbol,Symbol_Name,Voicing,Place_of_Articulation,Manner_of_Articulation,Height,Backness,Rounding
+p,P,voiceless,bilabial,plosive,,,
+b,B,voiced,bilabial,plosive,,,
+t,T,voiceless,dental;alveolar,plosive,,,
+d,D,voiced,dental;alveolar,plosive,,,
+ʈ,T,voiceless,retroflex,plosive,,,
+ɖ,D,voiced,retroflex,plosive,,,
+c,C,voiceless,palatal,plosive,,,
+ɟ,J,voiced,palatal,plosive,,,
+k,K,voiceless,velar,plosive,,,
+ɡ,G,voiced,velar,plosive,,,
+q,Q,voiceless,uvular,plosive,,,
+ɢ,G,voiced,uvular,plosive,,,
+ʔ,t,,glottal,plosive,,,
+m,M,voiced,bilabial,nasal,,,
+ɱ,M (at right),voiced,labiodental,nasal,,,
+n,N,voiced,dental;alveolar,nasal,,,
+ɳ,N,voiced,retroflex,nasal,,,
+ɲ,N (at left),voiced,palatal,nasal,,,
+ŋ,ng,voiced,velar,nasal,,,
+ɴ,N,voiced,uvular,nasal,,,
+ʙ,B,voiced,bilabial,trill,,,
+r,R,voiced,dental;alveolar,trill,,,
+ʀ,R,voiced,uvular,trill,,,
+ɾ,R,voiced,dental;alveolar,tap,,,
+ɽ,R,voiced,retroflex,flap,,,
+ɸ,v,voiceless,bilabial,fricative,,,
+β,f,voiced,bilabial,fricative,,,
+f,F,voiceless,labiodental,fricative,,,
+v,V,voiced,labiodental,fricative,,,
+θ,th,voiceless,dental,fricative,,,
+ð,th,voiced,dental,fricative,,,
+s,S,voiceless,alveolar,fricative,,,
+z,Z,voiced,alveolar,fricative,,,
+ʃ,sh,voiceless,postalveolar,fricative,,,
+ʒ,zh;tailed Z,voiced,postalveolar,fricative,,,
+ʂ,sh,voiceless,retroflex,fricative,,,
+ʐ,zh,voiced,retroflex,fricative,,,
+ç,ch,voiceless,palatal,fricative,,,
+ʝ,j,voiced,palatal,fricative,,,
+x,X,voiceless,palatal,fricative,,,
+ɣ,Z,voiced,velar,fricative,,,
+χ,X,voiceless,uvular,fricative,,,
+ʁ,inverted small capital R,voiced,uvular,fricative,,,
+ħ,barred H,voiceless,pharyngeal,fricative,,,
+ʕ,reversed glottal stop,voiced,pharyngeal,fricative;approximant,,,
+h,H,voiceless,glottal,fricative,,,
+ɦ,hooktop G,voiced,glottal,fricative,,,
+ɬ,belted L,voiceless,dental;alveolar,lateral fricative,,,
+ɮ,L-ezh ligature,voiced,dental;alveolar,lateral fricative,,,
+ʋ,cursive V,voiced,labiodental,approximant,,,
+ɹ,r,voiced,dental;alveolar,approximant,,,
+ɻ,r,voiced,retroflex,approximant,,,
+j,J,voiced,palatal,approximant,,,
+ɰ,turned M w. right leg,voiced,velar,approximant,,,
+l,L,voiced,dental;alveolar,lateral approximant,,,
+ɭ,L,voiced,retroflex,lateral approximant,,,
+ʎ,turned Y,voiced,palatal,lateral approximant,,,
+ʟ,small capital L,voiced,velar,lateral approximant,,,
+ƥ,P,voiceless,bilabial,implosive,,,
+ɓ,B,voiced,bilabial,implosive,,,
+ƭ,T,voiceless,dental;alveolar,implosive,,,
+ɗ,D,voiced,dental;alveolar,implosive,,,
+ƈ,C,voiceless,palatal,implosive,,,
+ʄ,J,voiced,palatal,implosive,,,
+ƙ,K,voiceless,velar,implosive,,,
+ɠ,G,voiced,velar,implosive,,,
+ʠ,Q,voiceless,uvular,implosive,,,
+ʛ,G,voiced,uvular,implosive,,,
+ʍ,W,voiceless,labial-velar,fricative,,,
+w,W,voiced,labial-velar,approximant,,,
+ɥ,turned H,voiced,labial-palatal,approximant,,,
+ʜ,small capital H,voiceless,epiglottal,fricative,,,
+ʡ,barred glottal stop,,epiglottal,plosive,,,
+ʢ,barred reversed glottal stop,voiced,epiglottal,fricative;approximant,,,
+ɧ,hooktop heng,voiceless,simultaneous postalveolar and velar,fricative,,,
+ʘ,bull’s eye,,bilabial,click,,,
+ǀ,pipe,,dental,click,,,
+ǃ,exclamation point,,(post)alveolar,click,,,
+ǂ,double-barred pipe,,palatoalveolar,click,,,
+ǁ,double pipe,,alveolar,lateral click,,,
+ɺ,turned long-leg R,voiced,alveolar,lateral flap,,,
+ɕ,curly-tail C,voiceless,alveolo-palatal,fricative,,,
+ʑ,curly-tail Z,voiced,alveolo-palatal,fricative,,,
+ⱱ,right-hook V,voiced,labiodental,flap,,,
+ʇ,turned T,,dental,click,,,
+ʗ,stretched C,,postalveolar,click,,,
+ʖ,inverted glottal stop,,alveolar,lateral click,,,
+ƫ,left-hook T,voiceless,dental;alveolar,plosive,,,
+ɫ,L with tilde,voiced,dental;alveolar,lateral approximant,,,
+g,looptail G,voiced,velar,plosive,,,
+ʦ,ts ligature,voiceless,dental;alveolar,affricate,,,
+ʣ,dz ligature,voiced,alveolar,affricate,,,
+ʧ,tsh ligature,voiceless,postalveolar,affricate,,,
+ʤ,dzh ligature,voiced,postalveolar,affricate,,,
+ʨ,T-curly-tail-C ligature,voiceless,alveolo-palatal,affricate,,,
+ʥ,D-curly-tail-Z ligature,voiced,alveolo-palatal,affricate,,,
+ᶑ,hooktop right-tail-D,voiced,retroflex,imposive,,,
+ȶ,curly-tail T,voiceless,alveolo-palatal,stop,,,
+ȡ,curly-tail D,voiced,alveolo-palatal,stop,,,
+ȵ,curly-tail N (at right),voiced,alveolo-palatal,nasal,,,
+ƛ,barred lambda,voiceless,dental;alveolar,lateral affricate,,,
+λ,lambda,voiceless,dental;alveolar,lateral fricative,,,
+ž,Z wedge,voiced,postalveolar,,,,
+š,S wedge,voiceless,postalveolar,fricative,,,
+ǰ,J wedge,voiced,postalveolar,affricate,,,
+č,C wedge,voiceless,postalveolar,affricate,,,
+i,I,,,,close,front,unrounded
+e,E,,,,close-mid,front,unrounded
+ɛ,epsilon,,,,open-mid,front,unrounded
+a,A,,,,open,front,unrounded
+ɑ,script A,,,,open,back,unrounded
+ɔ,open O,,,,open-mid,back,rounded
+o,O,,,,close-mid,back,rounded
+u,U,,,,close,back,rounded
+y,Y,,,,close,front,rounded
+ø,slashed O,,,,close-mid,front,rounded
+œ,oe,,,,open-mid,front,rounded
+ɶ,oe,,,,open,front,rounded
+ɒ,turned script A,,,,open,back,rounded
+ʌ,turned V,,,,open-mid,back,unrounded
+ɤ,ram’s horns,,,,close-mid,back,unrounded
+ɯ,turned M,,,,close,back,unrounded
+ɨ,barred I,,,,close,central,unrounded
+ʉ,barred U,,,,close,central,rounded
+ɪ,small capital I,,,,near-close,near-front,unrounded
+ʏ,small capital Y,,,,near-close,near-front,rounded
+ʊ,upsilon,,,,near-close,near-back,rounded
+ə,schwa,,,,mid,central,
+ɵ,barred O,,,,close-mid,central,rounded
+ɐ,turned A,,,,near-open,central,
+æ,ash;A-E ligature,,,,near-open,front,unrounded
+ɜ,reversed epsilon,,,,open-mid,central,unrounded
+ɚ,right-hook schwa,,,,mid,central,
+ı,undotted I,,,,,,
+ɞ,closed reversed epsilon,,,,open-mid,central,rounded
+ʚ,closed epsilon,,,,open-mid,central,rounded
+ɘ,reversed E,,,,close-mid,central,unrounded
+ɷ,closed omega,,,,near-close,near-back,rounded
+ɩ,iota,,,,near-close,near-front,unrounded

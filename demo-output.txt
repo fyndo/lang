@@ -1,0 +1,368 @@
+========================================
+  LANGUAGES OF THE WORLD
+========================================
+--- proto-elvish ---
+  Order: (SUBJECT OBJECT VERB)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-AFTER [hoɮ]
+    GENITIVE NOUN: PARTICLE-AFTER [foɸ]
+    PLURAL NOUN: PARTICLE-AFTER [vuf]
+    PAST VERB: PARTICLE-AFTER [fɒz]
+    NEGATION VERB: NONE
+    NEGATION NOUN: PARTICLE-AFTER [fof]
+--- proto-goblin ---
+  Order: (SUBJECT VERB OBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PREFIX [rɒm]
+    GENITIVE NOUN: PREFIX [mɨɰ]
+    PLURAL NOUN: SUFFIX [mɨm]
+    PAST VERB: PREFIX [dam]
+    NEGATION VERB: SUFFIX [nam]
+    NEGATION NOUN: PREFIX [dɨr]
+--- proto-orcish ---
+  Order: (OBJECT VERB SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PREFIX [ɨk]
+    GENITIVE NOUN: SUFFIX [eɻd]
+    PLURAL NOUN: SUFFIX [uɡ]
+    PAST VERB: SUFFIX [uɹ]
+    NEGATION VERB: SUFFIX [eɰ]
+    NEGATION NOUN: SUFFIX [eʜ]
+--- proto-dwarvish ---
+  Order: (SUBJECT OBJECT VERB)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-BEFORE [qax]
+    GENITIVE NOUN: SUFFIX [ʁɔχk]
+    PLURAL NOUN: PREFIX [kɔɡ]
+    PAST VERB: SUFFIX [ɟçɔʁɡ]
+    NEGATION VERB: NONE
+    NEGATION NOUN: PARTICLE-BEFORE [ʁɔχ]
+--- proto-gnomish ---
+  Order: (VERB OBJECT SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-AFTER [ɹeɹ]
+    GENITIVE NOUN: PARTICLE-BEFORE [mɒn]
+    PLURAL NOUN: PARTICLE-BEFORE [jaj]
+    PAST VERB: PARTICLE-AFTER [joʝ]
+    NEGATION VERB: PARTICLE-AFTER [joj]
+    NEGATION NOUN: PARTICLE-AFTER [ɳoç]
+--- proto-halfling ---
+  Order: (SUBJECT OBJECT VERB)  NP: (ADJECTIVE NOUN)  Gen: POSSESSED-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-BEFORE [tɔʜ]
+    GENITIVE NOUN: PREFIX [nex]
+    PLURAL NOUN: NONE
+    PAST VERB: PARTICLE-AFTER [ŋeʜ]
+    NEGATION VERB: PREFIX [pɨʜ]
+    NEGATION NOUN: PARTICLE-BEFORE [lap]
+--- high-elvish ---
+  Order: (SUBJECT OBJECT VERB)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-AFTER [hoɮ]
+    GENITIVE NOUN: PARTICLE-AFTER [foɸ]
+    PLURAL NOUN: PARTICLE-AFTER [vuf]
+    PAST VERB: PARTICLE-AFTER [fɒz]
+    NEGATION VERB: NONE
+    NEGATION NOUN: PARTICLE-AFTER [fof]
+--- wood-elvish ---
+  Order: (SUBJECT OBJECT VERB)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-AFTER [hɵɮ]
+    GENITIVE NOUN: PARTICLE-AFTER [fɵɸ]
+    PLURAL NOUN: PARTICLE-AFTER [vʉf]
+    PAST VERB: PARTICLE-AFTER [fɒʝ]
+    NEGATION VERB: NONE
+    NEGATION NOUN: PARTICLE-AFTER [fɵf]
+--- marsh-goblin ---
+  Order: (SUBJECT VERB OBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PREFIX [rɒm]
+    GENITIVE NOUN: PREFIX [mɘɰ]
+    PLURAL NOUN: SUFFIX [mɘm]
+    PAST VERB: PREFIX [nam]
+    NEGATION VERB: SUFFIX [nam]
+    NEGATION NOUN: PREFIX [nɘr]
+--- cave-goblin ---
+  Order: (SUBJECT VERB OBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PREFIX [rɒb]
+    GENITIVE NOUN: PREFIX [bɨɰ]
+    PLURAL NOUN: SUFFIX [bɨb]
+    PAST VERB: PREFIX [dɶb]
+    NEGATION VERB: SUFFIX [dɶb]
+    NEGATION NOUN: PREFIX [dɨr]
+--- black-orc ---
+  Order: (OBJECT VERB SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PREFIX [ɨx]
+    GENITIVE NOUN: SUFFIX [eɻd]
+    PLURAL NOUN: SUFFIX [uɡ]
+    PAST VERB: SUFFIX [uɹ]
+    NEGATION VERB: SUFFIX [eɰ]
+    NEGATION NOUN: SUFFIX [eʜ]
+--- mountain-orc ---
+  Order: (OBJECT VERB SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PREFIX [ɨk]
+    GENITIVE NOUN: SUFFIX [ɘɻd]
+    PLURAL NOUN: SUFFIX [uɡ]
+    PAST VERB: SUFFIX [uɹ]
+    NEGATION VERB: SUFFIX [ɘɰ]
+    NEGATION NOUN: SUFFIX [ɘʜ]
+--- deep-dwarvish ---
+  Order: (SUBJECT OBJECT VERB)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-BEFORE [qaχ]
+    GENITIVE NOUN: SUFFIX [ʁɔχq]
+    PLURAL NOUN: PREFIX [qɔɢ]
+    PAST VERB: SUFFIX [ɟçɔʁɢ]
+    NEGATION VERB: NONE
+    NEGATION NOUN: PARTICLE-BEFORE [ʁɔχ]
+--- iron-dwarvish ---
+  Order: (SUBJECT OBJECT VERB)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-BEFORE [qak]
+    GENITIVE NOUN: SUFFIX [ɢʌqk]
+    PLURAL NOUN: PREFIX [kʌɡ]
+    PAST VERB: SUFFIX [ɟcʌɢɡ]
+    NEGATION VERB: NONE
+    NEGATION NOUN: PARTICLE-BEFORE [ɢʌq]
+--- tinker-gnomish ---
+  Order: (VERB OBJECT SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-AFTER [ɹeɹ]
+    GENITIVE NOUN: PARTICLE-BEFORE [mɶn]
+    PLURAL NOUN: PARTICLE-BEFORE [jaj]
+    PAST VERB: PARTICLE-AFTER [jøʝ]
+    NEGATION VERB: PARTICLE-AFTER [jøj]
+    NEGATION NOUN: PARTICLE-AFTER [ɳøç]
+--- garden-gnomish ---
+  Order: (VERB OBJECT SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSOR-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-AFTER [ɹeɹ]
+    GENITIVE NOUN: PARTICLE-BEFORE [mɔm]
+    PLURAL NOUN: PARTICLE-BEFORE [jɛj]
+    PAST VERB: PARTICLE-AFTER [joʝ]
+    NEGATION VERB: PARTICLE-AFTER [joj]
+    NEGATION NOUN: PARTICLE-AFTER [ɳoç]
+--- shire-halfling ---
+  Order: (SUBJECT OBJECT VERB)  NP: (ADJECTIVE NOUN)  Gen: POSSESSED-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-BEFORE [tɔʜ]
+    GENITIVE NOUN: PREFIX [nɛx]
+    PLURAL NOUN: NONE
+    PAST VERB: PARTICLE-AFTER [ŋɛʜ]
+    NEGATION VERB: PREFIX [pɨʜ]
+    NEGATION NOUN: PARTICLE-BEFORE [lap]
+--- river-halfling ---
+  Order: (SUBJECT OBJECT VERB)  NP: (ADJECTIVE NOUN)  Gen: POSSESSED-FIRST
+  Morphology:
+    ACCUSATIVE NOUN: PARTICLE-BEFORE [tɔʜ]
+    GENITIVE NOUN: PREFIX [nek]
+    PLURAL NOUN: NONE
+    PAST VERB: PARTICLE-AFTER [ŋeʜ]
+    NEGATION VERB: PREFIX [pɯʜ]
+    NEGATION NOUN: PARTICLE-BEFORE [lap]
+========================================
+  TRANSLATIONS
+========================================
+>> The wise wolf hunts the king
+----------------------------------------
+  proto-elvish                   fot sh͜ålh͜ volh͜ holz͜ hͣe'
+  proto-goblin                   mïd bb͜årr͜ y̌ïng͜ rr͜åm.ng͜ën'
+  proto-orcish                   ï.kåt' åk eṙk eṙk
+  proto-dwarvish                 t̃z̃h͜åk̂h͜t̃ t̃s̃h͜ïĝ k̂akh͜ k̂ïk̂h͜ t̃z̃h͜ògh͜
+  proto-gnomish                  ṙaz yåy rer ñïy ṅïs̃h͜
+  proto-halfling                 ľal pïl tòh y̌eb ng͜òng͜
+  high-elvish                    fot' sh͜ålh͜' volh͜' holz͜ hͣe''
+  wood-elvish                    fôt' sh͜ålh͜' vôlh͜' hôlz͜ hͣe''
+  marsh-goblin                   mên' bb͜årr͜' y̌êng͜' rr͜åm.ng͜ën'
+  cave-goblin                    bïd' bb͜årr͜' y̌ïg' rr͜åb.gëd'
+  black-orc                      ï.kh͜ås' åkh͜' eṙkh͜' eṙkh͜'
+  mountain-orc                   ï.kåt' åk' êṙk' êṙk'
+  deep-dwarvish                  t̃z̃h͜åk̂h͜t̃' t̃s̃h͜êĝ' k̂ak̂h͜ k̂êk̂h͜' t̃z̃h͜òĝh͜'
+  iron-dwarvish                  t̃d̃ák̂t̃' t̃.t̃ïĝ' k̂ak k̂ïk̂' t̃d̃âg'
+  tinker-gnomish                 ṙaz' yøy' rer ñïy' ṅïs̃h͜'
+  garden-gnomish                 ṙèz' yòy' rer ñïy' ṅïs̃h͜'
+  shire-halfling                 ľal' pïl' tòh y̌èb' ng͜òng͜'
+  river-halfling                 ľal' pûl' tòh y̌eb' ng͜òng͜'
+>> The old sword breaks
+----------------------------------------
+  proto-elvish                   hif hͣåf hohͣ
+  proto-goblin                   dïd gër rr͜ag
+  proto-orcish                   åkh͜ ïrk uk
+  proto-dwarvish                 k̂òĝh͜t̃ t̃gh͜ïz̃h͜t̃ gz̃h͜ek̂h͜ĝ
+  proto-gnomish                  żh͜oṙ måph͜ ph͜oñ
+  proto-halfling                 tah kh͜eh tes
+  high-elvish                    hif' hͣåf' hohͣ'
+  wood-elvish                    hif' hͣåf' hôhͣ'
+  marsh-goblin                   nên' ng͜ër' rr͜ang͜'
+  cave-goblin                    dïd' gër' rr͜øg'
+  black-orc                      åkh͜' ïrkh͜' ukh͜'
+  mountain-orc                   åkh͜' ïrk' uk'
+  deep-dwarvish                  k̂òĝh͜t̃' t̃ĝh͜êz̃h͜t̃' ĝz̃h͜ek̂h͜ĝ'
+  iron-dwarvish                  k̂âĝt̃' t̃gïd̃t̃' g.d̃e'k̂ĝ
+  tinker-gnomish                 żh͜öṙ' møph͜' ph͜öñ'
+  garden-gnomish                 żh͜oṙ' mòph͜' ph͜oñ'
+  shire-halfling                 tah' kh͜èh' tès'
+  river-halfling                 tah' keh' tet'
+>> No man's death is silent
+----------------------------------------
+  proto-elvish                   sol fof foph͜ zul tol
+  proto-goblin                   dïrr͜.mïy̌.mòr' ľïl ľïd
+  proto-orcish                   åhk e'y̌eṙ.deh ur
+  proto-dwarvish                 ĝh͜òk̂h͜ t̃ĝh͜òd̃'ĝh͜òk̂h͜k gk̂h͜òk̂ gåĝh͜
+  proto-gnomish                  mom mån ṅos̃h͜ yożh͜ yor
+  proto-halfling                 lap beg nekh͜.hap' y̌ah
+  high-elvish                    sol' fof foph͜ zul' tol'
+  wood-elvish                    s̃h͜ôl' fôf fôph͜ z̃h͜ül' tôl'
+  marsh-goblin                   nêrr͜.mêy̌.mòr' ľêl' ľên'
+  cave-goblin                    dïrr͜.bïy̌.bòr' ľïl' ľïd'
+  black-orc                      åhkh͜' e'y̌eṙ.deh ur'
+  mountain-orc                   åhk' ê'y̌êṙ.dêh ur'
+  deep-dwarvish                  ĝh͜òk̂h͜ t̃ĝh͜òd̃'ĝh͜òk̂h͜k̂ ĝk̂h͜òk̂' ĝåĝh͜'
+  iron-dwarvish                  ĝâk̂ t̃ĝâd̃'ĝâk̂k g.k̂âk̂' gáĝ'
+  tinker-gnomish                 möm' møn ṅös̃h͜ yöżh͜' yör'
+  garden-gnomish                 mom' mòm ṅos̃h͜ yożh͜' yor'
+  shire-halfling                 lap bèy̌' nèkh͜.hap' y̌ah'
+  river-halfling                 lap beg' nek.hap' y̌ah'
+>> The strong fear the wise
+----------------------------------------
+  proto-elvish                   sol bh͜ålz͜ zoflål holz͜ sh͜ålh͜ fåp
+  proto-goblin                   mòr bang͜ ľòľ rr͜åm.måm'mïm bb͜årr͜
+  proto-orcish                   ï.keh'dårh eṙk ås ey̌ ehk
+  proto-dwarvish                 t̃ĝh͜òd̃ z̃h͜ïkh͜ k̂akh͜ gh͜òĝh͜t̃ĝh͜ïĝh͜g t̃s̃h͜ïĝ k̂s̃h͜òk̂
+  proto-gnomish                  måh ñomñash͜ rer ṅïs̃h͜ yożh͜ ṅïzh͜
+  proto-halfling                 kal hap ľal tòh hòbsot ph͜ey̌
+  high-elvish                    sol' bh͜ålz͜' zof'lål holz͜ sh͜ålh͜' fåp'
+  wood-elvish                    s̃h͜ôl' bh͜ålz͜' z̃h͜ôf'lål hôlz͜ sh͜ålh͜' fåp'
+  marsh-goblin                   mòr' mang͜' ľòľ' rr͜åm.måm'mêm bb͜årr͜'
+  cave-goblin                    bòr' bøg' ľòľ' rr͜åb.båb'bïb bb͜årr͜'
+  black-orc                      ï.kh͜eh'dårh eṙkh͜' ås' ey̌' ehkh͜'
+  mountain-orc                   ï.kêh'dårh êṙk' ås' êy̌' êhk'
+  deep-dwarvish                  t̃ĝh͜òd̃' z̃h͜êk̂h͜' k̂ak̂h͜ ĝh͜òĝh͜'t̃ĝh͜êĝh͜ĝ t̃s̃h͜êĝ' k̂s̃h͜òk̂'
+  iron-dwarvish                  t̃ĝâd̃' d̃ïk' k̂ak gâĝ't̃ĝïĝg t̃.t̃ïĝ' k̂.t̃âk̂'
+  tinker-gnomish                 møh' ñöm'ñash͜ rer ṅïs̃h͜' yöżh͜' ṅïzh͜'
+  garden-gnomish                 mòh' ñom'ñèsh͜ rer ṅïs̃h͜' yożh͜' ṅïzh͜'
+  shire-halfling                 kal' hap' ľal' tòh hòb'sòt ph͜èy̌'
+  river-halfling                 kal' hap' ľal' tòh hòb'tot pey̌'
+>> Fire burns the dark forest
+----------------------------------------
+  proto-elvish                   felz͜ sh͜osh͜vobh͜ holz͜ pul ful
+  proto-goblin                   bam y̌ïl rr͜åm.rëy̌'dïl bb͜ïbb͜
+  proto-orcish                   ï.kå'kehk ed òrh òk
+  proto-dwarvish                 t̃òĝh͜ k̂akh͜ t̃k̂h͜åz̃h͜ĝd̃k̂h͜ïk̂h͜ k̂h͜ògh͜k̂ d̃s̃h͜ek̂h͜
+  proto-gnomish                  sosh͜ yemṙïy rer hom bh͜osh͜
+  proto-halfling                 ph͜et had tòh dòpbep ng͜òs
+  high-elvish                    felz͜' sh͜osh͜'vobh͜ holz͜ pul' ful'
+  wood-elvish                    felz͜' sh͜ôsh͜'vôbh͜ hôlz͜ pül' fül'
+  marsh-goblin                   mam' y̌êl' rr͜åm.rëy̌'nêl bb͜êbb͜'
+  cave-goblin                    bøb' y̌ïl' rr͜åb.rëy̌'dïl bb͜ïbb͜'
+  black-orc                      ï.kh͜å'kh͜ehkh͜ ed' òrh' òkh͜'
+  mountain-orc                   ï.kå'kêhk êd' òrh' òk'
+  deep-dwarvish                  t̃òĝh͜' k̂ak̂h͜ t̃k̂h͜åz̃h͜ĝ'd̃k̂h͜êk̂h͜ k̂h͜òĝh͜k̂' d̃s̃h͜ek̂h͜'
+  iron-dwarvish                  t̃âĝ' k̂ak t̃.k̂ád̃ĝd̃'k̂ïk̂ k̂âgk̂' d̃.t̃ek̂'
+  tinker-gnomish                 sösh͜' yem'ṙïy rer höm' bh͜ösh͜'
+  garden-gnomish                 sosh͜' yem'ṙïy rer hom' bh͜osh͜'
+  shire-halfling                 ph͜èt' har' tòh ròp'bèp ng͜òs'
+  river-halfling                 pet' had' tòh dòp'bep ng͜òt'
+>> The child follows the bright star
+----------------------------------------
+  proto-elvish                   fåzh͜ lh͜ol holz͜ 'op fevlz͜of
+  proto-goblin                   mam nëmy̌òl rr͜åm.dïl' y̌åbb͜
+  proto-orcish                   ï.keh' åk åkek åy̌k
+  proto-dwarvish                 kh͜aĝh͜d̃ k̂akh͜ s̃h͜òk̂h͜t̃ ĝh͜òs̃h͜k̂ t̃k̂h͜òs̃h͜kk̂k̂h͜ïk̂h͜d̃
+  proto-gnomish                  yïmyåy zh͜eh rer z̃h͜oṡh͜ zh͜ash͜
+  proto-halfling                 bòs dòph͜ tòh pal lòlbop
+  high-elvish                    fåzh͜' lh͜ol' holz͜ 'op' fev'lz͜of
+  wood-elvish                    fåzh͜' lh͜ôl' hôlz͜ 'ôp' fev'lz͜ôf
+  marsh-goblin                   mam' nëm'y̌òl rr͜åm.nêl' y̌åbb͜'
+  cave-goblin                    bøb' dëb'y̌òl rr͜åb.dïl' y̌åbb͜'
+  black-orc                      ï.kh͜eh' åkh͜' å'kh͜ekh͜ åy̌kh͜'
+  mountain-orc                   ï.kêh' åk' å'kêk åy̌k'
+  deep-dwarvish                  k̂h͜aĝh͜d̃' k̂ak̂h͜ s̃h͜òk̂h͜t̃' ĝh͜òs̃h͜k̂' t̃k̂h͜òs̃h͜k̂'k̂k̂h͜êk̂h͜d̃
+  iron-dwarvish                  kaĝd̃' k̂ak t̃âk̂t̃' ĝât̃k̂' t̃.k̂ât̃kk̂'k̂ï.k̂d̃
+  tinker-gnomish                 yïm'yøy zh͜eh' rer z̃h͜öṡh͜' zh͜ash͜'
+  garden-gnomish                 yïm'yòy zh͜eh' rer z̃h͜oṡh͜' zh͜èsh͜'
+  shire-halfling                 bòs' ròph͜' tòh pal' lòl'bòp
+  river-halfling                 bòt' dòp' tòh pal' lòl'bop
+>> The dead king's sword falls
+----------------------------------------
+  proto-elvish                   volh͜ foph͜ hͣilh͜ hif lz͜åsh͜
+  proto-goblin                   mïy̌.ng͜ën' ľag dïd nag
+  proto-orcish                   åk å'teṙd eh ïrk
+  proto-dwarvish                 k̂ïk̂h͜'ĝh͜òk̂h͜k t̃s̃h͜åk̂h͜k̂ k̂òĝh͜t̃ ĝòĝh͜
+  proto-gnomish                  ṅïñ mån yåy ph͜åżh͜ måph͜
+  proto-halfling                 kh͜eh pey̌ nekh͜.y̌eb' rel
+  high-elvish                    volh͜' foph͜ hͣilh͜' hif' lz͜åsh͜'
+  wood-elvish                    vôlh͜' fôph͜ hͣilh͜' hif' lz͜åsh͜'
+  marsh-goblin                   mêy̌.ng͜ën' ľang͜' nên' nang͜'
+  cave-goblin                    bïy̌.gëd' ľøg' dïd' døg'
+  black-orc                      åkh͜' å'seṙd eh' ïrkh͜'
+  mountain-orc                   åk' å'têṙd êh' ïrk'
+  deep-dwarvish                  k̂êk̂h͜'ĝh͜òk̂h͜k̂ t̃s̃h͜åk̂h͜k̂' k̂òĝh͜t̃' ĝòĝh͜'
+  iron-dwarvish                  k̂ïk̂'ĝâk̂k t̃.t̃ák̂k̂' k̂âĝt̃' ĝâĝ'
+  tinker-gnomish                 ṅïñ' møn yøy' ph͜øżh͜' møph͜'
+  garden-gnomish                 ṅïñ' mòm yòy' ph͜òżh͜' mòph͜'
+  shire-halfling                 kh͜èh' pèy̌' nèkh͜.y̌èb' rèl'
+  river-halfling                 keh' pey̌' nek.y̌eb' rel'
+>> A blind wolf finds the path
+----------------------------------------
+  proto-elvish                   fot lo' hͣil holz͜ vih
+  proto-goblin                   mïd råy̌ lårr͜ rr͜åm.rål'
+  proto-orcish                   ï.kåsk' åṙ eṙk ïḋ
+  proto-dwarvish                 t̃z̃h͜åk̂h͜t̃ ĝz̃h͜òk̂h͜ k̂akh͜ ĝh͜agh͜ ĝh͜åk̂h͜ĝ
+  proto-gnomish                  z̃h͜ïṅ mïs rer ñïy ṙozh͜
+  proto-halfling                 san pïl tòh soľ nek
+  high-elvish                    fot' lo'' hͣil' holz͜ vih'
+  wood-elvish                    fôt' lô'' hͣil' hôlz͜ vih'
+  marsh-goblin                   mên' råy̌' lårr͜' rr͜åm.rål'
+  cave-goblin                    bïd' råy̌' lårr͜' rr͜åb.rål'
+  black-orc                      ï.kh͜åskh͜' åṙ' eṙkh͜' ïḋ'
+  mountain-orc                   ï.kåsk' åṙ' êṙk' ïḋ'
+  deep-dwarvish                  t̃z̃h͜åk̂h͜t̃' ĝz̃h͜òk̂h͜' k̂ak̂h͜ ĝh͜aĝh͜' ĝh͜åk̂h͜ĝ'
+  iron-dwarvish                  t̃d̃ák̂t̃' ĝ.d̃âk̂' k̂ak ĝag' ĝá'k̂ĝ
+  tinker-gnomish                 z̃h͜ïṅ' mïs' rer ñïy' ṙözh͜'
+  garden-gnomish                 z̃h͜ïṅ' mïs' rer ñïy' ṙozh͜'
+  shire-halfling                 san' pïl' tòh sòľ' nèk'
+  river-halfling                 tan' pûl' tòh toľ' nek'
+>> Blood and gold rule the people
+----------------------------------------
+  proto-elvish                   loph͜ ph͜ofvef holz͜ zo'
+  proto-goblin                   dïm y̌ïrr͜ rr͜åm.mïd'mëd
+  proto-orcish                   ï.ke'kïh òr åṡh͜
+  proto-dwarvish                 d̃k̂h͜òk̂h͜t̃ k̂akh͜ kes̃h͜t̃k̂h͜ïk̂h͜d̃ d̃gh͜åd̃
+  proto-gnomish                  råzh͜ sh͜ïrbh͜eph͜ rer måm
+  proto-halfling                 y̌en tòh pahnang͜ sïm
+  high-elvish                    loph͜' ph͜of'vef holz͜ zo''
+  wood-elvish                    lôph͜' ph͜ôf'vef hôlz͜ z̃h͜ô''
+  marsh-goblin                   nêm' y̌êrr͜' rr͜åm.mên'mën
+  cave-goblin                    dïb' y̌ïrr͜' rr͜åb.bïd'bëd
+  black-orc                      ï.kh͜e'kh͜ïh òr' åṡh͜'
+  mountain-orc                   ï.kê'kïh òr' åṡh͜'
+  deep-dwarvish                  d̃k̂h͜òk̂h͜t̃' k̂ak̂h͜ k̂es̃h͜'t̃k̂h͜êk̂h͜d̃ d̃ĝh͜åd̃'
+  iron-dwarvish                  d̃.k̂âk̂t̃' k̂ak ket̃t̃'k̂ï.k̂d̃ d̃.gád̃'
+  tinker-gnomish                 røzh͜' sh͜ïr'bh͜eph͜ rer møm'
+  garden-gnomish                 ròzh͜' sh͜ïr'bh͜eph͜ rer mòm'
+  shire-halfling                 y̌èn' tòh pah'nang͜ sïm'
+  river-halfling                 y̌en' tòh pah'nang͜ tûm'
+>> The bitter wind comes from the mountain
+----------------------------------------
+  proto-elvish                   zoz lutvel våhͣ
+  proto-goblin                   gël dïlmëm rr͜ïd
+  proto-orcish                   åy̌k òst ersåy̌ṡh͜
+  proto-dwarvish                 t̃ït̃ ĝh͜åk̂h͜t̃t̃ĝh͜åz̃h͜ĝ d̃k̂h͜òk
+  proto-gnomish                  råñ nobh͜ mïhṙoy
+  proto-halfling                 boph͜lòd heph͜ ľap
+  high-elvish                    zoz' lut'vel våhͣ'
+  wood-elvish                    z̃h͜ôz̃h͜' lüt'vel våhͣ'
+  marsh-goblin                   ng͜ël' nêl'mëm rr͜ên'
+  cave-goblin                    gël' dïl'bëb rr͜ïd'
+  black-orc                      åy̌kh͜' òss' er'såy̌ṡh͜
+  mountain-orc                   åy̌k' òst' êr'såy̌ṡh͜
+  deep-dwarvish                  t̃êt̃' ĝh͜åk̂h͜t̃'t̃ĝh͜åz̃h͜ĝ d̃k̂h͜òk̂'
+  iron-dwarvish                  t̃ït̃' ĝák̂t̃'t̃ĝád̃ĝ d̃.k̂âk'
+  tinker-gnomish                 røñ' nöbh͜' mïh'ṙöy
+  garden-gnomish                 ròñ' mobh͜' mïh'ṙoy
+  shire-halfling                 bòph͜'lòr hèph͜' ľap'
+  river-halfling                 bop'lòd hep' ľap'

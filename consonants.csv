@@ -1,0 +1,60 @@
+101,p,voiceless,bilabial,plosive,p
+102,b,voiced,bilabial,plosive,b
+103,t,voiceless,alveolar,plosive,t
+104,d,voiced,alveolar,plosive,d
+105,ʈ,voiceless,retroflex,plosive,ṫ
+106,ɖ,voiced,retroflex,plosive,ḋ
+107,c,voiceless,palatal,plosive,t̃
+108,ɟ,voiced,palatal,plosive,d̃
+109,k,voiceless,velar,plosive,k
+110,ɡ,voiced,velar,plosive,g
+111,q,voiceless,uvular,plosive,k̂
+112,ɢ,voiced,uvular,plosive,ĝ
+113,ʔ,,glottal,plosive,'
+114,m,voiced,bilabial,nasal,m
+115,ɱ,voiced,labiodental,nasal,m̐
+116,n,voiced,alveolar,nasal,n
+117,ɳ,voiced,retroflex,nasal,ṅ
+118,ɲ,voiced,palatal,nasal,ñ
+119,ŋ,voiced,velar,nasal,ng͜
+120,ɴ,voiced,uvular,nasal,n̂g͜
+121,ʙ,voiced,bilabial,trill,bb͜
+122,r,voiced,alveolar,trill,rr͜
+123,ʀ,voiced,uvular,trill,r̂r̂͜
+124,ɾ,voiced,alveolar,tap,ṛ
+125,ɽ,voiced,retroflex,flap,ṛ̇
+126,ɸ,voiceless,bilabial,fricative,ph͜
+127,β,voiced,bilabial,fricative,bh͜
+128,f,voiceless,labiodental,fricative,f
+129,v,voiced,labiodental,fricative,v
+130,θ,voiceless,dental,fricative,th͜
+131,ð,voiced,dental,fricative,dh͜
+132,s,voiceless,alveolar,fricative,s
+133,z,voiced,alveolar,fricative,z
+134,ʃ,voiceless,postalveolar,fricative,sh͜
+135,ʒ,voiced,postalveolar,fricative,zh͜
+136,ʂ,voiceless,retroflex,fricative,ṡh͜
+137,ʐ,voiced,retroflex,fricative,żh͜
+138,ç,voiceless,palatal,fricative,s̃h͜
+139,ʝ,voiced,palatal,fricative,z̃h͜
+140,x,voiceless,velar,fricative,kh͜
+141,ɣ,voiced,velar,fricative,gh͜
+142,χ,voiceless,uvular,fricative,k̂h͜
+143,ʁ,voiced,uvular,fricative,ĝh͜
+146,h,voiceless,glottal,fricative,h
+147,ɦ,voiced,glottal,fricative,hͣ
+148,ɬ,voiceless,alveolar,lateral fricative,lh͜
+149,ɮ,voiced,alveolar,lateral fricative,lz͜
+150,ʋ,voiced,labiodental,approximant,w̐
+151,ɹ,voiced,alveolar,approximant,r
+152,ɻ,voiced,retroflex,approximant,ṙ
+153,j,voiced,palatal,approximant,y
+154,ɰ,voiced,velar,approximant,y̌
+155,l,voiced,alveolar,lateral approximant,l
+156,ɭ,voiced,retroflex,lateral approximant,l̇
+157,ʎ,voiced,palatal,lateral approximant,l̃
+158,ʟ,voiced,velar,lateral approximant,ľ
+169,ʍ,voiceless,labial-velar,fricative,wh͜
+170,w,voiced,labial-velar,approximant,w
+171,ɥ,voiced,labial-palatal,approximant,w̃
+172,ʜ,voiceless,epiglottal,fricative,h

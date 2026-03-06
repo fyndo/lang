@@ -1,0 +1,10 @@
+# Emacs backup and autosave files
+*~
+\#*\#
+.\#*
+
+# ASDF/SBCL compiled files
+*.fasl
+
+# Claude Code
+.claude/
