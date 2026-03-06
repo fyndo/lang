@@ -357,6 +357,7 @@
     ("helm" noun 3 :combat :inanimate :manufactured :weapon :metal)
     ("armor" noun 4 :combat :inanimate :manufactured :weapon :metal)
     ("blade" noun 2 :combat :inanimate :manufactured :weapon :metal)
+    ("knife" noun 2 :craft :inanimate :manufactured :tool :metal)
     ("mace" noun 3 :combat :inanimate :manufactured :weapon :metal)
     ("dagger" noun 4 :combat :inanimate :manufactured :weapon :metal)
     ("lance" noun 3 :combat :inanimate :manufactured :weapon :metal)
@@ -1109,3 +1110,114 @@
     ("dock" "city" "dock-city")
     ("chain" "man" "chain-man")
     ("trade" "house" "trade-house")))
+
+;;; Compound derivations: words that CAN be expressed as compounds of simpler words
+;;; Format: (target-gloss (modifier head) (modifier head) ...)
+;;; Each language randomly decides whether to derive each word or keep its own root.
+;;; When derived, the word's phonological form becomes a compound of the two base words,
+;;; but its gloss (semantic identity) stays the same.
+(defparameter *compound-derivations*
+  '(;; ── Weapons ──────────────────────────────────────────────
+    ;; A language might say "war-blade" or "long-knife" for sword
+    ("sword"      ("war" "blade") ("long" "blade") ("war" "knife"))
+    ("dagger"     ("short" "blade") ("small" "knife"))
+    ("lance"      ("long" "spear"))
+    ("mace"       ("war" "hammer") ("iron" "hammer"))
+    ("pike"       ("long" "spear") ("iron" "spear"))
+    ("bolt"       ("iron" "arrow") ("short" "arrow"))
+    ("helm"       ("war" "hood") ("iron" "hood"))
+    ("armor"      ("war" "iron") ("iron" "skin"))
+    ("shield"     ("war" "wall"))
+    ("catapult"   ("stone" "bow") ("war" "wheel"))
+    ("gauntlet"   ("iron" "glove") ("war" "glove"))
+    ("sheath"     ("blade" "skin") ("sword" "skin"))
+    ("quiver"     ("arrow" "bag"))               ; note: needs "bag" — skip if missing
+
+    ;; ── Combat roles ────────────────────────────────────────
+    ("warrior"    ("war" "man"))
+    ("warlord"    ("war" "lord"))
+    ("archer"     ("bow" "man"))
+    ("scout"      ("war" "eye"))
+    ("knight"     ("sword" "lord") ("war" "noble"))
+
+    ;; ── Architecture / Structures ───────────────────────────
+    ("fortress"   ("war" "tower") ("stone" "tower"))
+    ("lighthouse" ("fire" "tower"))
+    ("palace"     ("king" "house") ("gold" "house"))
+    ("prison"     ("chain" "house") ("slave" "house"))
+    ("chimney"    ("fire" "pillar"))
+    ("cellar"     ("earth" "chamber"))
+    ("threshold"  ("door" "stone"))
+
+    ;; ── Maritime ────────────────────────────────────────────
+    ("wharf"      ("ship" "bridge") ("dock" "bridge"))
+    ("rudder"     ("ship" "hand") ("sail" "arm"))
+    ("compass"    ("star" "needle") ("sea" "needle"))
+    ("captain"    ("ship" "lord") ("sail" "lord"))
+    ("pirate"     ("sea" "thief"))                ; note: needs "thief" — skip if missing
+    ("navigator"  ("star" "man") ("sea" "man"))
+    ("voyage"     ("sea" "road") ("long" "sail"))
+
+    ;; ── Religion ────────────────────────────────────────────
+    ("temple"     ("god" "house"))
+    ("altar"      ("god" "stone"))
+    ("shrine"     ("god" "door") ("god" "hearth"))
+    ("tomb"       ("death" "house") ("death" "stone"))
+    ("pyre"       ("death" "fire"))
+    ("hymn"       ("god" "song"))
+    ("oracle"     ("god" "mouth"))                ; note: needs "mouth" — skip if missing
+    ("martyr"     ("death" "saint"))
+    ("pilgrim"    ("god" "road") ("holy" "road")) ; adj+noun works as modifier
+
+    ;; ── Commerce ────────────────────────────────────────────
+    ("warehouse"  ("goods" "house") ("trade" "house"))
+    ("market"     ("trade" "square"))
+    ("purse"      ("coin" "bag"))                 ; note: needs "bag" — skip if missing
+    ("vault"      ("gold" "house") ("gold" "stone"))
+    ("ledger"     ("trade" "letter"))
+
+    ;; ── Agriculture ─────────────────────────────────────────
+    ("vineyard"   ("wine" "field"))
+    ("orchard"    ("fruit" "field"))
+    ("barn"       ("grain" "house"))
+    ("mill"       ("grain" "wheel"))
+    ("shepherd"   ("sheep" "man") ("flock" "man"))
+    ("farmer"     ("field" "man") ("plow" "man"))
+
+    ;; ── Craft / Trades ──────────────────────────────────────
+    ("forge"      ("fire" "house") ("iron" "house"))
+    ("kiln"       ("fire" "stone") ("fire" "oven"))
+    ("anvil"      ("iron" "stone"))
+    ("smith"      ("iron" "man") ("hammer" "man"))
+    ("carpenter"  ("wood" "man"))                 ; note: needs "wood" — skip if missing
+    ("mason"      ("stone" "man"))
+    ("weaver"     ("cloth" "man") ("loom" "man"))
+    ("potter"     ("clay" "man"))
+    ("tanner"     ("fur" "man") ("skin" "man"))
+
+    ;; ── Magic ───────────────────────────────────────────────
+    ("wizard"     ("spell" "man"))
+    ("witch"      ("spell" "woman"))
+    ("sorcerer"   ("spell" "lord"))
+    ("wand"       ("small" "staff") ("spell" "staff"))
+    ("potion"     ("spell" "water"))
+    ("phantom"    ("death" "spirit"))
+    ("wraith"     ("death" "spirit") ("dark" "spirit"))
+
+    ;; ── Clothing ────────────────────────────────────────────
+    ("sandal"     ("foot" "belt"))
+    ("glove"      ("hand" "skin"))
+    ("hood"       ("head" "cloth"))
+    ("veil"       ("eye" "cloth"))
+
+    ;; ── Body ────────────────────────────────────────────────
+    ("skull"      ("head" "bone"))                ; note: needs "skull" in vocab — skip if missing
+    ("fist"       ("hand" "stone"))               ; note: needs "fist" in vocab — skip if missing
+
+    ;; ── Emotions ────────────────────────────────────────────
+    ("terror"     ("big" "fear"))
+    ("fury"       ("fire" "rage"))
+    ("wrath"      ("war" "rage"))
+    ("anguish"    ("long" "sorrow"))
+    ("despair"    ("death" "hope"))
+    ("bliss"      ("big" "joy"))))
