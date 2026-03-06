@@ -1132,6 +1132,9 @@
     ("gauntlet"   ("iron" "glove") ("war" "glove"))
     ("sheath"     ("blade" "skin") ("sword" "skin"))
     ("quiver"     ("arrow" "bag"))               ; note: needs "bag" — skip if missing
+    ("axe"        ("iron" "blade") ("war" "blade"))
+    ("banner"     ("war" "cloth"))
+    ("sickle"     ("grain" "blade") ("short" "blade"))
 
     ;; ── Combat roles ────────────────────────────────────────
     ("warrior"    ("war" "man"))
@@ -1139,6 +1142,10 @@
     ("archer"     ("bow" "man"))
     ("scout"      ("war" "eye"))
     ("knight"     ("sword" "lord") ("war" "noble"))
+    ("soldier"    ("war" "man") ("shield" "man"))
+    ("champion"   ("war" "lord") ("big" "warrior"))
+    ("marshal"    ("war" "judge") ("army" "lord"))
+    ("guard"      ("gate" "man") ("shield" "man"))
 
     ;; ── Architecture / Structures ───────────────────────────
     ("fortress"   ("war" "tower") ("stone" "tower"))
@@ -1148,6 +1155,13 @@
     ("chimney"    ("fire" "pillar"))
     ("cellar"     ("earth" "chamber"))
     ("threshold"  ("door" "stone"))
+    ("hall"       ("big" "chamber") ("long" "house"))
+    ("window"     ("wall" "eye") ("light" "door"))
+    ("stair"      ("stone" "path") ("high" "path"))
+    ("hearth"     ("fire" "stone") ("home" "fire"))
+    ("ruin"       ("old" "stone") ("dead" "house"))
+    ("arch"       ("stone" "door") ("stone" "bridge"))
+    ("roof"       ("house" "sky") ("house" "shield"))
 
     ;; ── Maritime ────────────────────────────────────────────
     ("wharf"      ("ship" "bridge") ("dock" "bridge"))
@@ -1157,6 +1171,21 @@
     ("pirate"     ("sea" "thief"))                ; note: needs "thief" — skip if missing
     ("navigator"  ("star" "man") ("sea" "man"))
     ("voyage"     ("sea" "road") ("long" "sail"))
+    ("sailor"     ("sea" "man") ("sail" "man"))
+    ("anchor"     ("ship" "stone") ("sea" "iron"))
+    ("mast"       ("sail" "pillar") ("ship" "tree"))
+    ("hull"       ("ship" "skin") ("ship" "bone"))
+    ("oar"        ("sea" "arm") ("ship" "arm"))
+    ("keel"       ("ship" "bone") ("ship" "spine"))
+    ("harbor"     ("ship" "home") ("sea" "gate"))
+    ("port"       ("ship" "door") ("sea" "door"))
+    ("prow"       ("ship" "head"))
+    ("stern"      ("ship" "back"))               ; note: needs "back" — skip if missing
+    ("deck"       ("ship" "floor"))
+    ("strait"     ("narrow" "sea"))
+    ("shoal"      ("shallow" "sea"))             ; note: needs "shallow" — skip if missing
+    ("wave"       ("sea" "hill") ("water" "hill"))
+    ("current"    ("sea" "river") ("deep" "flow"))
 
     ;; ── Religion ────────────────────────────────────────────
     ("temple"     ("god" "house"))
@@ -1165,16 +1194,44 @@
     ("tomb"       ("death" "house") ("death" "stone"))
     ("pyre"       ("death" "fire"))
     ("hymn"       ("god" "song"))
-    ("oracle"     ("god" "mouth"))                ; note: needs "mouth" — skip if missing
+    ("oracle"     ("god" "mouth"))               ; note: needs "mouth" — skip if missing
     ("martyr"     ("death" "saint"))
-    ("pilgrim"    ("god" "road") ("holy" "road")) ; adj+noun works as modifier
+    ("pilgrim"    ("god" "road") ("holy" "road"))
+    ("priest"     ("god" "man") ("holy" "man"))
+    ("prophet"    ("god" "eye") ("god" "voice"))  ; note: needs "voice" — skip if missing
+    ("idol"       ("god" "stone") ("god" "image")) ; note: needs "image" — skip if missing
+    ("heaven"     ("god" "sky") ("holy" "sky"))
+    ("hell"       ("death" "fire") ("dark" "earth"))
+    ("sin"        ("dark" "deed"))               ; note: needs "deed" — skip if missing
+    ("blessing"   ("god" "word") ("holy" "word"))
+    ("prayer"     ("god" "word") ("god" "call"))
+    ("sacrifice"  ("god" "death") ("holy" "blood"))
+    ("relic"      ("holy" "bone") ("god" "bone"))
+    ("demon"      ("dark" "spirit") ("hell" "spirit"))
+    ("angel"      ("god" "spirit") ("holy" "spirit"))
+    ("miracle"    ("god" "power") ("holy" "power"))
 
     ;; ── Commerce ────────────────────────────────────────────
     ("warehouse"  ("goods" "house") ("trade" "house"))
     ("market"     ("trade" "square"))
-    ("purse"      ("coin" "bag"))                 ; note: needs "bag" — skip if missing
+    ("purse"      ("coin" "bag"))                ; note: needs "bag" — skip if missing
     ("vault"      ("gold" "house") ("gold" "stone"))
     ("ledger"     ("trade" "letter"))
+    ("merchant"   ("trade" "man") ("goods" "man"))
+    ("coin"       ("gold" "stone") ("small" "gold"))
+    ("debt"       ("owe" "gold") ("dark" "trade"))
+    ("profit"     ("trade" "gold") ("good" "trade"))
+    ("tax"        ("king" "gold") ("lord" "gold"))
+    ("harbor"     ("ship" "home") ("trade" "door"))
+    ("cargo"      ("ship" "goods"))
+    ("silver"     ("white" "gold") ("moon" "gold"))
+    ("copper"     ("red" "gold") ("cheap" "gold"))
+    ("gem"        ("bright" "stone") ("precious" "stone"))
+    ("pearl"      ("sea" "gem") ("sea" "stone"))
+    ("jade"       ("green" "stone") ("green" "gem"))
+    ("amber"      ("gold" "stone") ("sun" "stone"))
+    ("ivory"      ("white" "bone") ("tooth" "bone"))
+    ("silk"       ("fine" "cloth"))              ; note: needs "fine" — skip if missing
 
     ;; ── Agriculture ─────────────────────────────────────────
     ("vineyard"   ("wine" "field"))
@@ -1183,17 +1240,36 @@
     ("mill"       ("grain" "wheel"))
     ("shepherd"   ("sheep" "man") ("flock" "man"))
     ("farmer"     ("field" "man") ("plow" "man"))
+    ("pasture"    ("herd" "field") ("grass" "field")) ; note: needs "grass" — skip if missing
+    ("harvest"    ("grain" "cut") ("field" "reap"))
+    ("well"       ("earth" "water") ("deep" "water"))
+    ("furrow"     ("plow" "path") ("earth" "path"))
+    ("hay"        ("dry" "grass"))               ; note: needs "dry"/"grass" — skip if missing
+    ("yoke"       ("ox" "chain") ("ox" "rope"))
+    ("fence"      ("field" "wall"))
+    ("soil"       ("dark" "earth") ("rich" "earth"))
 
     ;; ── Craft / Trades ──────────────────────────────────────
     ("forge"      ("fire" "house") ("iron" "house"))
     ("kiln"       ("fire" "stone") ("fire" "oven"))
     ("anvil"      ("iron" "stone"))
     ("smith"      ("iron" "man") ("hammer" "man"))
-    ("carpenter"  ("wood" "man"))                 ; note: needs "wood" — skip if missing
+    ("carpenter"  ("wood" "man"))                ; note: needs "wood" — skip if missing
     ("mason"      ("stone" "man"))
     ("weaver"     ("cloth" "man") ("loom" "man"))
     ("potter"     ("clay" "man"))
     ("tanner"     ("fur" "man") ("skin" "man"))
+    ("chisel"     ("stone" "knife") ("small" "hammer"))
+    ("saw"        ("iron" "tooth") ("tooth" "blade"))
+    ("rope"       ("long" "thread") ("strong" "thread"))
+    ("brick"      ("fire" "clay") ("hard" "clay"))
+    ("ingot"      ("iron" "stone") ("gold" "stone"))
+    ("ore"        ("earth" "iron") ("stone" "iron"))
+    ("plank"      ("flat" "tree"))               ; note: needs "flat" — skip if missing
+    ("needle"     ("small" "blade") ("iron" "thorn"))
+    ("awl"        ("small" "chisel") ("leather" "needle")) ; note: needs "leather" — skip if missing
+    ("dye"        ("color" "water"))             ; note: needs "color" — skip if missing
+    ("glue"       ("tree" "water") ("sticky" "water")) ; note: needs "sticky" — skip if missing
 
     ;; ── Magic ───────────────────────────────────────────────
     ("wizard"     ("spell" "man"))
@@ -1203,16 +1279,149 @@
     ("potion"     ("spell" "water"))
     ("phantom"    ("death" "spirit"))
     ("wraith"     ("death" "spirit") ("dark" "spirit"))
+    ("crystal"    ("bright" "stone") ("spell" "stone"))
+    ("hex"        ("dark" "spell") ("curse" "word"))
+    ("sigil"      ("spell" "letter") ("spell" "name"))
+    ("rune"       ("old" "letter") ("spell" "letter"))
+    ("ward"       ("spell" "wall") ("spell" "shield"))
+    ("enchantment" ("spell" "song") ("spell" "charm"))
+    ("talisman"   ("spell" "stone") ("ward" "stone"))
+    ("amulet"     ("ward" "gem") ("spell" "gem"))
+    ("familiar"   ("spell" "beast"))             ; note: needs "beast" — skip if missing
+    ("coven"      ("witch" "clan") ("spell" "clan"))
 
     ;; ── Clothing ────────────────────────────────────────────
     ("sandal"     ("foot" "belt"))
     ("glove"      ("hand" "skin"))
     ("hood"       ("head" "cloth"))
     ("veil"       ("eye" "cloth"))
+    ("cloak"      ("dark" "cloth") ("long" "cloth"))
+    ("robe"       ("long" "cloth") ("priest" "cloth"))
+    ("boot"       ("foot" "skin") ("hard" "sandal"))
+    ("belt"       ("waist" "rope"))              ; note: needs "waist" — skip if missing
+    ("tunic"      ("body" "cloth"))              ; note: needs "body" — skip if missing
+    ("sash"       ("silk" "belt") ("cloth" "belt"))
+    ("crown"      ("king" "gold") ("gold" "ring"))
+    ("throne"     ("king" "seat"))               ; note: needs "seat" — skip if missing
 
     ;; ── Body ────────────────────────────────────────────────
-    ("skull"      ("head" "bone"))                ; note: needs "skull" in vocab — skip if missing
-    ("fist"       ("hand" "stone"))               ; note: needs "fist" in vocab — skip if missing
+    ("skull"      ("head" "bone"))
+    ("fist"       ("hand" "stone") ("closed" "hand")) ; note: needs "closed" — skip if missing
+    ("spine"      ("back" "bone"))               ; note: needs "back" — skip if missing
+    ("rib"        ("chest" "bone"))
+    ("jaw"        ("mouth" "bone"))              ; note: needs "mouth" — skip if missing
+    ("knee"       ("leg" "joint"))               ; note: needs "joint" — skip if missing
+    ("elbow"      ("arm" "knee"))
+    ("wrist"      ("hand" "arm"))
+    ("shoulder"   ("arm" "head") ("high" "arm"))
+    ("throat"     ("neck" "mouth"))              ; note: needs "mouth" — skip if missing
+    ("brain"      ("head" "heart") ("thought" "heart")) ; note: needs "thought" — skip if missing
+    ("vein"       ("blood" "road") ("blood" "river"))
+    ("flesh"      ("body" "skin"))               ; note: needs "body" — skip if missing
+    ("womb"       ("child" "house") ("birth" "house")) ; note: needs "birth" — skip if missing
+    ("palm"       ("hand" "heart") ("open" "hand"))
+    ("lip"        ("mouth" "skin"))              ; note: needs "mouth" — skip if missing
+    ("brow"       ("eye" "hill") ("head" "hill"))
+    ("cheek"      ("eye" "skin") ("face" "side")) ; note: needs "face"/"side" — skip if missing
+    ("marrow"     ("bone" "blood") ("bone" "heart"))
+    ("sinew"      ("bone" "rope") ("flesh" "rope"))
+    ("lung"       ("breath" "house"))            ; note: needs "breath" — skip if missing
+    ("scalp"      ("head" "skin"))
+    ("nail"       ("finger" "bone"))             ; note: needs "finger" — skip if missing
+    ("tongue"     ("mouth" "hand"))              ; note: needs "mouth" — skip if missing
+
+    ;; ── Kinship ─────────────────────────────────────────────
+    ("husband"    ("man" "oath") ("house" "man"))
+    ("wife"       ("woman" "oath") ("house" "woman"))
+    ("widow"      ("death" "wife") ("alone" "woman"))
+    ("orphan"     ("alone" "child") ("death" "child"))
+    ("elder"      ("old" "man") ("wise" "man"))
+    ("infant"     ("small" "child") ("new" "child"))
+    ("ancestor"   ("old" "father") ("first" "father")) ; note: needs "first" — skip if missing
+    ("heir"       ("son" "lord") ("child" "king"))
+    ("firstborn"  ("first" "son") ("first" "child")) ; note: needs "first" — skip if missing
+    ("bride"      ("new" "wife") ("young" "woman"))
+    ("groom"      ("new" "husband") ("young" "man"))
+    ("twin"       ("two" "child"))               ; note: needs "two" — skip if missing
+    ("clan"       ("blood" "house") ("kin" "house"))
+    ("tribe"      ("big" "clan") ("blood" "people"))
+    ("maiden"     ("young" "woman") ("unwed" "woman")) ; note: needs "unwed" — skip if missing
+
+    ;; ── Animals ─────────────────────────────────────────────
+    ("eagle"      ("big" "hawk") ("king" "bird"))
+    ("raven"      ("black" "bird") ("dark" "bird"))
+    ("owl"        ("night" "bird") ("wise" "bird"))
+    ("crow"       ("black" "bird") ("death" "bird"))
+    ("falcon"     ("fast" "hawk") ("swift" "bird"))
+    ("swallow"    ("small" "bird") ("swift" "bird"))
+    ("viper"      ("small" "snake") ("death" "snake"))
+    ("whale"      ("big" "fish") ("sea" "beast"))    ; note: needs "beast" — skip if missing
+    ("eel"        ("snake" "fish") ("water" "snake"))
+    ("spider"     ("web" "beast"))               ; note: needs "web"/"beast" — skip if missing
+    ("lion"       ("king" "beast"))              ; note: needs "beast" — skip if missing
+    ("wolf"       ("wild" "dog") ("forest" "dog"))
+    ("fox"        ("cunning" "dog") ("red" "dog"))
+    ("bull"       ("big" "ox") ("strong" "ox"))
+    ("ram"        ("horn" "sheep"))
+    ("stag"       ("horn" "deer"))               ; note: needs "deer" — skip if missing
+    ("boar"       ("wild" "pig") ("fierce" "pig"))
+    ("mule"       ("horse" "ox") ("half" "horse")) ; note: needs "half" — skip if missing
+    ("hare"       ("fast" "rat") ("field" "rat"))
+    ("frog"       ("water" "lizard") ("marsh" "beast")) ; note: needs "beast" — skip if missing
+    ("tortoise"   ("stone" "lizard") ("slow" "lizard"))
+    ("moth"       ("night" "bird") ("fire" "fly"))   ; "fly" is a verb in vocab — creative!
+    ("crab"       ("sea" "spider") ("shell" "fish")) ; note: needs "shell" — skip if missing
+    ("beetle"     ("small" "beetle"))            ; skip — no simpler decomposition
+    ("worm"       ("earth" "snake") ("small" "snake"))
+
+    ;; ── Nature ──────────────────────────────────────────────
+    ("mountain"   ("big" "hill") ("high" "earth"))
+    ("forest"     ("big" "tree") ("deep" "tree"))
+    ("river"      ("long" "water") ("big" "stream"))
+    ("lake"       ("still" "water") ("deep" "water"))
+    ("valley"     ("low" "hill"))                ; note: needs "low" — skip if missing
+    ("marsh"      ("wet" "field") ("water" "field"))
+    ("island"     ("sea" "hill") ("water" "earth"))
+    ("cliff"      ("steep" "stone") ("high" "stone"))
+    ("cave"       ("dark" "stone") ("earth" "door"))
+    ("spring"     ("earth" "water") ("birth" "water")) ; note: needs "birth" — skip if missing
+    ("storm"      ("big" "wind") ("war" "sky"))
+    ("thunder"    ("sky" "drum") ("storm" "voice")) ; note: needs "voice" — skip if missing
+    ("lightning"  ("sky" "fire") ("storm" "light"))
+    ("frost"      ("cold" "water") ("ice" "dust"))
+    ("fog"        ("water" "smoke") ("cold" "smoke"))
+    ("hail"       ("ice" "rain") ("sky" "stone"))
+    ("dew"        ("dawn" "water") ("night" "rain"))
+    ("rainbow"    ("rain" "light") ("storm" "light"))
+    ("mist"       ("thin" "fog") ("light" "fog"))
+    ("breeze"     ("small" "wind") ("calm" "wind"))
+    ("ember"      ("small" "fire") ("dying" "fire")) ; note: needs "dying" — skip if missing
+    ("flame"      ("bright" "fire") ("hot" "light"))
+    ("spark"      ("small" "fire") ("fire" "seed"))
+    ("stream"     ("small" "river") ("fast" "water"))
+    ("pond"       ("small" "lake") ("still" "water"))
+    ("gorge"      ("deep" "valley"))
+    ("desert"     ("dry" "earth"))               ; note: needs "dry" — skip if missing
+    ("jungle"     ("hot" "forest") ("wild" "forest"))
+    ("canyon"     ("deep" "gorge") ("big" "gorge"))
+    ("boulder"    ("big" "stone"))
+    ("pebble"     ("small" "stone"))
+    ("crater"     ("fire" "hole"))               ; note: needs "hole" — skip if missing
+    ("reef"       ("sea" "stone") ("sea" "wall"))
+    ("delta"      ("river" "mouth"))             ; note: needs "mouth" — skip if missing
+    ("glade"      ("forest" "meadow") ("tree" "field"))
+    ("thicket"    ("thick" "forest"))            ; note: needs "thick" — skip if missing
+    ("meadow"     ("green" "field") ("flower" "field"))
+    ("dawn"       ("sun" "birth") ("day" "birth")) ; note: needs "birth" — skip if missing
+    ("dusk"       ("sun" "death") ("day" "death"))
+    ("shadow"     ("dark" "light") ("sun" "dark"))
+    ("ash"        ("fire" "dust") ("dead" "fire"))
+    ("smoke"      ("fire" "cloud") ("fire" "fog"))
+    ("sand"       ("small" "stone") ("sea" "dust"))
+    ("mud"        ("wet" "earth") ("water" "earth"))
+    ("horizon"    ("sky" "earth") ("far" "sky"))  ; note: needs "far" — skip if missing
+    ("tide"       ("moon" "water") ("sea" "breath")) ; note: needs "breath" — skip if missing
+    ("shore"      ("sea" "earth") ("water" "edge")) ; note: needs "edge" — skip if missing
 
     ;; ── Emotions ────────────────────────────────────────────
     ("terror"     ("big" "fear"))
@@ -1220,4 +1429,86 @@
     ("wrath"      ("war" "rage"))
     ("anguish"    ("long" "sorrow"))
     ("despair"    ("death" "hope"))
-    ("bliss"      ("big" "joy"))))
+    ("bliss"      ("big" "joy"))
+    ("dread"      ("dark" "fear") ("deep" "fear"))
+    ("grief"      ("deep" "sorrow") ("death" "sorrow"))
+    ("shame"      ("dark" "honor") ("bad" "pride"))
+    ("envy"       ("dark" "want") ("bitter" "want"))
+    ("pity"       ("sad" "love") ("soft" "sorrow"))
+    ("longing"    ("long" "want") ("far" "love"))   ; note: needs "far" — skip if missing
+    ("courage"    ("heart" "fire") ("brave" "heart"))
+    ("honor"      ("bright" "name") ("good" "name"))
+    ("regret"     ("old" "sorrow") ("dead" "hope"))
+    ("jealousy"   ("dark" "envy") ("fire" "envy"))
+    ("awe"        ("holy" "fear") ("god" "fear"))
+    ("contempt"   ("small" "hate") ("cold" "hate"))
+    ("remorse"    ("deep" "shame") ("heart" "sorrow"))
+    ("yearning"   ("deep" "longing") ("fire" "longing"))
+    ("doubt"      ("dark" "thought"))            ; note: needs "thought" — skip if missing
+
+    ;; ── Food / Drink ────────────────────────────────────────
+    ("bread"      ("grain" "food") ("fire" "grain"))
+    ("ale"        ("grain" "water") ("grain" "wine"))
+    ("broth"      ("meat" "water") ("hot" "water"))
+    ("cheese"     ("old" "milk") ("hard" "milk"))
+    ("honey"      ("sweet" "gold") ("bee" "gold"))  ; note: needs "bee" — skip if missing
+    ("feast"      ("big" "food") ("king" "food"))
+    ("famine"     ("death" "food") ("long" "hunger")) ; note: needs "hunger" — skip if missing
+    ("kettle"     ("fire" "bowl") ("iron" "bowl"))
+    ("oven"       ("fire" "stone") ("fire" "house"))
+    ("oil"        ("fat" "water") ("fruit" "water"))
+    ("spice"      ("hot" "herb") ("fire" "herb"))    ; note: needs appropriate adj
+    ("vinegar"    ("sour" "wine") ("old" "wine"))    ; note: needs "vinegar" in vocab — skip
+
+    ;; ── Music / Arts ────────────────────────────────────────
+    ("drum"       ("war" "song") ("skin" "bowl"))
+    ("flute"      ("wind" "song") ("hollow" "bone"))
+    ("harp"       ("string" "song"))             ; note: needs "string" — skip if missing
+    ("horn"       ("war" "call") ("bull" "bone"))
+    ("bell"       ("iron" "song") ("iron" "call"))
+    ("lyre"       ("small" "harp"))
+    ("melody"     ("sweet" "song") ("long" "song"))
+    ("chant"      ("holy" "song") ("god" "song"))
+    ("bard"       ("song" "man") ("word" "man"))
+    ("minstrel"   ("song" "man") ("road" "bard"))
+    ("pipe"       ("small" "flute") ("hollow" "reed")) ; note: needs "reed" — skip if missing
+    ("rhythm"     ("drum" "song") ("heart" "song"))
+    ("verse"      ("word" "song") ("short" "song"))
+    ("dance"      ("body" "song"))               ; note: needs "body" — skip if missing
+
+    ;; ── Abstract / Philosophical ────────────────────────────
+    ("wisdom"     ("old" "truth") ("deep" "truth"))
+    ("folly"      ("dark" "wisdom") ("blind" "path"))
+    ("power"      ("strong" "will"))             ; note: needs "will" — skip if missing
+    ("secret"     ("dark" "word") ("hidden" "truth")) ; note: needs "hidden" — skip if missing
+    ("riddle"     ("dark" "word") ("strange" "word"))
+    ("burden"     ("heavy" "stone") ("long" "chain"))
+    ("memory"     ("old" "dream") ("heart" "word"))
+    ("silence"    ("dead" "word") ("empty" "song"))
+    ("mercy"      ("soft" "law") ("heart" "law"))
+    ("dream"      ("night" "eye") ("sleep" "vision"))
+
+    ;; ── Society / Government ────────────────────────────────
+    ("empire"     ("big" "king") ("king" "earth"))
+    ("council"    ("lord" "hall") ("wise" "hall"))
+    ("slave"      ("chain" "man"))
+    ("traitor"    ("lie" "man") ("dark" "friend"))
+    ("rebel"      ("war" "slave") ("free" "slave"))
+    ("herald"     ("king" "voice"))              ; note: needs "voice" — skip if missing
+    ("exile"      ("alone" "road") ("far" "man")) ; note: needs "far" — skip if missing
+    ("treaty"     ("peace" "word"))              ; note: needs "peace" — skip if missing
+    ("decree"     ("king" "word") ("law" "word"))
+    ("tribute"    ("war" "gold") ("king" "gold"))
+    ("oath"       ("blood" "word") ("god" "word"))
+    ("seal"       ("king" "mark"))               ; note: needs "mark" — skip if missing
+    ("guild"      ("trade" "clan") ("craft" "clan")) ; note: needs "craft" as noun — may conflict
+    ("charter"    ("law" "letter") ("king" "letter"))
+    ("blood-price" ("death" "gold") ("blood" "gold"))
+    ("conquest"   ("war" "victory"))             ; note: needs "victory" — skip if missing
+    ("truce"      ("war" "oath") ("peace" "oath"))   ; note: needs "peace" — skip if missing
+    ("siege"      ("war" "wall") ("long" "war"))
+    ("battle"     ("big" "fight") ("war" "fight"))
+    ("ambush"     ("dark" "war") ("hidden" "war"))   ; note: needs "hidden" — skip if missing
+    ("raid"       ("fast" "war") ("night" "war"))
+    ("wound"      ("blade" "blood") ("war" "blood"))
+    ("scar"       ("old" "wound") ("dead" "wound"))))
