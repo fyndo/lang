@@ -37,7 +37,35 @@
     (:river-halfling . ((C :manner fricative -> :manner plosive)
                         (V :backness central -> :backness back)))))
 
-(defun make-world ()
+(defparameter *demo-words*
+  '("alone" "always" "ask" "bad" "believe" "bird" "bitter" "blade" "blind"
+    "blood" "brave" "break" "bright" "bring" "brother" "burn" "call" "chain"
+    "charge" "child" "city" "clerk" "cloth" "cold" "come" "cook" "council"
+    "dark" "daughter" "dawn" "day" "dead" "death" "deep" "die" "dock" "dog"
+    "door" "dress" "earth" "eat" "empire" "empty" "end" "enemy" "fall" "fast"
+    "father" "fear" "fight" "find" "fire" "fleet" "flower" "follow" "food"
+    "forest" "free" "friend" "full" "give" "go" "god" "gold" "good" "goods"
+    "grow" "guard" "hand" "happy" "harbor" "hear" "hide" "hold" "home" "hope"
+    "horse" "hot" "house" "hunt" "iron" "judge" "kill" "king" "knife" "know"
+    "laugh" "law" "lead" "leaf" "letter" "live" "long" "lord" "lose" "love"
+    "make" "man" "merchant" "mercy" "moon" "mother" "mountain" "name" "never"
+    "new" "not" "obey" "old" "open" "own" "palace" "path" "people" "play"
+    "pride" "promise" "protect" "proud" "rain" "refuse" "return" "rich" "rise"
+    "river" "road" "root" "rule" "run" "sail" "see" "seed" "sell" "send"
+    "serve" "sharp" "shield" "shine" "ship" "short" "shout" "silence" "silent"
+    "sing" "sit" "sky" "slave" "sleep" "small" "snow" "song" "speak" "spirit"
+    "square" "stand" "star" "stone" "stop" "story" "strange" "strong" "sun"
+    "sweet" "sword" "take" "think" "tongue" "trade" "traitor" "tree" "truth"
+    "wait" "walk" "wall" "want" "war" "warm" "water" "weep" "wife" "wind"
+    "wise" "wolf" "woman" "word" "write" "young")
+  "Subset of word glosses actually referenced in demo/sample/stress phrases.")
+
+(defun demo-vocabulary ()
+  "Filter *vocabulary* to only the words used by the demo phrases."
+  (remove-if-not (lambda (spec) (member (first spec) *demo-words* :test #'string=))
+                 *vocabulary*))
+
+(defun make-world (&key (vocabulary (demo-vocabulary)))
   "Generate all proto-languages, their grammars, lexicons, and derived variants."
   (let ((protos nil)
         (all-langs nil))
@@ -56,12 +84,13 @@
                          for candidate = (handler-case
                                              (let ((l (funcall name-sym n :name proto-name)))
                                                (generate-grammar l :typology typology)
-                                               (generate-lexicon l *vocabulary*)
+                                               (generate-lexicon l vocabulary)
                                                (generate-pronoun-lexicon l)
                                                (generate-modal-lexicon l)
                                                (generate-wh-lexicon l)
                                                (generate-derived-lexicon l)
                                                (generate-compound-lexicon l *compound-specs*)
+                                               (apply-compound-derivations l *compound-derivations*)
                                                (generate-paradigms l)
                                                l)
                                            (error (e)
@@ -99,6 +128,7 @@
                                        :name "elvish-goblin-trade")))
                 (generate-derived-lexicon pidgin)
                 (generate-compound-lexicon pidgin *compound-specs*)
+                (apply-compound-derivations pidgin *compound-derivations*)
                 (generate-paradigms pidgin)
                 (push pidgin all-langs))
             (error (e)
@@ -111,6 +141,7 @@
                                        :name "orc-dwarf-border")))
                 (generate-derived-lexicon pidgin)
                 (generate-compound-lexicon pidgin *compound-specs*)
+                (apply-compound-derivations pidgin *compound-derivations*)
                 (generate-paradigms pidgin)
                 (push pidgin all-langs))
             (error (e)

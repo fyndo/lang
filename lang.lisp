@@ -1595,6 +1595,63 @@ and uses familiar digraphs."
   (iter (for spec in compound-specs)
     (generate-compound-entry language (first spec) (second spec) (third spec))))
 
+;;; Compound derivations — replace a word's root with a compound of simpler words
+
+(defun apply-compound-derivations (language derivation-specs &key (probability 0.35))
+  "For each derivation spec, with PROBABILITY chance, replace the target word's
+   root form with a compound of two simpler words.  Specs are:
+     (target-gloss (modifier head) (modifier head) ...)
+   Skips gracefully if the target or either component word is missing from the lexicon."
+  (iter (for spec in derivation-specs)
+    (let* ((target-gloss (first spec))
+           (alternatives (rest spec))
+           (target-entry (lookup-word language target-gloss)))
+      ;; Only derive if the target exists AND the dice roll succeeds
+      (when (and target-entry (< (random 1.0) probability))
+        ;; Filter alternatives to those whose components both exist in the lexicon
+        (let ((viable (remove-if-not
+                       (lambda (alt)
+                         (and (lookup-word language (first alt))
+                              (lookup-word language (second alt))))
+                       alternatives)))
+          (when viable
+            ;; Pick one alternative at random
+            (let* ((chosen (nth (random (length viable)) viable))
+                   (mod-gloss (first chosen))
+                   (head-gloss (second chosen))
+                   (strategy (gfeature language :compound-strategy))
+                   (order (gfeature language :compound-order))
+                   (head-entry (lookup-word language head-gloss))
+                   (mod-entry (lookup-word language mod-gloss))
+                   (head-form (strip-markers (form head-entry)))
+                   (mod-form (strip-markers (form mod-entry)))
+                   (ordered (if (eql order :head-final)
+                                (list mod-form head-form)
+                                (list head-form mod-form)))
+                   (form (case strategy
+                           (:juxtapose
+                            (reanalyze (append (first ordered) (second ordered))))
+                           (:linking
+                            (let ((linker (mapcar #'ensure-phone
+                                                  (gfeature language :compound-linker))))
+                              (reanalyze (append (first ordered) linker
+                                                 (second ordered)))))
+                           (:genitive
+                            (let* ((gen-rule (find-morpheme-rule language :genitive :noun))
+                                   (mod-inflected (if gen-rule
+                                                      (strip-markers
+                                                       (first (inflect
+                                                               (reanalyze mod-form)
+                                                               gen-rule)))
+                                                      mod-form)))
+                              (reanalyze (if (eql order :head-final)
+                                             (append mod-inflected head-form)
+                                             (append head-form mod-inflected))))))))
+              ;; Replace the target entry's form and mark its origin
+              (setf (form target-entry) form)
+              (setf (origin target-entry)
+                    (list :compound-derivation mod-gloss head-gloss)))))))))
+
 ;;; Grammar
 
 (defun inflect (base-form rule &key gloss lang feature applies-to)
