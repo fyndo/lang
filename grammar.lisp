@@ -624,20 +624,41 @@ If not, create a fresh scope so register-referent/register-tense work."
                (list :adverb adv-words
                      :verb verb-words))))
 
+(defun head-noun (part)
+  "The head noun of PART: PART itself if a noun, the noun inside a
+   noun-phrase, else NIL."
+  (cond ((typep part 'noun) part)
+        ((typep part 'noun-phrase)
+         (find-if (lambda (c) (typep c 'noun)) (components part)))
+        (t nil)))
+
 (defmethod render ((lang language) (p possessive) &key features gloss)
   (let* ((gen-order (gfeature lang :gen-order))
          (topic-drop (gfeature lang :topic-drop))
-         (possessor-words (render lang (possessor p) :features '(:genitive) :gloss gloss))
-         (possessed-words (render lang (possessed p) :features features :gloss gloss)))
-    ;; Possessor-pronoun drop: elide coreferent possessor pronoun
-    (when (and (getf topic-drop :possessor-pronoun)
-               (typep (possessor p) 'pronoun)
-               (referent-established-p (pronoun-person (possessor p))
-                                       (pro-number (possessor p))))
-      (setf possessor-words nil))
-    (if (eql gen-order :possessor-first)
-        (append possessor-words possessed-words)
-        (append possessed-words possessor-words))))
+         ;; Determiner–genitive complementarity (:possessive-determiner
+         ;; :complementary): the possessor phrase fills the head noun's
+         ;; determiner slot — "the king's sword", never "the king's the
+         ;; sword".  The default (:independent / unset) keeps the head
+         ;; noun's own article, as in "the sword of the king" languages.
+         (head (when (eql (gfeature lang :possessive-determiner) :complementary)
+                 (head-noun (possessed p))))
+         (saved-def (when head (definiteness head))))
+    (when saved-def
+      (setf (definiteness head) nil))
+    (unwind-protect
+         (let ((possessor-words (render lang (possessor p) :features '(:genitive) :gloss gloss))
+               (possessed-words (render lang (possessed p) :features features :gloss gloss)))
+           ;; Possessor-pronoun drop: elide coreferent possessor pronoun
+           (when (and (getf topic-drop :possessor-pronoun)
+                      (typep (possessor p) 'pronoun)
+                      (referent-established-p (pronoun-person (possessor p))
+                                              (pro-number (possessor p))))
+             (setf possessor-words nil))
+           (if (eql gen-order :possessor-first)
+               (append possessor-words possessed-words)
+               (append possessed-words possessor-words)))
+      (when saved-def
+        (setf (definiteness head) saved-def)))))
 
 (defmethod render ((lang language) (neg negation) &key features gloss)
   (let* ((tgt (target neg))

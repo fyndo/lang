@@ -302,6 +302,8 @@
    :compound-strategy :juxtapose
    :compound-order :head-final
    :compound-linker nil
+   ;; "the king's sword", not "the king's the sword"
+   :possessive-determiner :complementary
    ;; pronouns: "you" for singular and plural, "you all" to disambiguate
    :pronoun-collapse :collapse-2
    :plural-pronoun-strategy :quantifier-after

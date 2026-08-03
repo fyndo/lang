@@ -2517,6 +2517,14 @@ Falls back to a full syllable if no distinct short marker is found."
           :compound-order order
           :compound-linker linker)))
 
+(defun random-possessive-grammar (&optional overrides)
+  "Possessive determiner behavior: :independent (head noun keeps its own
+   article — 'the sword of the king') or :complementary (the possessor
+   phrase fills the determiner slot — 'the king's sword').  Defaults to
+   :independent; override via :features :possessive-determiner."
+  (list :possessive-determiner
+        (override-or overrides :possessive-determiner :independent)))
+
 (defun random-pronoun-grammar (head-final-p &optional overrides)
   "Generate pronoun grammar: collapse, plural-pronoun-strategy."
   (let* ((collapse (override-or overrides :pronoun-collapse
@@ -2705,6 +2713,7 @@ feature name, value is a plist with :STRATEGY and/or :MARKER).
              (random-wh-grammar head-final-p features)
              (random-complement-grammar head-final-p features)
              (random-compound-grammar language head-final-p features)
+             (random-possessive-grammar features)
              (random-pronoun-grammar head-final-p features)
              noun-class-feat
              question-feat
