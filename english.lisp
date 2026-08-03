@@ -223,8 +223,221 @@
     ("wh-where" "w" "ɛ" "ɹ")
     ("wh-when"  "w" "ɛ" "n")
     ("wh-why"   "w" "a" "ɪ")
-    ("wh-how"   "h" "a" "ʊ"))
+    ("wh-how"   "h" "a" "ʊ")
+    ;; plural disambiguator ("you all") when pronoun-collapse merges number
+    ("plural-quantifier" "ɔ" "l"))
   "English (General American) IPA targets keyed by gloss.")
+
+;;; Hand-built English-like grammar
+;;;
+;;; A complete :features plist for GENERATE-GRAMMAR pinning every grammar
+;;; decision to its English value, with English function words (in IPA) as
+;;; the markers.  Apply to a proto- or contact language with
+;;; APPLY-ENGLISH-GRAMMAR; derive daughters with :cliticization-rate 0 to
+;;; keep the strategies from drifting.  Edit freely — this is a starting
+;;; point, not canon.
+
+(defparameter *english-grammar-features*
+  (list
+   ;; word order: SVO, adjective-noun, adverb-verb, possessor-first
+   :clause-order '(:subject :verb :object)
+   :np-order '(:adjective :noun)
+   :vp-order '(:adverb :verb)
+   :gen-order :possessor-first
+   :head-final-p nil
+   ;; copula: "is"
+   :copula-strategy :particle
+   :copula-marker '("ɪ" "z")
+   :copula-order '(:subject :copula :predicate)
+   ;; conjunction "and", disjunction "or"
+   :conjunction-strategy :medial
+   :conjunction-marker '("æ" "n" "d")
+   :disjunction-strategy :medial
+   :disjunction-marker '("ɔ" "ɹ")
+   :adposition-strategy :preposition
+   ;; clause combining
+   :conditional-strategy :particle
+   :conditional-order '(:protasis :apodosis)
+   :comp-order '(:target :quality :standard)
+   :relative-strategy :particle
+   :relative-order '(:head :clause)
+   :purpose-order '(:main :purpose)
+   :causative-strategy :analytic
+   :causative-order '(:causer :caused)
+   :quotation-order '(:speaker :verb :content)
+   :adversative-strategy :particle
+   :adversative-order '(:conceded :asserted)
+   :degree-order '(:quality :result)
+   :causal-strategy :particle
+   :causal-order '(:result :reason)
+   :concessive-strategy :particle
+   :concessive-order '(:conceded :asserted)
+   :complement-order '(:subject :verb :content)
+   ;; reflexive "self", reciprocal "each other", "each", "-ing"
+   :reflexive-strategy :separate-word
+   :reflexive-marker '("s" "ɛ" "l" "f")
+   :reciprocal-strategy :separate-word
+   :reciprocal-marker '("i" "t" "ʃ" "ʌ" "ð" "ə" "ɹ")
+   :nominalization-strategy :suffix
+   :nominalization-marker '("ɪ" "ŋ")
+   :distributive-strategy :particle-before
+   :distributive-marker '("i" "t" "ʃ")
+   ;; exclamation "oh", simile "like"
+   :exclamation-strategy :particle
+   :exclamation-particle '("o" "ʊ")
+   :exclamation-position :initial
+   :simile-strategy :particle
+   :simile-marker '("l" "a" "ɪ" "k")
+   :simile-order '(:compared :standard)
+   ;; questions: fronted wh-words; yes/no with initial "do"
+   :wh-strategy :dedicated
+   :wh-position :initial
+   :question-strategy :particle
+   :question-particle '("d" "u")
+   :question-particle-position :initial
+   ;; modals as auxiliaries ("can", "must" from the lexicon), modal first
+   :modal-strategy :auxiliary
+   :modal-order :modal-first
+   ;; compounds: bare juxtaposition, modifier before head
+   :compound-strategy :juxtapose
+   :compound-order :head-final
+   :compound-linker nil
+   ;; pronouns: "you" for singular and plural, "you all" to disambiguate
+   :pronoun-collapse :collapse-2
+   :plural-pronoun-strategy :quantifier-after
+   ;; no noun classes, no agreement, no pro-drop, no topic-drop
+   :noun-class-count 0
+   :noun-classes nil
+   :noun-class-scheme nil
+   :agreement-type :none
+   :articles :both
+   :pro-drop nil
+   :topic-drop nil
+   ;; info structure: topic fronting, impersonal demotion
+   :promote-strategy :fronting
+   :topic-particle nil
+   :demote-strategy :impersonal
+   ;; per-feature morphology: strategies and English markers
+   :morphology
+   (list
+    :accusative '(:strategy :none)
+    :genitive '(:strategy :suffix :marker ("z"))            ; 's
+    :plural '(:strategy :suffix :marker ("s"))              ; -s
+    :past '(:strategy :suffix :marker ("d"))                ; -ed
+    :present '(:strategy :none)
+    :future '(:strategy :particle-before :marker ("w" "ɪ" "l"))
+    :negation '(:strategy :particle-before :marker ("n" "ɑ" "t"))
+    :imperative '(:strategy :none)
+    :comparative '(:strategy :particle-before :marker ("m" "ɔ" "ɹ"))
+    :comp-standard '(:strategy :particle-before :marker ("ð" "æ" "n"))
+    :conditional '(:strategy :particle-before :marker ("ɪ" "f"))
+    :oblique-with '(:strategy :particle-before :marker ("w" "ɪ" "θ"))
+    :oblique-from '(:strategy :particle-before :marker ("f" "ɹ" "ʌ" "m"))
+    :oblique-to '(:strategy :particle-before :marker ("t" "u"))
+    :oblique-on '(:strategy :particle-before :marker ("ɑ" "n"))
+    :oblique-at '(:strategy :particle-before :marker ("æ" "t"))
+    :oblique-over '(:strategy :particle-before :marker ("o" "ʊ" "v" "ə" "ɹ"))
+    :temporal-before '(:strategy :particle-before :marker ("b" "ɪ" "f" "ɔ" "ɹ"))
+    :temporal-after '(:strategy :particle-before :marker ("æ" "f" "t" "ə" "ɹ"))
+    :temporal-when '(:strategy :particle-before :marker ("w" "ɛ" "n"))
+    :relative '(:strategy :particle-before :marker ("h" "u"))
+    :purpose '(:strategy :particle-before :marker ("t" "u"))
+    :causative '(:strategy :particle-before :marker ("m" "e" "ɪ" "k"))
+    :quotative '(:strategy :particle-before :marker ("ð" "æ" "t"))
+    :adversative '(:strategy :particle-before :marker ("b" "ʌ" "t"))
+    :exception '(:strategy :particle-before :marker ("ɪ" "k" "s" "ɛ" "p" "t"))
+    :degree '(:strategy :particle-before :marker ("s" "o" "ʊ"))
+    :interrogative '(:strategy :none)
+    :modal-ability '(:strategy :none)
+    :modal-obligation '(:strategy :none)
+    :causal '(:strategy :particle-before :marker ("b" "ɪ" "k" "ɔ" "z"))
+    :exclamation '(:strategy :none)
+    :simile '(:strategy :none)
+    :complementizer '(:strategy :particle-before :marker ("ð" "æ" "t"))
+    :passive '(:strategy :none)
+    :optative '(:strategy :particle-before :marker ("m" "e" "ɪ"))
+    :concessive '(:strategy :particle-before :marker ("ð" "o" "ʊ"))
+    :counterfactual '(:strategy :particle-before :marker ("w" "ʊ" "d"))
+    :definite '(:strategy :particle-before :marker ("ð" "ə"))
+    :indefinite '(:strategy :particle-before :marker ("ə"))
+    :adverbialize '(:strategy :suffix :marker ("l" "i"))     ; -ly
+    :agentive '(:strategy :suffix :marker ("ə" "ɹ"))         ; -er
+    :adj-from-noun '(:strategy :suffix :marker ("i"))        ; -y
+    :noun-from-adj '(:strategy :suffix :marker ("n" "ə" "s")))) ; -ness
+  "Hand-built English-like grammar :features plist for GENERATE-GRAMMAR.")
+
+(defun apply-english-grammar (language)
+  "Replace LANGUAGE's grammar with the hand-built English-like grammar and
+   regenerate everything that depends on it (function-word lexicon entries
+   and inflectional paradigms).  Typically applied to the chain root (e.g. a
+   creole) before retrofitting; derive daughters with :cliticization-rate 0
+   so the hand-picked strategies survive."
+  (generate-grammar language :typology :analytic
+                             :features *english-grammar-features*)
+  ;; The grammar switch may activate function words the old grammar lacked
+  ;; (auxiliary modals, the plural quantifier).  Only add what's missing.
+  (unless (lookup-word language "can")
+    (generate-modal-lexicon language))
+  (unless (lookup-word language "plural-quantifier")
+    (define-word language "plural-quantifier" 'particle :syllables 1))
+  (generate-paradigms language)
+  language)
+
+;;; Phonology coverage — which English phones can this language reach?
+
+(defun evolved-inventory (lang)
+  "The phone inventory of LANG: its root's inventory pushed through the
+   derivation chain (a phone's image under each sound change in order)."
+  (multiple-value-bind (root chain) (collect-derivation-chain lang)
+    (let ((phones (append (mapcar #'car (consonant-frequencies root))
+                          (mapcar #'car (vowel-frequencies root)))))
+      (remove-duplicates
+       (iter (for p in phones)
+         (let* ((evolved (if chain
+                             (evolve chain (list (ensure-phone-point p)))
+                             (list p)))
+                (ph (find-if #'phone-p (flatten evolved))))
+           (when ph (collect (ensure-raw-phone ph)))))
+       :key #'ipa :test #'equal))))
+
+(defun english-phones ()
+  "All distinct IPA symbols used by the English targets."
+  (remove-duplicates (apply #'append (mapcar #'rest *english-ipa*))
+                     :test #'equal))
+
+(defun english-coverage-report (lang &key (near-threshold 4.0))
+  "Report how well LANG's evolved inventory covers the phones the English
+   targets need.  For each needed phone: EXACT if present, NEAR (with the
+   substitute) if something within NEAR-THRESHOLD exists, MISSING otherwise.
+   Use this to choose parent inventories and sound changes: back-formation
+   can only reach English words built from EXACT/NEAR phones."
+  (let ((inventory (evolved-inventory lang))
+        (exact 0) (near 0) (missing 0))
+    (format t "~&English phone coverage for ~a (~a phones in inventory):~%"
+            (lang-name lang) (length inventory))
+    (dolist (sym (sort (english-phones) #'string<))
+      (let ((target (ensure-phone sym)))
+        (if (member sym inventory :key #'ipa :test #'equal)
+            (incf exact)
+            (let ((best nil) (best-dist most-positive-fixnum))
+              (dolist (candidate inventory)
+                (let ((d (cond ((and (consonant-p target) (consonant-p candidate))
+                                (consonant-distance target candidate))
+                               ((and (vowel-p target) (vowel-p candidate))
+                                (vowel-distance target candidate))
+                               (t most-positive-fixnum))))
+                  (when (< d best-dist)
+                    (setf best candidate best-dist d))))
+              (cond
+                ((and best (<= best-dist near-threshold))
+                 (incf near)
+                 (format t "  NEAR    ~a -> ~a (~,2f)~%" sym (ipa best) best-dist))
+                (t
+                 (incf missing)
+                 (format t "  MISSING ~a~@[ (closest ~a at ~,2f)~]~%"
+                         sym (when best (ipa best)) (when best best-dist))))))))
+    (format t "  ~a exact, ~a near, ~a missing~%" exact near missing)
+    (values exact near missing)))
 
 (defun english-form (gloss)
   "Return the English target for GLOSS as a reanalyzed word, or NIL."

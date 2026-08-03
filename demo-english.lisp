@@ -51,20 +51,29 @@
                             nil))
         when candidate return candidate))
 
-(defun make-imperial-chain (&key (vocabulary (demo-vocabulary)) corpus)
+(defun make-imperial-chain (&key (vocabulary (demo-vocabulary)) corpus
+                              (english-grammar t))
   "Build the halfling/orc → creole → imperial/provincial chain.  The creole's
    derived/compound lexicon is NOT yet generated — do that after retrofitting
-   so compounds are built from the retrofitted stems.
+   so compounds are built from the retrofitted stems.  With ENGLISH-GRAMMAR
+   (the default), the creole gets the hand-built English grammar in place of
+   the creolized substrate grammar, and imperial-trade derives with zero
+   strategy drift so the hand-picked grammar survives intact.
    Returns (values imperial provincial creole halfling orcish)."
   (let* ((halfling (build-english-proto #'halfling 12 :mixed "proto-halfling"
                                         :vocabulary vocabulary))
          (orcish (build-english-proto #'orcish 10 :synthetic "proto-orcish"
                                       :vocabulary vocabulary))
          (corpus (or corpus (append (demo-phrases) (sample-phrases))))
-         (creole (pidginize halfling orcish corpus :name "imperial-creole"))
-         (imperial (derive-language creole *imperial-changes* :name "imperial-trade"))
-         (provincial (derive-language creole *provincial-changes* :name "provincial-trade")))
-    (values imperial provincial creole halfling orcish)))
+         (creole (pidginize halfling orcish corpus :name "imperial-creole")))
+    (when english-grammar
+      (apply-english-grammar creole))
+    (let ((imperial (derive-language creole *imperial-changes*
+                                     :name "imperial-trade"
+                                     :cliticization-rate (if english-grammar 0 0.15)))
+          (provincial (derive-language creole *provincial-changes*
+                                       :name "provincial-trade")))
+      (values imperial provincial creole halfling orcish))))
 
 (defun finish-creole-lexicon (creole &key exclude)
   "Generate the creole's derived words, compounds, and paradigms.  Run AFTER
@@ -93,6 +102,8 @@
   (initialize)
   (multiple-value-bind (imperial provincial creole halfling orcish)
       (make-imperial-chain)
+    (format t "~%=== English phone coverage ===~%")
+    (english-coverage-report imperial)
     (format t "~%=== Back-forming ~a English targets through ~a ===~%"
             (length glosses) (lang-name imperial))
     (retrofit-english-lexicon imperial glosses :schedule schedule)
