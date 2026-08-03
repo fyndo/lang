@@ -1442,3 +1442,109 @@
         (phrases (sample-text)))
     (translate-phrases langs phrases "SAMPLE TEXT — FULL TRANSLATION")
     langs))
+
+;;; ---------------------------------------------------------------------------
+;;; Back-evolution demo: "the Common Speech descends from a halfling-orc creole"
+;;;
+;;; Tells the whole story in both directions:
+;;;   1. Build the ancient halfling x orc trade creole (the TRUE ancestor).
+;;;   2. Evolve it FORWARD through a chain of sound changes into the modern
+;;;      "Common Speech" (our English stand-in).
+;;;   3. Throw the ancestor away and RECONSTRUCT it by running the same changes
+;;;      backward from the Common Speech alone (back-derive-language).
+;;;   4. Show ancestor vs. evolved target vs. reconstruction side by side, and
+;;;      report how faithfully the round trip recovered the ancestor.
+
+(defparameter *common-speech-history*
+  '((C :voicing voiceless :manner plosive -> :manner fricative) ; lenition: p t k -> f th h
+    (V :height open -> :height mid)                             ; raising: a -> e/o
+    (C :manner fricative :voicing voiced -> :voicing voiceless) ; fricative devoicing
+    (V :backness back -> :backness central)                    ; back-vowel centralization
+    (C :stress unstressed :manner plosive -> :voicing voiceless)) ; unstressed-stop devoicing (a MERGER)
+  "A plausible chain of sound changes carrying the proto-creole to the modern
+   Common Speech, newest change last (the order DERIVE-LANGUAGE expects).
+   The final clause is an irreversible merger, included to show that
+   back-derivation reports and skips what it cannot honestly undo.")
+
+(defun spell (form)
+  "Plain anglicized spelling of a word FORM (no stress capitalization),
+   or a dash when absent."
+  (if form
+      (format nil "~{~a~}" (mapcar #'anglicize (remove-if-not #'phone-p form)))
+      "--"))
+
+(defun ipa-of (form)
+  (if form (format nil "~{~a~}" (serialize-form form)) "--"))
+
+(defun back-evolution-report (&key (world (make-world)) (glosses *demo-words*))
+  "Run and print the halfling-orc-creole -> Common Speech round trip."
+  (let ((halfling (find "proto-halfling" world :key #'lang-name :test #'string=))
+        (orcish   (find "proto-orcish"   world :key #'lang-name :test #'string=)))
+    (unless (and halfling orcish)
+      (format t "back-evolution-report: need proto-halfling and proto-orcish~%")
+      (return-from back-evolution-report nil))
+    (let* ((corpus (append (demo-phrases) (sample-phrases)
+                           (sample-text) (stress-sentences)))
+           (ancestor (pidginize halfling orcish corpus :name "old-trade-creole"))
+           (common (derive-language ancestor *common-speech-history*
+                                    :name "common-speech"))
+           (recon (back-derive-language common *common-speech-history*
+                                        :name "reconstructed-creole")))
+      (format t "~%============================================================~%")
+      (format t "  THE COMMON SPEECH descends from a HALFLING x ORC creole~%")
+      (format t "============================================================~%")
+      (format t "~%Forward history (proto-creole -> Common Speech), ~a change(s):~%"
+              (length *common-speech-history*))
+      (dolist (c *common-speech-history*) (format t "    ~s~%" c))
+      (multiple-value-bind (inv dropped) (invert-transformer-spec *common-speech-history*)
+        (format t "~%Inverted history used to reconstruct the ancestor ~
+                   (~a clause(s), order reversed):~%" (length inv))
+        (dolist (c inv) (format t "    ~s~%" c))
+        (when dropped
+          (format t "~%Skipped as irreversible (reported, not guessed):~%")
+          (dolist (d dropped)
+            (format t "    ~s~%      -> ~a~%" (car d) (cdr d)))))
+      ;; Compare ancestor / Common Speech / reconstruction for every shared
+      ;; gloss, bucketing each into a clean recovery or a lossy one.
+      (let ((recovered nil) (lossy nil))
+        (dolist (g glosses)
+          (let* ((a (let ((e (lookup-word ancestor g))) (and e (form e))))
+                 (c (let ((e (lookup-word common g)))   (and e (form e))))
+                 (r (let ((e (lookup-word recon g)))     (and e (form e)))))
+            (when (and a c r)
+              ;; Columns are IPA — the ground truth the bucketing uses.  (The
+              ;; anglicized SPELL is lossy: it can collapse distinct IPA to the
+              ;; same letters, which would misplace rows against the buckets.)
+              (let ((row (list g (ipa-of a) (ipa-of c) (ipa-of r))))
+                (if (equal (serialize-form a) (serialize-form r))
+                    (push row recovered)
+                    (push row lossy))))))
+        (setf recovered (nreverse recovered) lossy (nreverse lossy))
+        (labels ((header ()
+                   (format t "~%~18@a  ~13@a  ~13@a  ~13@a  (IPA)~%"
+                           "gloss" "ancestor" "Common Speech" "reconstruction")
+                   (format t "~18@a  ~13@a  ~13@a  ~13@a~%"
+                           "-----" "--------" "-------------" "--------------"))
+                 (rows (rs n)
+                   (dolist (row (subseq rs 0 (min n (length rs))))
+                     (apply #'format t "~18@a  ~13@a  ~13@a  ~13@a~%" row))))
+          (format t "~%Cleanly recovered by the inverted changes ~
+                     (ancestor == reconstruction):")
+          (header) (rows recovered 8)
+          (format t "~%Left changed by an irreversible merger ~
+                     (reconstruction is a best-effort hypothesis):")
+          (header) (rows lossy 8))
+        (let ((total (+ (length recovered) (length lossy))))
+          (format t "~%Round-trip fidelity: ~a / ~a ancestor forms recovered exactly (~,1f%).~%"
+                  (length recovered) total
+                  (if (plusp total) (* 100.0 (/ (length recovered) total)) 0))
+          (format t "The rest were merged away by the history's neutralizations ~
+                     (voicing/manner collapses), which no inverse can honestly undo.~%")))
+      (values ancestor common recon))))
+
+(defun run-back-evolution (&key (seed 42))
+  "Generate a world and run the back-evolution (ancestor reconstruction) demo."
+  (setf *random-state* (sb-ext:seed-random-state seed))
+  (initialize)
+  (back-evolution-report :world (make-world))
+  (values))

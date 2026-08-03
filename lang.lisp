@@ -1310,6 +1310,127 @@ and uses familiar digraphs."
         (generate-paradigms derived)))
     derived))
 
+;;; Backward evolution — reconstructing an ancestor from a target language
+;;;
+;;; DERIVE-LANGUAGE walks a proto-language toward a descendant by applying an
+;;; ordered chain of sound-change clauses.  This section runs that machinery
+;;; in reverse: given a modern target language and the changes believed to
+;;; have produced it, it inverts each clause, reverses their order, and
+;;; applies them to the target to reconstruct a plausible ancestor.
+;;;
+;;; Sound change is many-to-one (mergers, neutralizations), so an inverse is a
+;;; *hypothesis*, not a unique pre-image — exactly the situation a historical
+;;; linguist faces.  A clause that describes an irreversible merger (its
+;;; right-hand side sets a feature whose original value the left-hand side
+;;; never pinned down) is reported and skipped rather than guessed.
+
+(defun plist-keys (plist)
+  (iter (for (k v) on plist by #'cddr) (declare (ignore v)) (collect k)))
+
+(defclass reconstructed-language (derived-language)
+  ((forward-specs   :accessor forward-specs   :initarg :forward-specs   :initform nil)
+   (dropped-changes :accessor dropped-changes :initarg :dropped-changes :initform nil))
+  (:documentation
+   "A language reconstructed by inverting the sound changes that produced its
+    SOURCE.  SOURCE is the modern/target language; TRANSFORMER-SPECS are the
+    inverted changes actually applied; FORWARD-SPECS are the original forward
+    changes; DROPPED-CHANGES lists (forward-clause . reason) pairs for clauses
+    that could not be inverted."))
+
+(defun invert-feature-clause (selector lhs rhs)
+  "Invert a C/V feature clause.  Returns an inverted clause list, or
+   (values nil reason) when the change is an irreversible merger."
+  (let* ((changed (plist-keys rhs))
+         (restorable (remove-if-not (lambda (k) (member k (plist-keys lhs))) changed)))
+    (if (null restorable)
+        (values nil (format nil "merger: sets ~{~a~^, ~} with no prior value to restore"
+                            changed))
+        ;; New LHS describes the post-change phone: the old LHS tests with the
+        ;; changed features overwritten by their new (RHS) values.  New RHS
+        ;; restores each restorable feature to the value the LHS pinned down.
+        (let ((new-lhs (copy-list lhs)))
+          (iter (for (k v) on rhs by #'cddr)
+            (setf (getf new-lhs k) v))
+          (append (list selector) new-lhs (list '->)
+                  (iter (for k in restorable)
+                    (appending (list k (getf lhs k)))))))))
+
+(defun invert-spec-clause (clause)
+  "Invert one sound-change spec CLAUSE.  Returns an inverted clause, or
+   (values nil reason) when it cannot be cleanly inverted."
+  (let ((arrow (position '-> clause)))
+    (if (null arrow)
+        (values nil "structural/named transformer (no '->'), not invertible")
+        (let ((head (first clause))
+              (before (subseq clause 0 arrow))
+              (after (subseq clause (1+ arrow))))
+          (cond
+            ;; C/V feature clause
+            ((member head '(C V))
+             (invert-feature-clause head (rest before) after))
+            ;; IPA literal:  ("x" -> "y")  =>  ("y" -> "x")
+            ((and (stringp head) (= (length before) 1)
+                  (= (length after) 1) (stringp (first after)))
+             (list (first after) '-> head))
+            ;; vector clause:  #(a ...) -> #(x ...)  (swap)
+            ((and (vectorp head) (= (length before) 1)
+                  (= (length after) 1) (vectorp (first after)))
+             (list (first after) '-> head))
+            ((null head)
+             (values nil "epenthesis (insertion) has no unique inverse"))
+            (t
+             (values nil "unsupported clause shape for inversion")))))))
+
+(defun invert-transformer-spec (specs)
+  "Invert a whole chain of sound-change SPECS.  Sound changes compose in
+   order, so the inverse reverses the order and inverts each clause.  Returns
+   (values inverted-specs dropped), where DROPPED is a list of
+   (original-clause . reason) for clauses that could not be inverted."
+  (let ((inverted nil) (dropped nil))
+    (iter (for clause in (reverse specs))
+      (multiple-value-bind (inv reason) (invert-spec-clause clause)
+        (if inv
+            (push inv inverted)
+            (push (cons clause reason) dropped))))
+    (values (nreverse inverted) (nreverse dropped))))
+
+(defun back-derive-language (target forward-specs &key name)
+  "Reconstruct a plausible ancestor of TARGET.  FORWARD-SPECS are the sound
+   changes believed to have produced TARGET from that ancestor; they are
+   inverted (order reversed, each clause flipped) and applied to TARGET's
+   lexicon and grammar.  Irreversible mergers are skipped and recorded in the
+   result's DROPPED-CHANGES."
+  (multiple-value-bind (inverted dropped) (invert-transformer-spec forward-specs)
+    (let* ((transformers (mapcar #'list (parse-transformer inverted)))
+           (reconstructed (make-instance 'reconstructed-language
+                                         :name name
+                                         :source target
+                                         :transformers transformers
+                                         :transformer-specs inverted
+                                         :forward-specs forward-specs
+                                         :dropped-changes dropped)))
+      (setf (lexicon reconstructed)
+            (iter (for entry in (lexicon target))
+              (collect (make-instance 'lexical-entry
+                                      :gloss (gloss entry)
+                                      :form (evolve transformers (form entry))
+                                      :category (category entry)
+                                      :origin (cons :reconstructed (lang-name target))
+                                      :domain (domain entry)
+                                      :noun-class (noun-class entry)
+                                      :inflected-forms
+                                      (mapcar (lambda (pair)
+                                                (cons (car pair)
+                                                      (evolve transformers (cdr pair))))
+                                              (inflected-forms entry))))))
+      (when (grammar target)
+        (setf (grammar reconstructed)
+              (evolve-grammar (grammar target) transformers))
+        (generate-paradigms reconstructed)
+        (when (disambiguate-markers reconstructed)
+          (generate-paradigms reconstructed)))
+      reconstructed)))
+
 ;;; Save/Restore
 
 (defun serialize-form (form)
@@ -1386,6 +1507,16 @@ and uses familiar digraphs."
         :name (lang-name lang)
         :source (lang-name (source lang))
         :transformer-specs (transformer-specs lang)
+        :lexicon (serialize-lexicon (lexicon lang))
+        :grammar (serialize-grammar (grammar lang))))
+
+(defmethod serialize-language ((lang reconstructed-language))
+  (list :reconstructed-language
+        :name (lang-name lang)
+        :source (lang-name (source lang))
+        :transformer-specs (transformer-specs lang)
+        :forward-specs (forward-specs lang)
+        :dropped-changes (mapcar #'car (dropped-changes lang))
         :lexicon (serialize-lexicon (lexicon lang))
         :grammar (serialize-grammar (grammar lang))))
 
