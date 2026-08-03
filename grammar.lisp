@@ -538,20 +538,53 @@ If not, create a fresh scope so register-referent/register-tense work."
                         (setf words (apply-inflection words rule)))))
                   words)))))))
 
+(defun np-determiner-rule (lang noun def)
+  "The morpheme rule marking definiteness DEF on NOUN — the class-specific
+   rule when the noun has a class, else the base rule."
+  (let* ((entry (lookup-word lang (name noun)))
+         (nc (when entry (noun-class entry)))
+         (class-feat (when nc
+                       (intern (format nil "~a-~a" (symbol-name def)
+                                       (symbol-name nc))
+                               :keyword))))
+    (or (when class-feat (find-morpheme-rule lang class-feat :noun))
+        (find-morpheme-rule lang def :noun))))
+
 (defmethod render ((lang language) (np noun-phrase) &key features gloss)
   (let* ((np-order (gfeature lang :np-order))
          (parts (components np))
          (noun-part (find-if (lambda (c) (typep c 'noun-like)) parts))
          (adjs (remove-if-not (lambda (c) (typep c 'adjective)) parts))
-         (noun-words (render lang noun-part :features features :gloss gloss))
-         (nc (when (typep noun-part 'noun-like)
-               (extract-noun-class lang noun-part)))
-         (adj-features (when nc (list nc)))
-         (adj-words (iter (for a in adjs)
-                      (appending (render lang a :features adj-features :gloss gloss)))))
-    (linearize np-order
-               (list :adjective adj-words
-                     :noun noun-words))))
+         ;; A particle determiner scopes over the whole NP: suppress it on
+         ;; the noun and attach it at the phrase edge, so adjectives fall
+         ;; inside it ("the wise wolf", not "wise the wolf").  Affix
+         ;; determiners stay on the noun.
+         (det (when (and adjs (typep noun-part 'noun))
+                (definiteness noun-part)))
+         (det-rule (when det (np-determiner-rule lang noun-part det)))
+         (lift-det (and det det-rule (particle-strategy-p det-rule))))
+    (when lift-det
+      (setf (definiteness noun-part) nil))
+    (unwind-protect
+         (let* ((noun-words (render lang noun-part :features features :gloss gloss))
+                (nc (when (typep noun-part 'noun-like)
+                      (extract-noun-class lang noun-part)))
+                (adj-features (when nc (list nc)))
+                (adj-words (iter (for a in adjs)
+                             (appending (render lang a :features adj-features :gloss gloss))))
+                (phrase (linearize np-order
+                                   (list :adjective adj-words
+                                         :noun noun-words))))
+           (if lift-det
+               (let ((det-words (if gloss
+                                    (list (symbol-name (mrule-feature det-rule)))
+                                    (list (deserialize-form (mrule-marker det-rule))))))
+                 (if (eql (mrule-strategy det-rule) :particle-before)
+                     (append det-words phrase)
+                     (append phrase det-words)))
+               phrase))
+      (when lift-det
+        (setf (definiteness noun-part) det)))))
 
 (defmethod render ((lang language) (a adjective) &key features gloss)
   (if gloss
