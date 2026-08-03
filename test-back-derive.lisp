@@ -23,6 +23,7 @@
 
 (defun run-back-derive-tests ()
   (setf *bd-pass* 0 *bd-fail* 0)
+  (setf *random-state* (sb-ext:seed-random-state 42))
 
   (format t "~%=== Test 1: invert a consonant feature clause ===~%")
   (bd-check "plosive->fricative inverts to fricative->plosive"
@@ -87,7 +88,19 @@
               (when (equal (serialize-form p) (serialize-form r)) (incf hits)))))
         (format t "  round-trip: ~a/~a proto forms recovered exactly~%" hits total)
         (bd-check-true "cleanly-invertible chain recovers a majority of forms"
-                       (and (plusp total) (>= (/ hits total) 1/2))))))
+                       (and (plusp total) (>= (/ hits total) 1/2))))
+      ;; Forward-consistency is the honest test: even where the reconstruction is
+      ;; not the true proto, it should re-evolve forward to the target.  Judge the
+      ;; inverse by running it forward, the way find-loanword judges an adaptation.
+      ;; Forward-consistency is high but not perfect: the imperfect tail is
+      ;; exactly where an analytic inverse breaks down (feature interactions the
+      ;; clause-by-clause flip can't capture) and a forward+Metropolis search is
+      ;; the right tool.  Require a strong majority, not perfection.
+      (multiple-value-bind (frac fwd-hits fwd-total) (reconstruction-consistency recon)
+        (format t "  forward-consistency: ~a/~a reconstructions re-evolve to target~%"
+                fwd-hits fwd-total)
+        (bd-check-true "the strong majority of reconstructions are forward-consistent"
+                       (and (plusp fwd-total) (>= frac 9/10))))))
 
   (format t "~%=== back-derive tests: ~a passed, ~a failed ===~%" *bd-pass* *bd-fail*)
   (values *bd-pass* *bd-fail*))

@@ -33,6 +33,28 @@ and skipped rather than guessed.
   `forward-specs` are the original changes, and `dropped-changes` records the
   mergers that could not be undone.
 
+### Judge a reconstruction by evolving it forward
+
+An inverse is only as good as the forward derivation it predicts, so don't
+trust the inverse — check it. A reconstruction is *forward-consistent* for a
+word when re-evolving it forward through the original changes lands back on the
+target: it is then a valid pre-image, even if it isn't the unique original
+(sound change is many-to-one, so several ancestors can be forward-consistent).
+
+- `(forward-consistent-p reconstruction target-form forward-specs)` — does this
+  reconstructed form re-evolve forward to the target?
+- `(reconstruction-consistency recon)` — the share of a reconstruction's lexicon
+  that is forward-consistent.
+
+This is the same principle the loanword adapter (`find-loanword`) runs on:
+because loanword adaptation has no clean invertible rule-chain, it never
+inverts — it samples candidate forms, evolves them **forward**, and uses
+Metropolis/`anneal` to accept-reject on distance to the target. Analytic
+inversion is the fast path for feature-rule chains (and is forward-consistent
+for most of a lexicon); a forward + Metropolis search is the right tool for the
+non-invertible tail (insertions/deletions, coalescence) and when you want to
+*sample* the distribution of plausible ancestors rather than pick one.
+
 ### Demo: "the Common Speech descends from a halfling × orc creole"
 
 `(run-back-evolution)` tells the whole story in both directions: it builds a

@@ -1520,6 +1520,39 @@ and uses familiar digraphs."
         :lexicon (serialize-lexicon (lexicon lang))
         :grammar (serialize-grammar (grammar lang))))
 
+;;; Forward-consistency: the honest test of a reconstruction
+;;;
+;;; An inverse chain is only as good as the forward derivation it predicts.  A
+;;; reconstructed ancestor is *forward-consistent* for a word when re-evolving
+;;; it forward through the original changes lands back on the observed target —
+;;; i.e. the reconstruction is a valid pre-image.  This is a weaker, honest
+;;; criterion than "recovered the unique original": sound change is many-to-one,
+;;; so several ancestors can be forward-consistent and only one was real.
+
+(defun evolve-specs (specs form)
+  "Evolve a phone FORM forward through raw sound-change SPECS."
+  (evolve (mapcar #'list (parse-transformer specs))
+          (mapcar #'ensure-phone-point (remove-if-not #'phone-p (flatten form)))))
+
+(defun forward-consistent-p (reconstruction target-form forward-specs)
+  "T when RECONSTRUCTION re-evolves forward through FORWARD-SPECS to TARGET-FORM."
+  (equal (serialize-form (evolve-specs forward-specs reconstruction))
+         (serialize-form target-form)))
+
+(defun reconstruction-consistency (recon)
+  "Share of RECON's lexicon whose reconstructed form re-evolves forward to the
+   corresponding target (SOURCE) form.  Returns (values fraction matches total)."
+  (let ((target (source recon))
+        (fspecs (forward-specs recon))
+        (matches 0) (total 0))
+    (iter (for entry in (lexicon recon))
+      (for tgt = (lookup-word target (gloss entry)))
+      (when tgt
+        (incf total)
+        (when (forward-consistent-p (form entry) (form tgt) fspecs)
+          (incf matches))))
+    (values (if (plusp total) (/ matches total) 0) matches total)))
+
 (defun save-world (languages filename)
   (with-open-file (s filename :direction :output :if-exists :supersede)
     (write (mapcar #'serialize-language languages) :stream s :readably t :pretty t)))

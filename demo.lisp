@@ -1505,21 +1505,24 @@
           (dolist (d dropped)
             (format t "    ~s~%      -> ~a~%" (car d) (cdr d)))))
       ;; Compare ancestor / Common Speech / reconstruction for every shared
-      ;; gloss, bucketing each into a clean recovery or a lossy one.
-      (let ((recovered nil) (lossy nil))
+      ;; gloss.  Two independent questions per word:
+      ;;   exact?      reconstruction == the TRUE ancestor (recovered the real one)
+      ;;   consistent? reconstruction re-evolves FORWARD to the target (a valid
+      ;;               pre-image) -- the honest test, the way find-loanword judges.
+      (let ((exact nil) (alt nil) (broken nil))
         (dolist (g glosses)
           (let* ((a (let ((e (lookup-word ancestor g))) (and e (form e))))
                  (c (let ((e (lookup-word common g)))   (and e (form e))))
                  (r (let ((e (lookup-word recon g)))     (and e (form e)))))
             (when (and a c r)
-              ;; Columns are IPA — the ground truth the bucketing uses.  (The
-              ;; anglicized SPELL is lossy: it can collapse distinct IPA to the
-              ;; same letters, which would misplace rows against the buckets.)
+              ;; Columns are IPA -- the ground truth.  (The anglicized SPELL is
+              ;; lossy: it can collapse distinct IPA to the same letters.)
               (let ((row (list g (ipa-of a) (ipa-of c) (ipa-of r))))
-                (if (equal (serialize-form a) (serialize-form r))
-                    (push row recovered)
-                    (push row lossy))))))
-        (setf recovered (nreverse recovered) lossy (nreverse lossy))
+                (cond
+                  ((equal (serialize-form a) (serialize-form r)) (push row exact))
+                  ((forward-consistent-p r c *common-speech-history*) (push row alt))
+                  (t (push row broken)))))))
+        (setf exact (nreverse exact) alt (nreverse alt) broken (nreverse broken))
         (labels ((header ()
                    (format t "~%~18@a  ~13@a  ~13@a  ~13@a  (IPA)~%"
                            "gloss" "ancestor" "Common Speech" "reconstruction")
@@ -1528,18 +1531,28 @@
                  (rows (rs n)
                    (dolist (row (subseq rs 0 (min n (length rs))))
                      (apply #'format t "~18@a  ~13@a  ~13@a  ~13@a~%" row))))
-          (format t "~%Cleanly recovered by the inverted changes ~
-                     (ancestor == reconstruction):")
-          (header) (rows recovered 8)
-          (format t "~%Left changed by an irreversible merger ~
-                     (reconstruction is a best-effort hypothesis):")
-          (header) (rows lossy 8))
-        (let ((total (+ (length recovered) (length lossy))))
-          (format t "~%Round-trip fidelity: ~a / ~a ancestor forms recovered exactly (~,1f%).~%"
-                  (length recovered) total
-                  (if (plusp total) (* 100.0 (/ (length recovered) total)) 0))
-          (format t "The rest were merged away by the history's neutralizations ~
-                     (voicing/manner collapses), which no inverse can honestly undo.~%")))
+          (format t "~%Recovered the TRUE ancestor exactly (ancestor == reconstruction):")
+          (header) (rows exact 6)
+          (format t "~%A DIFFERENT but valid pre-image (reconstruction != ancestor, ~
+                     yet still evolves forward to the target):")
+          (header) (rows alt 6))
+        (let ((total (+ (length exact) (length alt) (length broken))))
+          (format t "~%Exact-ancestor recovery: ~a / ~a (~,1f%) -- ~
+                     the rest were merged away and cannot be uniquely undone.~%"
+                  (length exact) total
+                  (if (plusp total) (* 100.0 (/ (length exact) total)) 0))
+          (format t "Forward-consistency:     ~a / ~a (~,1f%) -- ~
+                     reconstructions that re-evolve forward to the target.~%"
+                  (+ (length exact) (length alt)) total
+                  (if (plusp total)
+                      (* 100.0 (/ (+ (length exact) (length alt)) total)) 0))
+          (format t "The forward check (not trusting the inverse) is how ~
+                     find-loanword judges an adaptation: run it forward and measure.~%")
+          (when broken
+            (format t "~a form(s) were NOT forward-consistent -- these are where an ~
+                       analytic inverse genuinely fails and a forward+Metropolis search ~
+                       (as in find-loanword) is the right tool.~%"
+                    (length broken)))))
       (values ancestor common recon))))
 
 (defun run-back-evolution (&key (seed 42))
