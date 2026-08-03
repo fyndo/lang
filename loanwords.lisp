@@ -253,47 +253,70 @@
           language
           :debug debug :fitness-fn fitness-fn)))
 
+(defun default-anneal-schedule (&key (stages 41) (steps 25000))
+  "Annealing schedule: STAGES exponentially-cooling temperature stages of
+   STEPS Metropolis steps each."
+  (iter (for i from 0 below stages)
+    (collect (cons steps (* 10 (exp (- (/ i 2))))))))
+
+(defun back-form-word (target-form lang &key (schedule (default-anneal-schedule))
+                                          debug)
+  "Search the root of LANG's derivation chain for a form that evolves into
+   something close to TARGET-FORM in LANG.  Returns
+   (values root-word evolved-word distance); for a proto-language (empty
+   chain) root-word and evolved-word are the same word.  This is the core of
+   both loanword adaptation and English-target back-formation: the annealer
+   proposes root-language words, but fitness is measured on the surface form
+   after running the whole chain of sound changes forward."
+  (multiple-value-bind (root chain) (collect-derivation-chain lang)
+    (let* ((flat-target (flatten target-form))
+           (evolve-candidate
+             (lambda (candidate)
+               (if chain
+                   (evolve chain (mapcar #'ensure-phone-point (flatten candidate)))
+                   (flatten candidate))))
+           (result
+             (anneal schedule
+                     flat-target
+                     (list (deconstructed-syllable root))
+                     root
+                     :debug debug
+                     ;; A candidate that evolves to nothing would score 0
+                     ;; against any vowel-only target — reject it outright.
+                     :fitness-fn (lambda (candidate)
+                                   (let ((surface (flatten (funcall evolve-candidate candidate))))
+                                     (if (remove-if-not #'phone-p surface)
+                                         (loanword-similarity-max-consonants
+                                          flat-target surface)
+                                         most-positive-fixnum)))))
+           (root-word (reanalyze result))
+           (evolved (if chain
+                        (funcall evolve-candidate result)
+                        root-word)))
+      (values root-word
+              evolved
+              (loanword-similarity-max-consonants (flatten evolved) flat-target)))))
+
 (fmakunbound 'find-loanword)
 (defgeneric find-loanword (loanword language))
 
 (defmethod find-loanword (loanword (language proto-language))
-  (let* ((flat-loanword (flatten loanword))
-         (result
-           (anneal (iter (for i from 0 to 40)
-                     (collect (cons 25000 (* 10 (exp (- (/ i 2)))))))
-                   flat-loanword
-                   (list (deconstructed-syllable language))
-                   language))
-         (word (reanalyze result)))
+  (multiple-value-bind (word evolved distance) (back-form-word loanword language)
+    (declare (ignore evolved))
     (format t "~a ~a ~f~%"
             (alt-print-word word)
             (alt-print-word loanword)
-            (loanword-similarity-max-consonants (flatten result) flat-loanword))
+            distance)
     word))
 
 (defmethod find-loanword (loanword (lang derived-language))
-  (multiple-value-bind (proto chain) (collect-derivation-chain lang)
-    (let* ((flat-loanword (flatten loanword))
-           (evolve-candidate (lambda (candidate)
-                               (evolve chain
-                                       (mapcar #'ensure-phone-point
-                                               (flatten candidate)))))
-           (result
-             (anneal (iter (for i from 0 to 40)
-                       (collect (cons 25000 (* 10 (exp (- (/ i 2)))))))
-                     flat-loanword
-                     (list (deconstructed-syllable proto))
-                     proto
-                     :fitness-fn (lambda (candidate)
-                                   (loanword-similarity-max-consonants
-                                    flat-loanword
-                                    (flatten (funcall evolve-candidate candidate))))))
-           (evolved (funcall evolve-candidate result)))
-      (format t "~a ~a ~f~%"
-              (alt-print-word evolved)
-              (alt-print-word loanword)
-              (loanword-similarity-max-consonants (flatten evolved) flat-loanword))
-      evolved)))
+  (multiple-value-bind (word evolved distance) (back-form-word loanword lang)
+    (declare (ignore word))
+    (format t "~a ~a ~f~%"
+            (alt-print-word evolved)
+            (alt-print-word loanword)
+            distance)
+    evolved))
 
 (defun borrow-word (target-language donor-language gloss)
   (let* ((donor-entry (lookup-word donor-language gloss))
