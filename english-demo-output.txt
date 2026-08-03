@@ -1,408 +1,437 @@
 
-=== Back-forming 200 English targets through imperial-trade ===
-alone         en /ə.loʊn/  root lɨn  surface lɨn (1.50) "lin"
-always        en /ɔl.weɪz/  root lɔ.ɰeʂ  surface lɔ.ɰes (12.00) "loyes"
-ask           en /æsk/  root sɔ.ke  surface sɔ.ke (0.67) "soke"
-bad           en /bæd/  root pɔ.tɨ  surface pɔ.tɨ (12.67) "poti"
+=== English phone coverage ===
+English phone coverage for imperial-trade (19 phones in inventory):
+  NEAR    b -> p (2.00)
+  NEAR    d -> t (2.00)
+  NEAR    f -> ɸ (2.08)
+  NEAR    h -> ʜ (2.00)
+  NEAR    i -> ɨ (0.50)
+  NEAR    j -> ɰ (2.08)
+  NEAR    o -> ɨ (0.17)
+  NEAR    u -> ɨ (0.17)
+  MISSING v (closest ɸ at 4.16)
+  NEAR    w -> ɰ (2.00)
+  NEAR    z -> s (2.00)
+  NEAR    æ -> ɔ (0.00)
+  MISSING ð (closest s at 4.16)
+  NEAR    ɑ -> ɒ (0.17)
+  NEAR    ə -> e (0.00)
+  NEAR    ɛ -> ɔ (0.17)
+  NEAR    ɡ -> k (2.00)
+  NEAR    ɪ -> ɨ (0.00)
+  NEAR    ʃ -> s (2.08)
+  NEAR    ʊ -> ɨ (0.00)
+  NEAR    ʌ -> ɔ (0.17)
+  MISSING ʒ (closest s at 4.16)
+  NEAR    θ -> s (2.08)
+  12 exact, 20 near, 3 missing
+
+=== Back-forming 201 English targets through imperial-trade ===
+alone         en /ə.loʊn/  root len  surface len (0.17) "len"
+always        en /ɔl.weɪz/  root ɔl.ɰeʂ  surface ɔl.ɰes (12.00) "olyes"
+ask           en /æsk/  root sɔ.ka  surface sɔ.ka (0.67) "soka"
+bad           en /bæd/  root pɔɔt  surface pɔɔt (12.67) "poot"
 believe       en /bɪ.liv/  root pɨ.lɨɸ  surface pɨ.lɨɸ (20.98) "pilif"
-bird          en /bəɹd/  root pe.ɹɒt  surface pe.ɹɒt (12.67) "perat"
-bitter        en /bɪ.təɹ/  root ɨp.teeɹ  surface ɨp.teeɹ (8.67) "ipteer"
-blade         en /bleɪd/  root pɨ.leʈ  surface pɨ.let (12.00) "pilet"
-blind         en /blaɪnd/  root pal.nɨt  surface pal.nɨt (12.00) "palnit"
+bird          en /bəɹd/  root pe.ɹeɨt  surface pe.ɹeɨt (12.67) "pereit"
+bitter        en /bɪ.təɹ/  root ɨp.ʈe.ɹa  surface ɨp.te.ɹa (8.67) "iptera"
+blade         en /bleɪd/  root ap.let  surface ap.let (12.00) "aplet"
+blind         en /blaɪnd/  root pal.naʈ  surface pal.nat (12.00) "palnat"
 blood         en /blʌd/  root ap.lɔt  surface ap.lɔt (12.17) "aplot"
-brave         en /bɹeɪv/  root peɹ.ɸa  surface peɹ.ɸa (18.48) "perfa"
-break         en /bɹeɪk/  root pa.ɹek  surface pa.ɹek (6.00) "parek"
-bright        en /bɹaɪt/  root pe.ɻat  surface pe.ɹat (6.00) "perat"
-bring         en /bɹɪŋ/  root pɨɹ.ŋɨ  surface pɨɹ.ŋɨ (8.00) "pirngi"
-brother       en /bɹʌ.ðəɹ/  root ap.ɹɔ.seɻ  surface ap.ɹɔ.seɹ (19.31) "aproser"
-burn          en /bəɹn/  root ep.ɹɨ.na  surface ep.ɹɨ.na (6.67) "eprina"
-call          en /kɔl/  root kɔl  surface kɔl (0.00) "kol"
-chain         en /tʃeɪn/  root ʈɨ.sen  surface tɨ.sen (6.24) "tisen"
-charge        en /tʃɑɹ.dʒ/  root tɔs.ɹaɒ.taʂ  surface tɔs.ɹaɒ.tas (26.22) "tosraatas"
-child         en /tʃaɪld/  root ʈas.lɨt  surface tas.lɨt (12.24) "taslit"
-city          en /sɪ.ti/  root sɨat  surface sɨat (2.00) "siat"
-clerk         en /kləɹk/  root ke.leɻ.ke  surface ke.leɹ.ke (0.67) "kelerke"
-cloth         en /klɔθ/  root ak.lɔs  surface ak.lɔs (6.24) "aklos"
-cold          en /koʊld/  root ɨk.lɨt  surface ɨk.lɨt (7.50) "iklit"
+brave         en /bɹeɪv/  root pa.ɹeɸ  surface pa.ɹeɸ (18.48) "paref"
+break         en /bɹeɪk/  root pe.ɹek  surface pe.ɹek (6.00) "perek"
+bright        en /bɹaɪt/  root a.paɹ.ta  surface a.paɹ.ta (6.00) "aparta"
+bring         en /bɹɪŋ/  root ap.ɻɨŋ  surface ap.ɹɨŋ (8.00) "apring"
+brother       en /bɹʌ.ðəɹ/  root pɔɹ.ʂeɹ  surface pɔɹ.seɹ (19.31) "porser"
+burn          en /bəɹn/  root pe.ɹen  surface pe.ɹen (6.67) "peren"
+call          en /kɔl/  root kɔɨl  surface kɔɨl (0.00) "koil"
+chain         en /tʃeɪn/  root et.ʂeen  surface et.seen (6.24) "etseen"
+charge        en /tʃɑɹ.dʒ/  root ʈa.ʂɔ.ɹɨ.taʂ  surface ta.sɔ.ɹɨ.tas (26.22) "tasoritas"
+child         en /tʃaɪld/  root ta.ʂal.tɨ  surface ta.sal.tɨ (12.24) "tasalti"
+city          en /sɪ.ti/  root ʂɨt  surface sɨt (2.00) "sit"
+clerk         en /kləɹk/  root ɒ.kel.ɹɨk  surface ɒ.kel.ɹɨk (0.67) "akelrik"
+cloth         en /klɔθ/  root kɨa.lɔʂ  surface kɨa.lɔs (6.24) "kialos"
+cold          en /koʊld/  root kɨ.lɨt  surface kɨ.lɨt (7.50) "kilit"
 come          en /kʌm/  root kɔm  surface kɔm (0.17) "kom"
-cook          en /kʊk/  root a.kɨk  surface a.kɨk (0.67) "akik"
-council       en /kaʊn.səl/  root kan.seal  surface kan.seal (0.67) "kanseal"
-dark          en /dɑɹk/  root tɒaɹ.ka  surface tɒaɹ.ka (6.17) "taarka"
-daughter      en /dɔ.təɹ/  root a.tɔ.teɻ  surface a.tɔ.teɹ (6.67) "atoter"
-dawn          en /dɔn/  root ʈɔn  surface tɔn (6.00) "ton"
+cook          en /kʊk/  root kɨk  surface kɨk (0.67) "kik"
+council       en /kaʊn.səl/  root kan.sel  surface kan.sel (0.67) "kansel"
+dark          en /dɑɹk/  root ʈɒɹ.ka  surface tɒɹ.ka (6.17) "tarka"
+daughter      en /dɔ.təɹ/  root tɔ.ʈeɹ  surface tɔ.teɹ (6.67) "toter"
+dawn          en /dɔn/  root ɔt.ne  surface ɔt.ne (6.00) "otne"
 day           en /deɪ/  root et  surface et (6.00) "et"
-dead          en /dɛd/  root tɔat  surface tɔat (12.17) "toat"
-death         en /dɛθ/  root tɔɨs  surface tɔɨs (12.41) "tois"
-deep          en /dip/  root tɨp  surface tɨp (6.50) "tip"
+dead          en /dɛd/  root tɔ.ta  surface tɔ.ta (12.17) "tota"
+death         en /dɛθ/  root ɔt.ʂa  surface ɔt.sa (12.41) "otsa"
+deep          en /dip/  root ɨt.pɒ  surface ɨt.pɒ (6.50) "itpa"
 die           en /daɪ/  root ta  surface ta (6.00) "ta"
-dock          en /dɑk/  root ʈɔk  surface tɔk (7.50) "tok"
-dog           en /dɔɡ/  root ʈɔk  surface tɔk (12.00) "tok"
-door          en /dɔɹ/  root tɔ.ɹɨ  surface tɔ.ɹɨ (6.00) "tori"
-dress         en /dɹɛs/  root ɒ.tɔɹ.ʂa  surface ɒ.tɔɹ.sa (6.17) "atorsa"
-earth         en /əɹθ/  root e.ɻaʂ  surface e.ɹas (6.91) "eras"
+dock          en /dɑk/  root tɒk  surface tɒk (6.17) "tak"
+dog           en /dɔɡ/  root ɨ.tɔk  surface ɨ.tɔk (12.00) "itok"
+door          en /dɔɹ/  root ʈɔ.ɹa  surface tɔ.ɹa (6.00) "tora"
+dress         en /dɹɛs/  root ʈɒ.ɻɔʂ  surface tɒ.ɹɔs (6.17) "taros"
+earth         en /əɹθ/  root ɹeʂ  surface ɹes (6.91) "res"
 eat           en /it/  root tɨ  surface tɨ (0.50) "ti"
-empire        en /ɛm.pa.ɪəɹ/  root mɔ.paɹ  surface mɔ.paɹ (0.17) "mopar"
-empty         en /ɛmp.ti/  root mɔ.pɨt  surface mɔ.pɨt (0.67) "mopit"
-end           en /ɛnd/  root nɔt  surface nɔt (6.17) "not"
+empire        en /ɛm.pa.ɪəɹ/  root ɔm.paɹ  surface ɔm.paɹ (0.17) "ompar"
+empty         en /ɛmp.ti/  root ɔm.pɨt  surface ɔm.pɨt (0.67) "ompit"
+end           en /ɛnd/  root nɔʈ  surface nɔt (6.17) "not"
 enemy         en /ɛ.nə.mi/  root nem  surface nem (0.67) "nem"
 fall          en /fɔl/  root ɸɔl  surface ɸɔl (6.24) "fol"
-fast          en /fæst/  root ɸɔ.set  surface ɸɔ.set (6.91) "foset"
-father        en /fɑ.ðəɹ/  root ɒɸ.seɹ  surface ɒɸ.seɹ (19.55) "afser"
-fear          en /fɪɹ/  root ɸɨɹ  surface ɸɨɹ (8.24) "fir"
-fight         en /faɪt/  root ɸat  surface ɸat (6.24) "fat"
+fast          en /fæst/  root ɔɸ.sɒt  surface ɔɸ.sɒt (6.91) "ofsat"
+father        en /fɑ.ðəɹ/  root ɸɒ.seɹ  surface ɸɒ.seɹ (19.55) "faser"
+fear          en /fɪɹ/  root ɸɨɻ  surface ɸɨɹ (8.24) "fir"
+fight         en /faɪt/  root ɸa.te  surface ɸa.te (6.24) "fate"
 find          en /faɪnd/  root aɸ.nat  surface aɸ.nat (12.24) "afnat"
 fire          en /fa.ɪəɹ/  root ɸaɹ  surface ɸaɹ (6.24) "far"
-fleet         en /flit/  root ɸa.lɨt  surface ɸa.lɨt (6.74) "falit"
-flower        en /fla.ʊəɹ/  root ɸɨ.laaɹ  surface ɸɨ.laaɹ (6.24) "filaar"
-follow        en /fɑ.loʊ/  root ɸɒl  surface ɸɒl (6.41) "fal"
-food          en /fud/  root ɸɨt  surface ɸɨt (12.41) "fit"
-forest        en /fɔ.ɹəst/  root a.ɸɔɹ.set  surface a.ɸɔɹ.set (6.91) "aforset"
+fleet         en /flit/  root ɸe.lɨt  surface ɸe.lɨt (6.74) "felit"
+flower        en /fla.ʊəɹ/  root ɸa.laɹ  surface ɸa.laɹ (6.24) "falar"
+follow        en /fɑ.loʊ/  root ɸɔɒl  surface ɸɔɒl (7.74) "foal"
+food          en /fud/  root e.ɸɨt  surface e.ɸɨt (12.41) "efit"
+forest        en /fɔ.ɹəst/  root ɔɸ.ɹeɔ.ʂet  surface ɔɸ.ɹeɔ.set (6.91) "ofreoset"
 free          en /fɹi/  root ɸɨɹ  surface ɸɨɹ (6.74) "fir"
-friend        en /fɹɛnd/  root ɸaɻ.ɔɒn.ʈa  surface ɸaɹ.ɔɒn.ta (12.41) "faroanta"
+friend        en /fɹɛnd/  root ɸɔɨɹ.nɨat  surface ɸɔɨɹ.nɨat (12.41) "foirniat"
 full          en /fʊl/  root ɸɨl  surface ɸɨl (6.91) "fil"
 give          en /ɡɪv/  root kɨɸ  surface kɨɸ (20.48) "kif"
 go            en /ɡoʊ/  root kɨ  surface kɨ (7.50) "ki"
-god           en /ɡɑd/  root kɔʈ  surface kɔt (13.50) "kot"
-gold          en /ɡoʊld/  root ek.lat  surface ek.lat (12.17) "eklat"
+god           en /ɡɑd/  root kɒt  surface kɒt (12.17) "kat"
+gold          en /ɡoʊld/  root kɨ.let  surface kɨ.let (13.50) "kilet"
 good          en /ɡʊd/  root kɨʈ  surface kɨt (12.67) "kit"
-goods         en /ɡʊ.dz/  root kɨt.sɨ  surface kɨt.sɨ (18.67) "kitsi"
-grow          en /ɡɹoʊ/  root e.kɨɻ  surface e.kɨɹ (7.50) "ekir"
-guard         en /ɡɑɹd/  root ɨ.kɒɻ.ʈe  surface ɨ.kɒɹ.te (12.17) "ikarte"
-hand          en /hænd/  root ɔʜ.net  surface ɔʜ.net (12.67) "ohnet"
+goods         en /ɡʊ.dz/  root ɨk.tɔʂ  surface ɨk.tɔs (18.67) "iktos"
+grow          en /ɡɹoʊ/  root keɹ  surface keɹ (6.17) "ker"
+guard         en /ɡɑɹd/  root kɒɨ.ɹat  surface kɒɨ.ɹat (12.17) "kairat"
+hand          en /hænd/  root ʜɔ.nɔt  surface ʜɔ.nɔt (12.67) "honot"
 happy         en /hæ.pi/  root ʜɔp  surface ʜɔp (6.67) "hop"
-harbor        en /hɑɹ.bəɹ/  root ʜɒɹ.peɹ  surface ʜɒɹ.peɹ (12.83) "harper"
-hear          en /hɪɹ/  root ʜɨɹ  surface ʜɨɹ (8.00) "hir"
+harbor        en /hɑɹ.bəɹ/  root ʜɒɹ.peɻ  surface ʜɒɹ.peɹ (12.83) "harper"
+hear          en /hɪɹ/  root e.ʜɨɹ  surface e.ʜɨɹ (8.00) "ehir"
 hide          en /haɪd/  root ʜat  surface ʜat (12.00) "hat"
-hold          en /hoʊld/  root ɨʜ.let  surface ɨʜ.let (13.50) "ihlet"
+hold          en /hoʊld/  root ʜɨ.lɨt  surface ʜɨ.lɨt (13.50) "hilit"
 home          en /hoʊm/  root ʜɨm  surface ʜɨm (7.50) "him"
-hope          en /hoʊp/  root a.ʜep  surface a.ʜep (6.17) "ahep"
-horse         en /hɔɹs/  root ʜɔ.ɹaɒs  surface ʜɔ.ɹaɒs (6.00) "horaas"
-hot           en /hɑt/  root ʜɒt  surface ʜɒt (6.17) "hat"
-house         en /haʊs/  root ʜas  surface ʜas (6.00) "has"
-hunt          en /hʌnt/  root ʜɔ.nɒ.ta  surface ʜɔ.nɒ.ta (6.17) "honata"
-iron          en /a.ɪəɹn/  root ɹan  surface ɹan (0.00) "ran"
-judge         en /dʒʌ.dʒ/  root ɔt.sɔt.sa  surface ɔt.sɔt.sa (37.13) "otsotsa"
-kill          en /kɪl/  root a.kɨl  surface a.kɨl (2.00) "akil"
-king          en /kɪŋ/  root ɨ.kɨŋ  surface ɨ.kɨŋ (2.00) "iking"
-knife         en /naɪf/  root naɸ  surface naɸ (6.24) "naf"
-know          en /noʊ/  root nɨ  surface nɨ (1.50) "ni"
-laugh         en /læf/  root lɔɸ  surface lɔɸ (6.91) "lof"
+hope          en /hoʊp/  root ʜɨp  surface ʜɨp (7.50) "hip"
+horse         en /hɔɹs/  root ɔʜ.ɹɨ.ʂɒ  surface ɔʜ.ɹɨ.sɒ (6.00) "ohrisa"
+hot           en /hɑt/  root ɒʜ.ta  surface ɒʜ.ta (6.17) "ahta"
+house         en /haʊs/  root ʜaʂ  surface ʜas (6.00) "has"
+hunt          en /hʌnt/  root ʜɔan.te  surface ʜɔan.te (6.17) "hoante"
+iron          en /a.ɪəɹn/  root a.ɹɨn  surface a.ɹɨn (0.00) "arin"
+judge         en /dʒʌ.dʒ/  root tɔʂ.tɨs  surface tɔs.tɨs (37.13) "tostis"
+kill          en /kɪl/  root kɨl  surface kɨl (2.00) "kil"
+king          en /kɪŋ/  root kɨŋ  surface kɨŋ (2.00) "king"
+knife         en /naɪf/  root e.naɸ  surface e.naɸ (6.24) "enaf"
+know          en /noʊ/  root ɨn  surface ɨn (1.50) "in"
+laugh         en /læf/  root lɔ.ɸa  surface lɔ.ɸa (6.91) "lofa"
 law           en /lɔ/  root ɔl  surface ɔl (0.00) "ol"
-lead          en /lid/  root lɨ.ʈe  surface lɨ.te (6.50) "lite"
+lead          en /lid/  root ɨl.ʈɒ  surface ɨl.tɒ (6.50) "ilta"
 leaf          en /lif/  root lɨɸ  surface lɨɸ (6.74) "lif"
-letter        en /lɛ.təɹ/  root ɔl.teɻ  surface ɔl.teɹ (0.83) "olter"
+letter        en /lɛ.təɹ/  root ɔl.teɹ  surface ɔl.teɹ (0.83) "olter"
 live          en /lɪv/  root lɨɸ  surface lɨɸ (14.48) "lif"
-long          en /lɔŋ/  root ɔl.ŋa  surface ɔl.ŋa (0.00) "olnga"
-lord          en /lɔɹd/  root ɔl.ɹɒt  surface ɔl.ɹɒt (6.00) "olrat"
+long          en /lɔŋ/  root lɔŋ  surface lɔŋ (0.00) "long"
+lord          en /lɔɹd/  root lɔɹ.ta  surface lɔɹ.ta (6.00) "lorta"
 lose          en /luz/  root lɨs  surface lɨs (6.17) "lis"
 love          en /lʌv/  root lɔɸ  surface lɔɸ (12.65) "lof"
 make          en /meɪk/  root mek  surface mek (0.00) "mek"
-man           en /mæn/  root a.mɔn  surface a.mɔn (0.67) "amon"
-merchant      en /məɹt.ʃənt/  root em.ɹɨ.tɨ.se.net  surface em.ɹɨ.tɨ.se.net (7.57) "emritisenet"
-mercy         en /məɹ.si/  root em.ɹɨʂ  surface em.ɹɨs (1.17) "emris"
-moon          en /mun/  root mɨ.ne  surface mɨ.ne (0.17) "mine"
-mother        en /mʌ.ðəɹ/  root mɔʂ.ɹe  surface mɔs.ɹe (13.31) "mosre"
-mountain      en /maʊn.tən/  root am.nɔ.ʈen  surface am.nɔ.ten (0.67) "amnoten"
-name          en /neɪm/  root ne.mɨ  surface ne.mɨ (0.00) "nemi"
-never         en /nɛ.vəɹ/  root nɔɸ.ɻe  surface nɔɸ.ɹe (13.31) "nofre"
+man           en /mæn/  root mɔan  surface mɔan (0.67) "moan"
+merchant      en /məɹt.ʃənt/  root a.meɹ.tɒ.ʂe.nɔt  surface a.meɹ.tɒ.se.nɔt (7.57) "amertasenot"
+mercy         en /məɹ.si/  root me.ɹɨʂ  surface me.ɹɨs (1.17) "meris"
+moon          en /mun/  root ɨm.nɨ  surface ɨm.nɨ (0.17) "imni"
+mother        en /mʌ.ðəɹ/  root ɔm.seɹ  surface ɔm.seɹ (13.31) "omser"
+mountain      en /maʊn.tən/  root am.neɨt.nɨ  surface am.neɨt.nɨ (0.67) "amneitni"
+name          en /neɪm/  root nem  surface nem (0.00) "nem"
+never         en /nɛ.vəɹ/  root nɔ.ɸeɹ  surface nɔ.ɸeɹ (13.31) "nofer"
 new           en /nu/  root nɨ  surface nɨ (0.17) "ni"
-not           en /nɑt/  root a.nɒt  surface a.nɒt (0.17) "anat"
-obey          en /oʊ.beɪ/  root pe  surface pe (6.00) "pe"
+not           en /nɑt/  root nɒt  surface nɒt (0.17) "nat"
+obey          en /oʊ.beɪ/  root peɒ  surface peɒ (6.00) "pea"
 old           en /oʊld/  root lɨt  surface lɨt (7.50) "lit"
 open          en /oʊ.pən/  root pen  surface pen (0.67) "pen"
-own           en /oʊn/  root nɨ  surface nɨ (1.50) "ni"
-palace        en /pæ.ləs/  root pɔl.ʂe  surface pɔl.se (1.33) "polse"
-path          en /pæθ/  root pɔʂ  surface pɔs (6.91) "pos"
+own           en /oʊn/  root ɨn  surface ɨn (1.50) "in"
+palace        en /pæ.ləs/  root pɔ.leʂ  surface pɔ.les (1.33) "poles"
+path          en /pæθ/  root pɔs  surface pɔs (6.91) "pos"
 people        en /pi.pəl/  root ɨp.pel  surface ɨp.pel (1.17) "ippel"
 play          en /pleɪ/  root pel  surface pel (0.00) "pel"
-pride         en /pɹaɪd/  root ap.ɹat  surface ap.ɹat (6.00) "aprat"
-promise       en /pɹɑ.məs/  root pɒɹ.meɨs  surface pɒɹ.meɨs (0.83) "parmeis"
-protect       en /pɹə.tɛkt/  root peɨɹ.tɔ.kat  surface peɨɹ.tɔ.kat (0.83) "peirtokat"
-proud         en /pɹaʊd/  root ɔp.ɹat  surface ɔp.ɹat (6.00) "oprat"
-rain          en /ɹeɪn/  root eɻ.na  surface eɹ.na (0.00) "erna"
-refuse        en /ɹəf.juz/  root ɹeɸ.ɰɨs  surface ɹeɸ.ɰɨs (19.31) "refyis"
-return        en /ɹɪ.təɹn/  root ɻɨʈ.ɹen  surface ɹɨt.ɹen (2.67) "ritren"
-rich          en /ɹɪ.tʃ/  root ɹɨ.tɔs  surface ɹɨ.tɔs (8.24) "ritos"
-rise          en /ɹaɪz/  root ɹas  surface ɹas (6.00) "ras"
-river         en /ɹɪ.vəɹ/  root ɨɹ.ɸeɹ  surface ɨɹ.ɸeɹ (15.15) "irfer"
+pride         en /pɹaɪd/  root pa.ɹat  surface pa.ɹat (6.00) "parat"
+promise       en /pɹɑ.məs/  root ɨp.ɹɒ.me.ʂe  surface ɨp.ɹɒ.me.se (0.83) "ipramese"
+protect       en /pɹə.tɛkt/  root ɒp.ɻet.kɔt  surface ɒp.ɹet.kɔt (0.83) "apretkot"
+proud         en /pɹaʊd/  root pa.ɹat  surface pa.ɹat (6.00) "parat"
+rain          en /ɹeɪn/  root ɹen  surface ɹen (0.00) "ren"
+refuse        en /ɹəf.juz/  root ɹeɸ.ɰɨʂ  surface ɹeɸ.ɰɨs (19.31) "refyis"
+return        en /ɹɪ.təɹn/  root ɨɹ.teɒɻ.ne  surface ɨɹ.teɒɹ.ne (2.67) "irtearne"
+rich          en /ɹɪ.tʃ/  root ɨɹ.tas  surface ɨɹ.tas (8.24) "irtas"
+rise          en /ɹaɪz/  root ɻaʂ  surface ɹas (6.00) "ras"
+river         en /ɹɪ.vəɹ/  root ɹɨ.ɸeɻ  surface ɹɨ.ɸeɹ (15.15) "rifer"
 road          en /ɹoʊd/  root ɹɨt  surface ɹɨt (7.50) "rit"
 root          en /ɹut/  root ɹɨt  surface ɹɨt (0.17) "rit"
-rule          en /ɹul/  root a.ɹɨl  surface a.ɹɨl (0.17) "aril"
+rule          en /ɹul/  root ɻɨl  surface ɹɨl (0.17) "ril"
 run           en /ɹʌn/  root ɹɔn  surface ɹɔn (0.17) "ron"
 sail          en /seɪl/  root sel  surface sel (0.00) "sel"
-see           en /si/  root ʂɨ  surface sɨ (0.50) "si"
-seed          en /sid/  root ʂɨ.te  surface sɨ.te (6.50) "site"
-sell          en /sɛl/  root ɔs.la  surface ɔs.la (0.17) "osla"
-send          en /sɛnd/  root ɔʂ.nat  surface ɔs.nat (6.17) "osnat"
-serve         en /səɹv/  root es.ɹɔɸ  surface es.ɹɔɸ (13.15) "esrof"
-sharp         en /ʃɑɹp/  root ɒs.ɹɒp  surface ɒs.ɹɒp (6.41) "asrap"
-shield        en /ʃild/  root ɨʂ.let  surface ɨs.let (12.74) "islet"
+see           en /si/  root ɨʂ  surface ɨs (0.50) "is"
+seed          en /sid/  root sɨt  surface sɨt (6.50) "sit"
+sell          en /sɛl/  root ʂɔl  surface sɔl (0.17) "sol"
+send          en /sɛnd/  root ɔʂ.nɒt  surface ɔs.nɒt (6.17) "osnat"
+serve         en /səɹv/  root ʂe.ɹaɸ  surface se.ɹaɸ (13.15) "seraf"
+sharp         en /ʃɑɹp/  root ɨ.sɒ.ɹap  surface ɨ.sɒ.ɹap (6.41) "isarap"
+shield        en /ʃild/  root a.ʂɨ.lat  surface a.sɨ.lat (12.74) "asilat"
 shine         en /ʃaɪn/  root ʂan  surface san (6.24) "san"
-ship          en /ʃɪp/  root sɨɨp  surface sɨɨp (8.24) "siip"
-short         en /ʃɔɹt/  root ɔs.ɻɒt  surface ɔs.ɹɒt (6.24) "osrat"
+ship          en /ʃɪp/  root sɨp  surface sɨp (8.24) "sip"
+short         en /ʃɔɹt/  root ɨ.sɔ.ɹaʈ  surface ɨ.sɔ.ɹat (6.24) "isorat"
 shout         en /ʃaʊt/  root ʂat  surface sat (6.24) "sat"
-silence       en /saɪ.ləns/  root aʂ.le.naeʂ  surface as.le.naes (0.67) "aslenaes"
-silent        en /saɪ.lənt/  root sal.net  surface sal.net (0.67) "salnet"
-sing          en /sɪŋ/  root ʂɨŋ  surface sɨŋ (2.00) "sing"
+silence       en /saɪ.ləns/  root saal.neʂ  surface saal.nes (0.67) "saalnes"
+silent        en /saɪ.lənt/  root a.ʂal.net  surface a.sal.net (0.67) "asalnet"
+sing          en /sɪŋ/  root sɨaŋ  surface sɨaŋ (2.00) "siang"
 sit           en /sɪt/  root sɨt  surface sɨt (2.00) "sit"
-sky           en /s.kaɪ/  root sak  surface sak (0.00) "sak"
-slave         en /sleɪv/  root as.leɸ  surface as.leɸ (12.48) "aslef"
-sleep         en /slip/  root ɒs.lɨp  surface ɒs.lɨp (0.50) "aslip"
-small         en /smɔl/  root ʂa.mɔl  surface sa.mɔl (0.00) "samol"
-snow          en /snoʊ/  root ʂɨn  surface sɨn (1.50) "sin"
-song          en /sɔŋ/  root sɔŋ  surface sɔŋ (0.00) "song"
+sky           en /s.kaɪ/  root saek  surface saek (0.00) "saek"
+slave         en /sleɪv/  root ʂa.leɸ  surface sa.leɸ (12.48) "salef"
+sleep         en /slip/  root ɔs.lɨp  surface ɔs.lɨp (0.50) "oslip"
+small         en /smɔl/  root ʂɨa.mɔl  surface sɨa.mɔl (0.00) "siamol"
+snow          en /snoʊ/  root ɨ.ʂɨn  surface ɨ.sɨn (1.50) "isin"
+song          en /sɔŋ/  root ʂɔ.ŋɒ  surface sɔ.ŋɒ (0.00) "songa"
 speak         en /s.pik/  root ʂa.pɨk  surface sa.pɨk (0.50) "sapik"
-spirit        en /s.pɪ.ɹət/  root sɨp.ɹet  surface sɨp.ɹet (2.67) "sipret"
-square        en /s.kwɛɹ/  root ʂɨk.ɰɔɒɻ  surface sɨk.ɰɔɒɹ (6.17) "sikyoar"
-stand         en /s.tænd/  root a.sɔt.nɒt  surface a.sɔt.nɒt (6.67) "asotnat"
-star          en /s.tɑɹ/  root ɒʂ.ʈɔeɹ  surface ɒs.tɔeɹ (1.50) "astoer"
-stone         en /s.toʊn/  root sa.tɨn  surface sa.tɨn (1.50) "satin"
-stop          en /s.tɑp/  root ʂɨ.ʈɒp  surface sɨ.tɒp (0.17) "sitap"
-story         en /s.tɔ.ɹi/  root ʂe.tɔɔɹ  surface se.tɔɔɹ (0.00) "setoor"
-strange       en /s.tɹeɪn.dʒ/  root ɨs.te.ɻea.ne.tas  surface ɨs.te.ɹea.ne.tas (18.48) "istereanetas"
-strong        en /s.tɹɔŋ/  root as.ʈɨ.ɹɔŋ  surface as.tɨ.ɹɔŋ (0.00) "astirong"
-sun           en /sʌn/  root ɒ.sɔn  surface ɒ.sɔn (0.17) "ason"
-sweet         en /swit/  root ʂɨɰ.tɨ  surface sɨɰ.tɨ (6.50) "siyti"
-sword         en /sɔɹd/  root ɔʂ.ɹa.tɨ  surface ɔs.ɹa.tɨ (6.00) "osrati"
-take          en /teɪk/  root ʈe.kɨ  surface te.kɨ (0.00) "teki"
-think         en /θɪŋk/  root ʂɨ.ŋɒk  surface sɨ.ŋɒk (8.24) "singak"
-tongue        en /tʌŋ/  root tɔŋ  surface tɔŋ (0.17) "tong"
-trade         en /tɹeɪd/  root tɨ.ɻet  surface tɨ.ɹet (6.00) "tiret"
-traitor       en /tɹeɪ.təɹ/  root teɹ.ʈeɹ  surface teɹ.teɹ (0.67) "terter"
-tree          en /tɹi/  root a.tɨɹ  surface a.tɨɹ (0.50) "atir"
-truth         en /tɹuθ/  root et.ɻɨs  surface et.ɹɨs (6.41) "etris"
-wait          en /weɪt/  root ɨ.ɰet  surface ɨ.ɰet (6.00) "iyet"
+spirit        en /s.pɪ.ɹət/  root ʂɨp.ɹet  surface sɨp.ɹet (2.67) "sipret"
+square        en /s.kwɛɹ/  root sak.ɰɔɻ  surface sak.ɰɔɹ (6.17) "sakyor"
+stand         en /s.tænd/  root aʂ.ʈɔ.nɨt  surface as.tɔ.nɨt (6.67) "astonit"
+star          en /s.tɑɹ/  root sɒ.tɒɹ  surface sɒ.tɒɹ (0.17) "satar"
+stone         en /s.toʊn/  root ɨs.tɨ.na  surface ɨs.tɨ.na (1.50) "istina"
+stop          en /s.tɑp/  root ʂɨ.tɒp  surface sɨ.tɒp (0.17) "sitap"
+story         en /s.tɔ.ɹi/  root ʂa.tɔɻ  surface sa.tɔɹ (0.00) "sator"
+strange       en /s.tɹeɪn.dʒ/  root a.ʂat.ɻen.tɔʂ  surface a.sat.ɹen.tɔs (18.48) "asatrentos"
+strong        en /s.tɹɔŋ/  root ɨs.tɨ.ɹɔŋ  surface ɨs.tɨ.ɹɔŋ (0.00) "istirong"
+sun           en /sʌn/  root ʂɔn  surface sɔn (0.17) "son"
+sweet         en /swit/  root ʂɨ.ɰɨt  surface sɨ.ɰɨt (6.50) "siyit"
+sword         en /sɔɹd/  root ɔʂ.ɻɒʈ  surface ɔs.ɹɒt (6.00) "osrat"
+take          en /teɪk/  root ʈek  surface tek (0.00) "tek"
+think         en /θɪŋk/  root ɨʂ.ŋɨk  surface ɨs.ŋɨk (8.24) "isngik"
+tongue        en /tʌŋ/  root a.tɔŋ  surface a.tɔŋ (0.17) "atong"
+trade         en /tɹeɪd/  root te.ɹet  surface te.ɹet (6.00) "teret"
+traitor       en /tɹeɪ.təɹ/  root teɻ.teɹ  surface teɹ.teɹ (0.67) "terter"
+tree          en /tɹi/  root tɨɹ  surface tɨɹ (0.50) "tir"
+truth         en /tɹuθ/  root ɨt.ɻɨs  surface ɨt.ɹɨs (6.41) "itris"
+wait          en /weɪt/  root ɰet  surface ɰet (6.00) "yet"
 walk          en /wɔk/  root ɰɔk  surface ɰɔk (6.00) "yok"
-wall          en /wɔl/  root ɰɔel  surface ɰɔel (6.00) "yoel"
-want          en /wɑnt/  root ɒɰ.nat  surface ɒɰ.nat (6.17) "aynat"
-war           en /wɔɹ/  root ɰɔɒɹ  surface ɰɔɒɹ (6.00) "yoar"
-warm          en /wɔɹm/  root ɰɔ.ɹam  surface ɰɔ.ɹam (6.00) "yoram"
-water         en /wɔ.təɹ/  root ɰɔ.te.ɹe  surface ɰɔ.te.ɹe (6.67) "yotere"
-weep          en /wip/  root ɰɨap  surface ɰɨap (6.50) "yiap"
+wall          en /wɔl/  root ɰɔl  surface ɰɔl (6.00) "yol"
+want          en /wɑnt/  root ɰɔ.neʈ  surface ɰɔ.net (7.50) "yonet"
+war           en /wɔɹ/  root ɰɔɹ  surface ɰɔɹ (6.00) "yor"
+warm          en /wɔɹm/  root ɰɔɻ.me  surface ɰɔɹ.me (6.00) "yorme"
+water         en /wɔ.təɹ/  root ɔɰ.ʈeɨɻ  surface ɔɰ.teɨɹ (6.67) "oyteir"
+weep          en /wip/  root ɰɨp  surface ɰɨp (6.50) "yip"
 wife          en /waɪf/  root ɰaɸ  surface ɰaɸ (12.24) "yaf"
-wind          en /wɪnd/  root ɔ.ɰɨn.te  surface ɔ.ɰɨn.te (14.00) "oyinte"
-wise          en /waɪz/  root ɰaʂ  surface ɰas (12.00) "yas"
-wolf          en /wʊlf/  root ɰɨ.leɸ  surface ɰɨ.leɸ (12.91) "yilef"
-woman         en /wʊ.mən/  root ɰɨ.men  surface ɰɨ.men (7.33) "yimen"
-word          en /wəɹd/  root eɰ.ɹeɨʈ  surface eɰ.ɹeɨt (12.67) "eyreit"
-write         en /ɹaɪt/  root ɹat  surface ɹat (0.00) "rat"
-young         en /jʌŋ/  root ɰɔ.ŋɨ  surface ɰɔ.ŋɨ (6.41) "yongi"
+wind          en /wɪnd/  root ɰɨ.nɔt  surface ɰɨ.nɔt (14.00) "yinot"
+wise          en /waɪz/  root aɰ.sɨ  surface aɰ.sɨ (12.00) "aysi"
+wolf          en /wʊlf/  root ɰɨl.ɸe  surface ɰɨl.ɸe (12.91) "yilfe"
+woman         en /wʊ.mən/  root ɨɰ.men  surface ɨɰ.men (7.33) "iymen"
+word          en /wəɹd/  root eɰ.ɹet  surface eɰ.ɹet (12.67) "eyret"
+write         en /ɹaɪt/  root ɹaat  surface ɹaat (0.00) "raat"
+young         en /jʌŋ/  root ɰɔŋ  surface ɰɔŋ (6.41) "yong"
 1stsingular   en /aɪ/  root a  surface a (0.00) "a"
-2ndsingular   en /ju/  root ɰɨ  surface ɰɨ (6.41) "yi"
-3rdsingular   en /hi/  root ɨʜ  surface ɨʜ (6.50) "ih"
-1stplural     en /wi/  root e.ɰɨ  surface e.ɰɨ (6.50) "eyi"
-2ndplural     en /ju/  root ɨɰ  surface ɨɰ (6.41) "iy"
+2ndsingular   en /ju/  root ɨɰ  surface ɨɰ (6.41) "iy"
+3rdsingular   en /hi/  root ʜɨ  surface ʜɨ (6.50) "hi"
+1stplural     en /wi/  root ɨɰ  surface ɨɰ (6.50) "iy"
+2ndplural     en /ju/  root ɰɨ  surface ɰɨ (6.41) "yi"
 3rdplural     en /ðeɪ/  root se  surface se (12.48) "se"
 can           en /kæn/  root kɔn  surface kɔn (0.67) "kon"
-must          en /mʌst/  root mɔ.ʂat  surface mɔ.sat (0.17) "mosat"
+must          en /mʌst/  root mɔs.eɒt  surface mɔs.eɒt (0.17) "moseat"
 wh-what       en /wʌt/  root ɰɔt  surface ɰɔt (6.17) "yot"
-wh-where      en /wɛɹ/  root ɔɰ.ɹɨ  surface ɔɰ.ɹɨ (6.17) "oyri"
-wh-when       en /wɛn/  root a.ɰɔn  surface a.ɰɔn (6.17) "ayon"
+wh-where      en /wɛɹ/  root ɰɔɹ  surface ɰɔɹ (6.17) "yor"
+wh-when       en /wɛn/  root ɔɰ.nɨ  surface ɔɰ.nɨ (6.17) "oyni"
 wh-why        en /waɪ/  root ɰa  surface ɰa (6.00) "ya"
-wh-how        en /haʊ/  root aʜ  surface aʜ (6.00) "ah"
+wh-how        en /haʊ/  root ʜa  surface ʜa (6.00) "ha"
+plural-quantifier  en /ɔl/  root ɔl  surface ɔl (0.00) "ol"
 
 
 === COGNATES (gloss | creole | imperial | provincial) ===
-alone           lin             lin             lin            
-always          loyes           loyes           loyes          
-ask             soke            soke            sohe           
-bad             poti            poti            fosi           
+alone           len             len             len            
+always          olyes           olyes           olyes          
+ask             soka            soka            soha           
+bad             poot            poot            foos           
 believe         pilif           pilif           filif          
-bird            perat           perat           feras          
-bitter          ipteer          ipteer          ifseer         
-blade           pilet           pilet           files          
-blind           palnit          palnit          falnis         
+bird            pereit          pereit          fereis         
+bitter          iptera          iptera          ifsera         
+blade           aplet           aplet           afles          
+blind           palnat          palnat          falnas         
 blood           aplot           aplot           aflos          
-brave           perfa           perfa           ferfa          
-break           parek           parek           fareh          
-bright          perat           perat           feras          
-bring           pirngi          pirngi          firngi         
-brother         aproser         aproser         afroser        
-burn            eprina          eprina          efrina         
-call            kol             kol             hol            
-chain           tisen           tisen           sisen          
-charge          tosraatas       tosraatas       sosraasas      
-child           taslit          taslit          saslis         
-city            siat            siat            sias           
-clerk           kelerke         kelerke         helerhe        
-cloth           aklos           aklos           ahlos          
-cold            iklit           iklit           ihlis          
+brave           paref           paref           faref          
+break           perek           perek           fereh          
+bright          aparta          aparta          afarsa         
+bring           apring          apring          afring         
+brother         porser          porser          forser         
+burn            peren           peren           feren          
+call            koil            koil            hoil           
+chain           etseen          etseen          esseen         
+charge          tasoritas       tasoritas       sasorisas      
+child           tasalti         tasalti         sasalsi        
+city            sit             sit             sis            
+clerk           akelrik         akelrik         ahelrih        
+cloth           kialos          kialos          hialos         
+cold            kilit           kilit           hilis          
 come            kom             kom             hom            
-cook            akik            akik            ahih           
-council         kanseal         kanseal         hanseal        
-dark            taarka          taarka          saarha         
-daughter        atoter          atoter          asoser         
-dawn            ton             ton             son            
+cook            kik             kik             hih            
+council         kansel          kansel          hansel         
+dark            tarka           tarka           sarha          
+daughter        toter           toter           soser          
+dawn            otne            otne            osne           
 day             et              et              es             
-dead            toat            toat            soas           
-death           tois            tois            sois           
-deep            tip             tip             sif            
+dead            tota            tota            sosa           
+death           otsa            otsa            ossa           
+deep            itpa            itpa            isfa           
 die             ta              ta              sa             
-dock            tok             tok             soh            
-dog             tok             tok             soh            
-door            tori            tori            sori           
-dress           atorsa          atorsa          asorsa         
-earth           eras            eras            eras           
+dock            tak             tak             sah            
+dog             itok            itok            isoh           
+door            tora            tora            sora           
+dress           taros           taros           saros          
+earth           res             res             res            
 eat             ti              ti              si             
-empire          mopar           mopar           mofar          
-empty           mopit           mopit           mofis          
+empire          ompar           ompar           omfar          
+empty           ompit           ompit           omfis          
 end             not             not             nos            
 enemy           nem             nem             nem            
 fall            fol             fol             fol            
-fast            foset           foset           foses          
-father          afser           afser           afser          
+fast            ofsat           ofsat           ofsas          
+father          faser           faser           faser          
 fear            fir             fir             fir            
-fight           fat             fat             fas            
+fight           fate            fate            fase           
 find            afnat           afnat           afnas          
 fire            far             far             far            
-fleet           falit           falit           falis          
-flower          filaar          filaar          filaar         
-follow          fal             fal             fal            
-food            fit             fit             fis            
-forest          aforset         aforset         aforses        
+fleet           felit           felit           felis          
+flower          falar           falar           falar          
+follow          foal            foal            foal           
+food            efit            efit            efis           
+forest          ofreoset        ofreoset        ofreoses       
 free            fir             fir             fir            
-friend          faroanta        faroanta        faroansa       
+friend          foirniat        foirniat        foirnias       
 full            fil             fil             fil            
 give            kif             kif             hif            
 go              ki              ki              hi             
-god             kot             kot             hos            
-gold            eklat           eklat           ehlas          
+god             kat             kat             has            
+gold            kilet           kilet           hiles          
 good            kit             kit             his            
-goods           kitsi           kitsi           hissi          
-grow            ekir            ekir            ehir           
-guard           ikarte          ikarte          iharse         
-hand            ohnet           ohnet           ohnes          
+goods           iktos           iktos           ihsos          
+grow            ker             ker             her            
+guard           kairat          kairat          hairas         
+hand            honot           honot           honos          
 happy           hop             hop             hof            
 harbor          harper          harper          harfer         
-hear            hir             hir             hir            
+hear            ehir            ehir            ehir           
 hide            hat             hat             has            
-hold            ihlet           ihlet           ihles          
+hold            hilit           hilit           hilis          
 home            him             him             him            
-hope            ahep            ahep            ahef           
-horse           horaas          horaas          horaas         
-hot             hat             hat             has            
+hope            hip             hip             hif            
+horse           ohrisa          ohrisa          ohrisa         
+hot             ahta            ahta            ahsa           
 house           has             has             has            
-hunt            honata          honata          honasa         
-iron            ran             ran             ran            
-judge           otsotsa         otsotsa         ossossa        
-kill            akil            akil            ahil           
-king            iking           iking           ihing          
-knife           naf             naf             naf            
-know            ni              ni              ni             
-laugh           lof             lof             lof            
+hunt            hoante          hoante          hoanse         
+iron            arin            arin            arin           
+judge           tostis          tostis          sossis         
+kill            kil             kil             hil            
+king            king            king            hing           
+knife           enaf            enaf            enaf           
+know            in              in              in             
+laugh           lofa            lofa            lofa           
 law             ol              ol              ol             
-lead            lite            lite            lise           
+lead            ilta            ilta            ilsa           
 leaf            lif             lif             lif            
 letter          olter           olter           olser          
 live            lif             lif             lif            
-long            olnga           olnga           olnga          
-lord            olrat           olrat           olras          
+long            long            long            long           
+lord            lorta           lorta           lorsa          
 lose            lis             lis             lis            
 love            lof             lof             lof            
 make            mek             mek             meh            
-man             amon            amon            amon           
-merchant        emritisenet     emritisenet     emrisisenes    
-mercy           emris           emris           emris          
-moon            mine            mine            mine           
-mother          mosre           mosre           mosre          
-mountain        amnoten         amnoten         amnosen        
-name            nemi            nemi            nemi           
-never           nofre           nofre           nofre          
+man             moan            moan            moan           
+merchant        amertasenot     amertasenot     amersasenos    
+mercy           meris           meris           meris          
+moon            imni            imni            imni           
+mother          omser           omser           omser          
+mountain        amneitni        amneitni        amneisni       
+name            nem             nem             nem            
+never           nofer           nofer           nofer          
 new             ni              ni              ni             
-not             anat            anat            anas           
-obey            pe              pe              fe             
+not             nat             nat             nas            
+obey            pea             pea             fea            
 old             lit             lit             lis            
 open            pen             pen             fen            
-own             ni              ni              ni             
-palace          polse           polse           folse          
+own             in              in              in             
+palace          poles           poles           foles          
 path            pos             pos             fos            
 people          ippel           ippel           iffel          
 play            pel             pel             fel            
-pride           aprat           aprat           afras          
-promise         parmeis         parmeis         farmeis        
-protect         peirtokat       peirtokat       feirsohas      
-proud           oprat           oprat           ofras          
-rain            erna            erna            erna           
+pride           parat           parat           faras          
+promise         ipramese        ipramese        iframese       
+protect         apretkot        apretkot        afreshos       
+proud           parat           parat           faras          
+rain            ren             ren             ren            
 refuse          refyis          refyis          refyis         
-return          ritren          ritren          risren         
-rich            ritos           ritos           risos          
+return          irtearne        irtearne        irsearne       
+rich            irtas           irtas           irsas          
 rise            ras             ras             ras            
-river           irfer           irfer           irfer          
+river           rifer           rifer           rifer          
 road            rit             rit             ris            
 root            rit             rit             ris            
-rule            aril            aril            aril           
+rule            ril             ril             ril            
 run             ron             ron             ron            
 sail            sel             sel             sel            
-see             si              si              si             
-seed            site            site            sise           
-sell            osla            osla            osla           
+see             is              is              is             
+seed            sit             sit             sis            
+sell            sol             sol             sol            
 send            osnat           osnat           osnas          
-serve           esrof           esrof           esrof          
-sharp           asrap           asrap           asraf          
-shield          islet           islet           isles          
+serve           seraf           seraf           seraf          
+sharp           isarap          isarap          isaraf         
+shield          asilat          asilat          asilas         
 shine           san             san             san            
-ship            siip            siip            siif           
-short           osrat           osrat           osras          
+ship            sip             sip             sif            
+short           isorat          isorat          isoras         
 shout           sat             sat             sas            
-silence         aslenaes        aslenaes        aslenaes       
-silent          salnet          salnet          salnes         
-sing            sing            sing            sing           
+silence         saalnes         saalnes         saalnes        
+silent          asalnet         asalnet         asalnes        
+sing            siang           siang           siang          
 sit             sit             sit             sis            
-sky             sak             sak             sah            
-slave           aslef           aslef           aslef          
-sleep           aslip           aslip           aslif          
-small           samol           samol           samol          
-snow            sin             sin             sin            
-song            song            song            song           
+sky             saek            saek            saeh           
+slave           salef           salef           salef          
+sleep           oslip           oslip           oslif          
+small           siamol          siamol          siamol         
+snow            isin            isin            isin           
+song            songa           songa           songa          
 speak           sapik           sapik           safih          
 spirit          sipret          sipret          sifres         
-square          sikyoar         sikyoar         sihyoar        
-stand           asotnat         asotnat         asosnas        
-star            astoer          astoer          assoer         
-stone           satin           satin           sasin          
+square          sakyor          sakyor          sahyor         
+stand           astonit         astonit         assonis        
+star            satar           satar           sasar          
+stone           istina          istina          issina         
 stop            sitap           sitap           sisaf          
-story           setoor          setoor          sesoor         
-strange         istereanetas    istereanetas    issereanesas   
-strong          astirong        astirong        assirong       
-sun             ason            ason            ason           
-sweet           siyti           siyti           siysi          
-sword           osrati          osrati          osrasi         
-take            teki            teki            sehi           
-think           singak          singak          singah         
-tongue          tong            tong            song           
-trade           tiret           tiret           sires          
+story           sator           sator           sasor          
+strange         asatrentos      asatrentos      asasrensos     
+strong          istirong        istirong        issirong       
+sun             son             son             son            
+sweet           siyit           siyit           siyis          
+sword           osrat           osrat           osras          
+take            tek             tek             seh            
+think           isngik          isngik          isngih         
+tongue          atong           atong           asong          
+trade           teret           teret           seres          
 traitor         terter          terter          serser         
-tree            atir            atir            asir           
-truth           etris           etris           esris          
-wait            iyet            iyet            iyes           
+tree            tir             tir             sir            
+truth           itris           itris           isris          
+wait            yet             yet             yes            
 walk            yok             yok             yoh            
-wall            yoel            yoel            yoel           
-want            aynat           aynat           aynas          
-war             yoar            yoar            yoar           
-warm            yoram           yoram           yoram          
-water           yotere          yotere          yosere         
-weep            yiap            yiap            yiaf           
+wall            yol             yol             yol            
+want            yonet           yonet           yones          
+war             yor             yor             yor            
+warm            yorme           yorme           yorme          
+water           oyteir          oyteir          oyseir         
+weep            yip             yip             yif            
 wife            yaf             yaf             yaf            
-wind            oyinte          oyinte          oyinse         
-wise            yas             yas             yas            
-wolf            yilef           yilef           yilef          
-woman           yimen           yimen           yimen          
-word            eyreit          eyreit          eyreis         
-write           rat             rat             ras            
-young           yongi           yongi           yongi          
+wind            yinot           yinot           yinos          
+wise            aysi            aysi            aysi           
+wolf            yilfe           yilfe           yilfe          
+woman           iymen           iymen           iymen          
+word            eyret           eyret           eyres          
+write           raat            raat            raas           
+young           yong            yong            yong           
 1stsingular     a               a               a              
-2ndsingular     yi              yi              yi             
-3rdsingular     ih              ih              ih             
-1stplural       eyi             eyi             eyi            
-2ndplural       iy              iy              iy             
+2ndsingular     iy              iy              iy             
+3rdsingular     hi              hi              hi             
+1stplural       iy              iy              iy             
+2ndplural       yi              yi              yi             
 3rdplural       se              se              se             
 can             kon             kon             hon            
-must            mosat           mosat           mosas          
+must            moseat          moseat          moseas         
 wh-what         yot             yot             yos            
-wh-where        oyri            oyri            oyri           
-wh-when         ayon            ayon            ayon           
+wh-where        yor             yor             yor            
+wh-when         oyni            oyni            oyni           
 wh-why          ya              ya              ya             
-wh-how          ah              ah              ah             
+wh-how          ha              ha              ha             
+plural-quantifier ol              ol              ol             
 
 ========================================
   LANGUAGES OF THE WORLD
@@ -554,14 +583,14 @@ wh-how          ah              ah              ah
     CLASS-3 ADJECTIVE: SUFFIX [eʂk]
 
 --- imperial-creole ---
-  Order: (VERB OBJECT SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSED-FIRST
-  Copula: ZERO  Conj: MEDIAL  Adpos: CASE-MARKING
-  Conditional: PARTICLE ((PROTASIS APODOSIS))  Comp: (QUALITY TARGET STANDARD)
-  Relative: PARTICIPIAL ((CLAUSE HEAD))  Purpose: (MAIN PURPOSE)  Causative: ANALYTIC ((CAUSER
-                                                                                        CAUSED))
-  Quotation: (SPEAKER VERB CONTENT)  Adversative: EACH ((CONCEDED ASSERTED))  Degree: (RESULT
-                                                                                       QUALITY)
-  Question: PARTICLE (FINAL)  Modal: AUXILIARY (MODAL-FIRST)
+  Order: (SUBJECT VERB OBJECT)  NP: (ADJECTIVE NOUN)  Gen: POSSESSOR-FIRST
+  Copula: PARTICLE  Conj: MEDIAL  Adpos: PREPOSITION
+  Conditional: PARTICLE ((PROTASIS APODOSIS))  Comp: (TARGET QUALITY STANDARD)
+  Relative: PARTICLE ((HEAD CLAUSE))  Purpose: (MAIN PURPOSE)  Causative: ANALYTIC ((CAUSER
+                                                                                     CAUSED))
+  Quotation: (SPEAKER VERB CONTENT)  Adversative: PARTICLE ((CONCEDED ASSERTED))  Degree: (QUALITY
+                                                                                           RESULT)
+  Question: PARTICLE (INITIAL)  Modal: AUXILIARY (MODAL-FIRST)
   Disjunction: MEDIAL  Reflexive: SEPARATE-WORD  Causal: PARTICLE ((RESULT
                                                                     REASON))
   Exclamation: PARTICLE (INITIAL)  Simile: PARTICLE ((COMPARED STANDARD))  Wh: DEDICATED (INITIAL)  Complement: (SUBJECT
@@ -570,77 +599,66 @@ wh-how          ah              ah              ah
   Concessive: PARTICLE ((CONCEDED ASSERTED))  Reciprocal: SEPARATE-WORD
   Nominalization: SUFFIX  Distributive: PARTICLE-BEFORE
   Noun classes: 0
-  Compound: JUXTAPOSE HEAD-INITIAL
+  Compound: JUXTAPOSE HEAD-FINAL
   Promote: FRONTING  Demote: IMPERSONAL
-  Agreement: NONE  Pro-drop: NIL  Pronoun collapse: COLLAPSE-NUMBER  Pl-disambig: QUANTIFIER-AFTER
+  Agreement: NONE  Pro-drop: NIL  Pronoun collapse: COLLAPSE-2  Pl-disambig: QUANTIFIER-AFTER
   Morphology:
-    ACCUSATIVE NOUN: PARTICLE-AFTER [ɨɻk]
-    GENITIVE NOUN: PARTICLE-AFTER [aʜk]
-    PLURAL NOUN: PARTICLE-AFTER [ɨk]
-    PAST VERB: PARTICLE-BEFORE [ɒɹʜ]
+    ACCUSATIVE NOUN: NONE
+    GENITIVE NOUN: SUFFIX [z]
+    PLURAL NOUN: SUFFIX [s]
+    PAST VERB: SUFFIX [d]
     PRESENT VERB: NONE
-    FUTURE VERB: PARTICLE-BEFORE [aɹk]
-    NEGATION VERB: PARTICLE-AFTER [eʜt]
-    NEGATION NOUN: PARTICLE-BEFORE [aʜʈ]
-    IMPERATIVE VERB: PARTICLE-AFTER [aɹs]
-    COMPARATIVE ADJECTIVE: PARTICLE-AFTER [ex]
-    COMP-STANDARD NOUN: PARTICLE-BEFORE [eɹ]
-    CONDITIONAL CLAUSE: PARTICLE-BEFORE [eʜk]
-    OBLIQUE-WITH NOUN: PARTICLE-AFTER [ɨɹ]
-    OBLIQUE-FROM NOUN: PARTICLE-AFTER [aɰs]
-    OBLIQUE-TO NOUN: PARTICLE-BEFORE [ɒɰ]
-    OBLIQUE-ON NOUN: PARTICLE-BEFORE [aɻk]
-    OBLIQUE-AT NOUN: PARTICLE-AFTER [ax]
-    OBLIQUE-OVER NOUN: PARTICLE-BEFORE [aɻs]
-    TEMPORAL-BEFORE CLAUSE: PARTICLE-BEFORE [ɒɹt]
-    TEMPORAL-AFTER CLAUSE: PARTICLE-BEFORE [ɨsʈ]
-    TEMPORAL-WHEN CLAUSE: PARTICLE-BEFORE [ɨʜk]
-    RELATIVE CLAUSE: PARTICLE-AFTER [axk]
-    PURPOSE CLAUSE: PARTICLE-AFTER [aʂ]
-    CAUSATIVE VERB: PARTICLE-AFTER [aɹʂ]
-    QUOTATIVE CLAUSE: PARTICLE-AFTER [eɹs]
-    ADVERSATIVE CLAUSE: PARTICLE-AFTER [ɨɰʈ]
-    EXCEPTION NOUN: PARTICLE-AFTER [ɨɹʜ]
-    DEGREE CLAUSE: PARTICLE-BEFORE [ɨɹʈ]
+    FUTURE VERB: PARTICLE-BEFORE [wɪl]
+    NEGATION VERB: PARTICLE-BEFORE [nɑt]
+    NEGATION NOUN: PARTICLE-BEFORE [nɑt]
+    IMPERATIVE VERB: NONE
+    COMPARATIVE ADJECTIVE: PARTICLE-BEFORE [mɔɹ]
+    COMP-STANDARD NOUN: PARTICLE-BEFORE [ðæn]
+    CONDITIONAL CLAUSE: PARTICLE-BEFORE [ɪf]
+    OBLIQUE-WITH NOUN: PARTICLE-BEFORE [wɪθ]
+    OBLIQUE-FROM NOUN: PARTICLE-BEFORE [fɹʌm]
+    OBLIQUE-TO NOUN: PARTICLE-BEFORE [tu]
+    OBLIQUE-ON NOUN: PARTICLE-BEFORE [ɑn]
+    OBLIQUE-AT NOUN: PARTICLE-BEFORE [æt]
+    OBLIQUE-OVER NOUN: PARTICLE-BEFORE [oʊvəɹ]
+    TEMPORAL-BEFORE CLAUSE: PARTICLE-BEFORE [bɪfɔɹ]
+    TEMPORAL-AFTER CLAUSE: PARTICLE-BEFORE [æftəɹ]
+    TEMPORAL-WHEN CLAUSE: PARTICLE-BEFORE [wɛn]
+    RELATIVE CLAUSE: PARTICLE-BEFORE [hu]
+    PURPOSE CLAUSE: PARTICLE-BEFORE [tu]
+    CAUSATIVE VERB: PARTICLE-BEFORE [meɪk]
+    QUOTATIVE CLAUSE: PARTICLE-BEFORE [ðæt]
+    ADVERSATIVE CLAUSE: PARTICLE-BEFORE [bʌt]
+    EXCEPTION NOUN: PARTICLE-BEFORE [ɪksɛpt]
+    DEGREE CLAUSE: PARTICLE-BEFORE [soʊ]
     INTERROGATIVE VERB: NONE
     MODAL-ABILITY VERB: NONE
     MODAL-OBLIGATION VERB: NONE
-    CAUSAL CLAUSE: PARTICLE-BEFORE [axt]
+    CAUSAL CLAUSE: PARTICLE-BEFORE [bɪkɔz]
     EXCLAMATION VERB: NONE
-    SIMILE NOUN: PARTICLE-AFTER [eɻt]
-    COMPLEMENTIZER CLAUSE: PARTICLE-BEFORE [et]
-    PASSIVE VERB: PARTICLE-BEFORE [aɰt]
-    OPTATIVE VERB: PARTICLE-AFTER [ɨɰʜ]
-    CONCESSIVE CLAUSE: PARTICLE-BEFORE [ɨɰ]
-    NOMINALIZATION VERB: PARTICLE-AFTER [ɨɹk]
-    COUNTERFACTUAL CLAUSE: PARTICLE-AFTER [exk]
-    DEFINITE NOUN: PARTICLE-AFTER [aɻx]
-    AGR-1SG VERB: NONE
-    AGR-2SG VERB: NONE
-    AGR-3SG VERB: NONE
-    AGR-1PL VERB: NONE
-    AGR-2PL VERB: NONE
-    AGR-3PL VERB: NONE
-    ADVERBIALIZE ADJECTIVE: PARTICLE-AFTER [aʂk]
-    AGENTIVE VERB: NONE
-    ADJ-FROM-NOUN NOUN: PARTICLE-AFTER [eɹk]
-    NOUN-FROM-ADJ ADJECTIVE: PARTICLE-AFTER [ask]
-    DEFINITE-CLASS-1 NOUN: PARTICLE-AFTER [ɨ]
-    DEFINITE-CLASS-2 NOUN: PARTICLE-AFTER [a]
-    DEFINITE-CLASS-3 NOUN: PARTICLE-AFTER [aɹk]
-    CLASS-1 ADJECTIVE: PARTICLE-AFTER [ɒɰk]
-    CLASS-2 ADJECTIVE: PARTICLE-AFTER [ɒk]
-    CLASS-3 ADJECTIVE: PARTICLE-AFTER [eʂk]
+    SIMILE NOUN: NONE
+    COMPLEMENTIZER CLAUSE: PARTICLE-BEFORE [ðæt]
+    PASSIVE VERB: NONE
+    OPTATIVE VERB: PARTICLE-BEFORE [meɪ]
+    CONCESSIVE CLAUSE: PARTICLE-BEFORE [ðoʊ]
+    NOMINALIZATION VERB: NONE
+    COUNTERFACTUAL CLAUSE: PARTICLE-BEFORE [wʊd]
+    DEFINITE NOUN: PARTICLE-BEFORE [ðə]
+    INDEFINITE NOUN: PARTICLE-BEFORE [ə]
+    ADVERBIALIZE ADJECTIVE: SUFFIX [li]
+    AGENTIVE VERB: SUFFIX [əɹ]
+    ADJ-FROM-NOUN NOUN: SUFFIX [i]
+    NOUN-FROM-ADJ ADJECTIVE: SUFFIX [nəs]
 
 --- imperial-trade ---
-  Order: (VERB OBJECT SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSED-FIRST
-  Copula: ZERO  Conj: MEDIAL  Adpos: CASE-MARKING
-  Conditional: PARTICLE ((PROTASIS APODOSIS))  Comp: (QUALITY TARGET STANDARD)
-  Relative: PARTICIPIAL ((CLAUSE HEAD))  Purpose: (MAIN PURPOSE)  Causative: ANALYTIC ((CAUSER
-                                                                                        CAUSED))
-  Quotation: (SPEAKER VERB CONTENT)  Adversative: EACH ((CONCEDED ASSERTED))  Degree: (RESULT
-                                                                                       QUALITY)
-  Question: PARTICLE (FINAL)  Modal: AUXILIARY (MODAL-FIRST)
+  Order: (SUBJECT VERB OBJECT)  NP: (ADJECTIVE NOUN)  Gen: POSSESSOR-FIRST
+  Copula: PARTICLE  Conj: MEDIAL  Adpos: PREPOSITION
+  Conditional: PARTICLE ((PROTASIS APODOSIS))  Comp: (TARGET QUALITY STANDARD)
+  Relative: PARTICLE ((HEAD CLAUSE))  Purpose: (MAIN PURPOSE)  Causative: ANALYTIC ((CAUSER
+                                                                                     CAUSED))
+  Quotation: (SPEAKER VERB CONTENT)  Adversative: PARTICLE ((CONCEDED ASSERTED))  Degree: (QUALITY
+                                                                                           RESULT)
+  Question: PARTICLE (INITIAL)  Modal: AUXILIARY (MODAL-FIRST)
   Disjunction: MEDIAL  Reflexive: SEPARATE-WORD  Causal: PARTICLE ((RESULT
                                                                     REASON))
   Exclamation: PARTICLE (INITIAL)  Simile: PARTICLE ((COMPARED STANDARD))  Wh: DEDICATED (INITIAL)  Complement: (SUBJECT
@@ -649,77 +667,66 @@ wh-how          ah              ah              ah
   Concessive: PARTICLE ((CONCEDED ASSERTED))  Reciprocal: SEPARATE-WORD
   Nominalization: SUFFIX  Distributive: PARTICLE-BEFORE
   Noun classes: 0
-  Compound: JUXTAPOSE HEAD-INITIAL
+  Compound: JUXTAPOSE HEAD-FINAL
   Promote: FRONTING  Demote: IMPERSONAL
-  Agreement: NONE  Pro-drop: NIL  Pronoun collapse: COLLAPSE-NUMBER  Pl-disambig: QUANTIFIER-AFTER
+  Agreement: NONE  Pro-drop: NIL  Pronoun collapse: COLLAPSE-2  Pl-disambig: QUANTIFIER-AFTER
   Morphology:
-    ACCUSATIVE NOUN: PARTICLE-AFTER [ɨɹk]
-    GENITIVE NOUN: PARTICLE-AFTER [aʜk]
-    PLURAL NOUN: PARTICLE-AFTER [ɨk]
-    PAST VERB: PARTICLE-BEFORE [ɒɹʜ]
+    ACCUSATIVE NOUN: NONE
+    GENITIVE NOUN: SUFFIX [z]
+    PLURAL NOUN: SUFFIX [s]
+    PAST VERB: SUFFIX [d]
     PRESENT VERB: NONE
-    FUTURE VERB: PARTICLE-BEFORE [aɹk]
-    NEGATION VERB: SUFFIX [eʜt]
-    NEGATION NOUN: PARTICLE-BEFORE [aʜt]
-    IMPERATIVE VERB: PARTICLE-AFTER [aɹs]
-    COMPARATIVE ADJECTIVE: SUFFIX [ex]
-    COMP-STANDARD NOUN: PARTICLE-BEFORE [eɹ]
-    CONDITIONAL CLAUSE: PARTICLE-BEFORE [eʜk]
-    OBLIQUE-WITH NOUN: PARTICLE-AFTER [ɨɹ]
-    OBLIQUE-FROM NOUN: PARTICLE-AFTER [aɰs]
-    OBLIQUE-TO NOUN: PREFIX [ɒɰ]
-    OBLIQUE-ON NOUN: PREFIX [aɹk]
-    OBLIQUE-AT NOUN: PARTICLE-AFTER [ax]
-    OBLIQUE-OVER NOUN: PARTICLE-BEFORE [aɹs]
-    TEMPORAL-BEFORE CLAUSE: PARTICLE-BEFORE [ɒɹt]
-    TEMPORAL-AFTER CLAUSE: PARTICLE-BEFORE [ɨst]
-    TEMPORAL-WHEN CLAUSE: PARTICLE-BEFORE [ɨʜk]
-    RELATIVE CLAUSE: PARTICLE-AFTER [axk]
-    PURPOSE CLAUSE: PARTICLE-AFTER [as]
-    CAUSATIVE VERB: SUFFIX [aɹs]
-    QUOTATIVE CLAUSE: SUFFIX [eɹs]
-    ADVERSATIVE CLAUSE: PARTICLE-AFTER [ɨɰt]
-    EXCEPTION NOUN: PARTICLE-AFTER [ɨɹʜ]
-    DEGREE CLAUSE: PARTICLE-BEFORE [ɨɹt]
+    FUTURE VERB: PARTICLE-BEFORE [wɪl]
+    NEGATION VERB: PARTICLE-BEFORE [nɑt]
+    NEGATION NOUN: PARTICLE-BEFORE [nɑt]
+    IMPERATIVE VERB: NONE
+    COMPARATIVE ADJECTIVE: PARTICLE-BEFORE [mɔɹ]
+    COMP-STANDARD NOUN: PARTICLE-BEFORE [ðæn]
+    CONDITIONAL CLAUSE: PARTICLE-BEFORE [ɪf]
+    OBLIQUE-WITH NOUN: PARTICLE-BEFORE [wɪθ]
+    OBLIQUE-FROM NOUN: PARTICLE-BEFORE [fɹʌm]
+    OBLIQUE-TO NOUN: PARTICLE-BEFORE [tu]
+    OBLIQUE-ON NOUN: PARTICLE-BEFORE [ɑn]
+    OBLIQUE-AT NOUN: PARTICLE-BEFORE [æt]
+    OBLIQUE-OVER NOUN: PARTICLE-BEFORE [oʊvəɹ]
+    TEMPORAL-BEFORE CLAUSE: PARTICLE-BEFORE [bɪfɔɹ]
+    TEMPORAL-AFTER CLAUSE: PARTICLE-BEFORE [æftəɹ]
+    TEMPORAL-WHEN CLAUSE: PARTICLE-BEFORE [wɛn]
+    RELATIVE CLAUSE: PARTICLE-BEFORE [hu]
+    PURPOSE CLAUSE: PARTICLE-BEFORE [tu]
+    CAUSATIVE VERB: PARTICLE-BEFORE [meɪk]
+    QUOTATIVE CLAUSE: PARTICLE-BEFORE [ðæt]
+    ADVERSATIVE CLAUSE: PARTICLE-BEFORE [bʌt]
+    EXCEPTION NOUN: PARTICLE-BEFORE [ɪksɛpt]
+    DEGREE CLAUSE: PARTICLE-BEFORE [soʊ]
     INTERROGATIVE VERB: NONE
     MODAL-ABILITY VERB: NONE
     MODAL-OBLIGATION VERB: NONE
-    CAUSAL CLAUSE: PARTICLE-BEFORE [axt]
+    CAUSAL CLAUSE: PARTICLE-BEFORE [bɪkɔz]
     EXCLAMATION VERB: NONE
-    SIMILE NOUN: PARTICLE-AFTER [eɹt]
-    COMPLEMENTIZER CLAUSE: PREFIX [et]
-    PASSIVE VERB: PARTICLE-BEFORE [aɰt]
-    OPTATIVE VERB: PARTICLE-AFTER [ɨɰʜ]
-    CONCESSIVE CLAUSE: PARTICLE-BEFORE [ɨɰ]
-    NOMINALIZATION VERB: SUFFIX [ɨɹk]
-    COUNTERFACTUAL CLAUSE: PARTICLE-AFTER [exk]
-    DEFINITE NOUN: PARTICLE-AFTER [aɹx]
-    AGR-1SG VERB: NONE
-    AGR-2SG VERB: NONE
-    AGR-3SG VERB: NONE
-    AGR-1PL VERB: NONE
-    AGR-2PL VERB: NONE
-    AGR-3PL VERB: NONE
-    ADVERBIALIZE ADJECTIVE: PARTICLE-AFTER [ask]
-    AGENTIVE VERB: NONE
-    ADJ-FROM-NOUN NOUN: PARTICLE-AFTER [eɹk]
-    NOUN-FROM-ADJ ADJECTIVE: PARTICLE-AFTER [ask]
-    DEFINITE-CLASS-1 NOUN: PARTICLE-AFTER [ɨ]
-    DEFINITE-CLASS-2 NOUN: SUFFIX [a]
-    DEFINITE-CLASS-3 NOUN: PARTICLE-AFTER [aɹk]
-    CLASS-1 ADJECTIVE: SUFFIX [ɒɰk]
-    CLASS-2 ADJECTIVE: SUFFIX [ɒk]
-    CLASS-3 ADJECTIVE: PARTICLE-AFTER [esk]
+    SIMILE NOUN: NONE
+    COMPLEMENTIZER CLAUSE: PARTICLE-BEFORE [ðæt]
+    PASSIVE VERB: NONE
+    OPTATIVE VERB: PARTICLE-BEFORE [meɪ]
+    CONCESSIVE CLAUSE: PARTICLE-BEFORE [ðoʊ]
+    NOMINALIZATION VERB: NONE
+    COUNTERFACTUAL CLAUSE: PARTICLE-BEFORE [wʊd]
+    DEFINITE NOUN: PARTICLE-BEFORE [ðə]
+    INDEFINITE NOUN: PARTICLE-BEFORE [ə]
+    ADVERBIALIZE ADJECTIVE: SUFFIX [li]
+    AGENTIVE VERB: SUFFIX [əɹ]
+    ADJ-FROM-NOUN NOUN: SUFFIX [i]
+    NOUN-FROM-ADJ ADJECTIVE: SUFFIX [nəs]
 
 --- provincial-trade ---
-  Order: (VERB OBJECT SUBJECT)  NP: (NOUN ADJECTIVE)  Gen: POSSESSED-FIRST
-  Copula: ZERO  Conj: MEDIAL  Adpos: CASE-MARKING
-  Conditional: PARTICLE ((PROTASIS APODOSIS))  Comp: (QUALITY TARGET STANDARD)
-  Relative: PARTICIPIAL ((CLAUSE HEAD))  Purpose: (MAIN PURPOSE)  Causative: ANALYTIC ((CAUSER
-                                                                                        CAUSED))
-  Quotation: (SPEAKER VERB CONTENT)  Adversative: EACH ((CONCEDED ASSERTED))  Degree: (RESULT
-                                                                                       QUALITY)
-  Question: PARTICLE (FINAL)  Modal: AUXILIARY (MODAL-FIRST)
+  Order: (SUBJECT VERB OBJECT)  NP: (ADJECTIVE NOUN)  Gen: POSSESSOR-FIRST
+  Copula: PARTICLE  Conj: MEDIAL  Adpos: PREPOSITION
+  Conditional: PARTICLE ((PROTASIS APODOSIS))  Comp: (TARGET QUALITY STANDARD)
+  Relative: PARTICLE ((HEAD CLAUSE))  Purpose: (MAIN PURPOSE)  Causative: ANALYTIC ((CAUSER
+                                                                                     CAUSED))
+  Quotation: (SPEAKER VERB CONTENT)  Adversative: PARTICLE ((CONCEDED ASSERTED))  Degree: (QUALITY
+                                                                                           RESULT)
+  Question: PARTICLE (INITIAL)  Modal: AUXILIARY (MODAL-FIRST)
   Disjunction: MEDIAL  Reflexive: SEPARATE-WORD  Causal: PARTICLE ((RESULT
                                                                     REASON))
   Exclamation: PARTICLE (INITIAL)  Simile: PARTICLE ((COMPARED STANDARD))  Wh: DEDICATED (INITIAL)  Complement: (SUBJECT
@@ -728,67 +735,56 @@ wh-how          ah              ah              ah
   Concessive: PARTICLE ((CONCEDED ASSERTED))  Reciprocal: SEPARATE-WORD
   Nominalization: SUFFIX  Distributive: PARTICLE-BEFORE
   Noun classes: 0
-  Compound: JUXTAPOSE HEAD-INITIAL
+  Compound: JUXTAPOSE HEAD-FINAL
   Promote: FRONTING  Demote: IMPERSONAL
-  Agreement: NONE  Pro-drop: NIL  Pronoun collapse: COLLAPSE-NUMBER  Pl-disambig: QUANTIFIER-AFTER
+  Agreement: NONE  Pro-drop: NIL  Pronoun collapse: COLLAPSE-2  Pl-disambig: QUANTIFIER-AFTER
   Morphology:
-    ACCUSATIVE NOUN: PARTICLE-AFTER [ɨɻx]
-    GENITIVE NOUN: PARTICLE-AFTER [aʜx]
-    PLURAL NOUN: SUFFIX [ɨx]
-    PAST VERB: PARTICLE-BEFORE [ɒɹʜ]
+    ACCUSATIVE NOUN: NONE
+    GENITIVE NOUN: SUFFIX [z]
+    PLURAL NOUN: SUFFIX [s]
+    PAST VERB: SUFFIX [d]
     PRESENT VERB: NONE
-    FUTURE VERB: PARTICLE-BEFORE [aɹx]
-    NEGATION VERB: PARTICLE-AFTER [ɛʜs]
-    NEGATION NOUN: PREFIX [aʜʂ]
-    IMPERATIVE VERB: PARTICLE-AFTER [aɹs]
-    COMPARATIVE ADJECTIVE: PARTICLE-AFTER [ɛx]
-    COMP-STANDARD NOUN: PREFIX [ɛɹ]
-    CONDITIONAL CLAUSE: PARTICLE-BEFORE [ɛʜx]
-    OBLIQUE-WITH NOUN: SUFFIX [ɨɹ]
-    OBLIQUE-FROM NOUN: PARTICLE-AFTER [aɰs]
-    OBLIQUE-TO NOUN: PARTICLE-BEFORE [ɒɰ]
-    OBLIQUE-ON NOUN: PARTICLE-BEFORE [aɻx]
-    OBLIQUE-AT NOUN: PARTICLE-AFTER [ax]
-    OBLIQUE-OVER NOUN: PREFIX [aɻs]
-    TEMPORAL-BEFORE CLAUSE: PREFIX [ɒɹs]
-    TEMPORAL-AFTER CLAUSE: PARTICLE-BEFORE [ɨsʂ]
-    TEMPORAL-WHEN CLAUSE: PARTICLE-BEFORE [ɨʜx]
-    RELATIVE CLAUSE: PARTICLE-AFTER [axx]
-    PURPOSE CLAUSE: PARTICLE-AFTER [aʂ]
-    CAUSATIVE VERB: PARTICLE-AFTER [aɹʂ]
-    QUOTATIVE CLAUSE: PARTICLE-AFTER [ɛɹs]
-    ADVERSATIVE CLAUSE: SUFFIX [ɨɰʂ]
-    EXCEPTION NOUN: PARTICLE-AFTER [ɨɹʜ]
-    DEGREE CLAUSE: PARTICLE-BEFORE [ɨɹʂ]
+    FUTURE VERB: PARTICLE-BEFORE [wɪl]
+    NEGATION VERB: PARTICLE-BEFORE [nɑs]
+    NEGATION NOUN: PARTICLE-BEFORE [nɑs]
+    IMPERATIVE VERB: NONE
+    COMPARATIVE ADJECTIVE: PARTICLE-BEFORE [mɔɹ]
+    COMP-STANDARD NOUN: PARTICLE-BEFORE [ðæn]
+    CONDITIONAL CLAUSE: PARTICLE-BEFORE [ɪf]
+    OBLIQUE-WITH NOUN: PREFIX [wɪθ]
+    OBLIQUE-FROM NOUN: PARTICLE-BEFORE [fɹʌm]
+    OBLIQUE-TO NOUN: PARTICLE-BEFORE [su]
+    OBLIQUE-ON NOUN: PARTICLE-BEFORE [ɑn]
+    OBLIQUE-AT NOUN: PREFIX [æs]
+    OBLIQUE-OVER NOUN: PARTICLE-BEFORE [ɔʊvəɹ]
+    TEMPORAL-BEFORE CLAUSE: PARTICLE-BEFORE [bɪfɔɹ]
+    TEMPORAL-AFTER CLAUSE: PARTICLE-BEFORE [æfsəɹ]
+    TEMPORAL-WHEN CLAUSE: PARTICLE-BEFORE [wɛn]
+    RELATIVE CLAUSE: PARTICLE-BEFORE [hu]
+    PURPOSE CLAUSE: PARTICLE-BEFORE [su]
+    CAUSATIVE VERB: PARTICLE-BEFORE [mɛɪx]
+    QUOTATIVE CLAUSE: PARTICLE-BEFORE [ðæs]
+    ADVERSATIVE CLAUSE: PARTICLE-BEFORE [bʌs]
+    EXCEPTION NOUN: PARTICLE-BEFORE [ɪxsɛɸs]
+    DEGREE CLAUSE: PARTICLE-BEFORE [sɔʊ]
     INTERROGATIVE VERB: NONE
     MODAL-ABILITY VERB: NONE
     MODAL-OBLIGATION VERB: NONE
-    CAUSAL CLAUSE: PARTICLE-BEFORE [axs]
+    CAUSAL CLAUSE: PARTICLE-BEFORE [bɪxɔz]
     EXCLAMATION VERB: NONE
-    SIMILE NOUN: PARTICLE-AFTER [ɛɻs]
-    COMPLEMENTIZER CLAUSE: PARTICLE-BEFORE [ɛs]
-    PASSIVE VERB: PARTICLE-BEFORE [aɰs]
-    OPTATIVE VERB: PARTICLE-AFTER [ɨɰʜ]
-    CONCESSIVE CLAUSE: PREFIX [ɨɰ]
-    NOMINALIZATION VERB: PARTICLE-AFTER [ɨɹx]
-    COUNTERFACTUAL CLAUSE: PARTICLE-AFTER [ɛxx]
-    DEFINITE NOUN: PARTICLE-AFTER [aɻx]
-    AGR-1SG VERB: NONE
-    AGR-2SG VERB: NONE
-    AGR-3SG VERB: NONE
-    AGR-1PL VERB: NONE
-    AGR-2PL VERB: NONE
-    AGR-3PL VERB: NONE
-    ADVERBIALIZE ADJECTIVE: PARTICLE-AFTER [aʂx]
-    AGENTIVE VERB: NONE
-    ADJ-FROM-NOUN NOUN: PARTICLE-AFTER [ɛɹx]
-    NOUN-FROM-ADJ ADJECTIVE: PARTICLE-AFTER [asx]
-    DEFINITE-CLASS-1 NOUN: PARTICLE-AFTER [ɨ]
-    DEFINITE-CLASS-2 NOUN: PARTICLE-AFTER [a]
-    DEFINITE-CLASS-3 NOUN: PARTICLE-AFTER [aɹx]
-    CLASS-1 ADJECTIVE: PARTICLE-AFTER [ɒɰx]
-    CLASS-2 ADJECTIVE: PARTICLE-AFTER [ɒx]
-    CLASS-3 ADJECTIVE: PARTICLE-AFTER [ɛʂx]
+    SIMILE NOUN: NONE
+    COMPLEMENTIZER CLAUSE: PARTICLE-BEFORE [ðæs]
+    PASSIVE VERB: NONE
+    OPTATIVE VERB: PARTICLE-BEFORE [mɛɪ]
+    CONCESSIVE CLAUSE: PARTICLE-BEFORE [ðɔʊ]
+    NOMINALIZATION VERB: NONE
+    COUNTERFACTUAL CLAUSE: PARTICLE-BEFORE [wʊd]
+    DEFINITE NOUN: PARTICLE-BEFORE [ðə]
+    INDEFINITE NOUN: PARTICLE-BEFORE [ə]
+    ADVERBIALIZE ADJECTIVE: SUFFIX [li]
+    AGENTIVE VERB: SUFFIX [əɹ]
+    ADJ-FROM-NOUN NOUN: SUFFIX [i]
+    NOUN-FROM-ADJ ADJECTIVE: SUFFIX [nəs]
 
 
 ========================================
@@ -808,20 +804,20 @@ wh-how          ah              ah              ah
                                  ɨɻ'tɨx æɹ'kæ.kaɹ.kɨɻk æɰ'kæʜ.kɨɰ.ʈæ.kaɹk ɨɹ'kaɰ.keʂk
                                  hunt.3SG king.DEFINITE-CLASS-3.III.ACCUSATIVE wolf.DEFINITE-CLASS-3.III wise.III
 
-  imperial-creole                honata iking ark irk yilef ark yas esk
-                                 hònåta ïkïng͜ ark ïṙk y̌ïleph͜ ark y̌aṡh͜ eṡh͜k
-                                 ʜɔ.nɒ.ta ɨ.kɨŋ aɹk ɨɻk ɰɨ.leɸ aɹk ɰaʂ eʂk
-                                 hunt king.III DEFINITE-CLASS-3 ACCUSATIVE wolf.III DEFINITE-CLASS-3 wise III
+  imperial-creole                aysi dhe yilfe hoante dhe king
+                                 ay̌sï dh͜é y̌ïlph͜e hòante dh͜é kïng͜
+                                 aɰ.sɨ ðə ɰɨl.ɸe ʜɔan.te ðə kɨŋ
+                                 wise DEFINITE wolf hunt DEFINITE king
 
-  imperial-trade                 honata iking ark irk yilef ark yas esk
-                                 hònåta ïkïng͜ ark ïrk y̌ïleph͜ ark y̌as esk
-                                 ʜɔ.nɒ.ta ɨ.kɨŋ aɹk ɨɹk ɰɨ.leɸ aɹk ɰas esk
-                                 hunt king.III DEFINITE-CLASS-3 ACCUSATIVE wolf.III DEFINITE-CLASS-3 wise III
+  imperial-trade                 aysi dhe yilfe hoante dhe king
+                                 ay̌sï dh͜é y̌ïlph͜e hòante dh͜é kïng͜
+                                 aɰ.sɨ ðə ɰɨl.ɸe ʜɔan.te ðə kɨŋ
+                                 wise DEFINITE wolf hunt DEFINITE king
 
-  provincial-trade               honasa ihing arh irh yilef arh yas esh
-                                 hònåsa ïkh͜ïng͜ arkh͜ ïṙkh͜ y̌ïlèph͜ arkh͜ y̌aṡh͜ èṡh͜kh͜
-                                 ʜɔ.nɒ.sa ɨ.xɨŋ aɹx ɨɻx ɰɨ.lɛɸ aɹx ɰaʂ ɛʂx
-                                 hunt king.III DEFINITE-CLASS-3 ACCUSATIVE wolf.III DEFINITE-CLASS-3 wise III
+  provincial-trade               aysi dhe yilfe hoanse dhe hing
+                                 ay̌sï dh͜é y̌ïlph͜è hòansè dh͜é kh͜ïng͜
+                                 aɰ.sɨ ðə ɰɨl.ɸɛ ʜɔan.sɛ ðə xɨŋ
+                                 wise DEFINITE wolf hunt DEFINITE king
 
 
 
@@ -837,20 +833,20 @@ wh-how          ah              ah              ah
                                  eɰ'sɨx aɻ'tɨ æ'ke.ɹɒɰk
                                  break.3SG sword.DEFINITE-CLASS-1.I old.I
 
-  imperial-creole                parek osrati arh lit
-                                 parek òṡh͜ratï aṙkh͜ lït
-                                 pa.ɹek ɔʂ.ɹa.tɨ aɻx lɨt
-                                 break sword DEFINITE old
+  imperial-creole                lit dhe osrat perek
+                                 lït dh͜é òṡh͜ṙåṫ perek
+                                 lɨt ðə ɔʂ.ɻɒʈ pe.ɹek
+                                 old DEFINITE sword break
 
-  imperial-trade                 parek osrati arh lit
-                                 parek òsratï arkh͜ lït
-                                 pa.ɹek ɔs.ɹa.tɨ aɹx lɨt
-                                 break sword DEFINITE old
+  imperial-trade                 lit dhe osrat perek
+                                 lït dh͜é òsråt perek
+                                 lɨt ðə ɔs.ɹɒt pe.ɹek
+                                 old DEFINITE sword break
 
-  provincial-trade               fareh osrasi arh lis
-                                 ph͜arèkh͜ òṡh͜rasï aṙkh͜ lïs
-                                 ɸa.ɹɛx ɔʂ.ɹa.sɨ aɻx lɨs
-                                 break sword DEFINITE old
+  provincial-trade               lis dhe osras fereh
+                                 lïs dh͜é òṡh͜ṙåṡh͜ ph͜èrèkh͜
+                                 lɨs ðə ɔʂ.ɻɒʂ ɸɛ.ɹɛx
+                                 old DEFINITE sword break
 
 
 
@@ -866,20 +862,20 @@ wh-how          ah              ah              ah
                                  e'ʈɨx æʜ.ʈɒɻ'xæ.ɰaɹk ɨʜ'taɹ.kæʜk
                                  live.3SG death.DEFINITE-CLASS-3.III.NEGATION man.DEFINITE-CLASS-3.III.GENITIVE
 
-  imperial-creole                lif aht tois arh amon ark ahk
-                                 lïph͜ ahṫ tòïs aṙkh͜ amòn ark ahk
-                                 lɨɸ aʜʈ tɔɨs aɻx a.mɔn aɹk aʜk
-                                 live NEGATION death DEFINITE man.III DEFINITE-CLASS-3 GENITIVE
+  imperial-creole                nat dhe moanz dhe otsa lif
+                                 nát dh͜é mòanz dh͜é òtṡh͜a lïph͜
+                                 nɑt ðə mɔanz ðə ɔt.ʂa lɨɸ
+                                 NEGATION DEFINITE.GENITIVE man DEFINITE death live
 
-  imperial-trade                 lif aht tois arh amon ark ahk
-                                 lïph͜ aht tòïs arkh͜ amòn ark ahk
-                                 lɨɸ aʜt tɔɨs aɹx a.mɔn aɹk aʜk
-                                 live NEGATION death DEFINITE man.III DEFINITE-CLASS-3 GENITIVE
+  imperial-trade                 nat dhe moanz dhe otsa lif
+                                 nát dh͜é mòanz dh͜é òtsa lïph͜
+                                 nɑt ðə mɔanz ðə ɔt.sa lɨɸ
+                                 NEGATION DEFINITE.GENITIVE man DEFINITE death live
 
-  provincial-trade               lif ahssois arh amon arh ahh
-                                 lïph͜ ahṡh͜sòïs aṙkh͜ amòn arkh͜ ahkh͜
-                                 lɨɸ aʜʂ.sɔɨs aɻx a.mɔn aɹx aʜx
-                                 live death.NEGATION DEFINITE man.III DEFINITE-CLASS-3 GENITIVE
+  provincial-trade               nas dhe moanz dhe ossa lif
+                                 nás dh͜é mòanz dh͜é òsṡh͜a lïph͜
+                                 nɑs ðə mɔanz ðə ɔs.ʂa lɨɸ
+                                 NEGATION DEFINITE.GENITIVE man DEFINITE death live
 
 
 
@@ -895,20 +891,20 @@ wh-how          ah              ah              ah
                                  a'kɨ.xɨx æʜ'kɨɰ.kaɹ.kɨɻk ɨɹ'kaɰ.keʂk ɨʜ'taɹk ex'teʂk
                                  fear.3SG enemy.DEFINITE-CLASS-3.III.ACCUSATIVE wise.III man.DEFINITE-CLASS-3.III strong.III
 
-  imperial-creole                fir nem arh irk yas amon ark astirong esk
-                                 ph͜ïr nem aṙkh͜ ïṙk y̌aṡh͜ amòn ark asṫïròng͜ eṡh͜k
-                                 ɸɨɹ nem aɻx ɨɻk ɰaʂ a.mɔn aɹk as.ʈɨ.ɹɔŋ eʂk
-                                 fear enemy DEFINITE ACCUSATIVE wise man.III DEFINITE-CLASS-3 strong III
+  imperial-creole                istirong dhe moan fir aysi dhe nem
+                                 ïstïròng͜ dh͜é mòan ph͜ïṙ ay̌sï dh͜é nem
+                                 ɨs.tɨ.ɹɔŋ ðə mɔan ɸɨɻ aɰ.sɨ ðə nem
+                                 strong DEFINITE man fear wise DEFINITE enemy
 
-  imperial-trade                 fir nem arh irk yas amon ark astirong esk
-                                 ph͜ïr nem arkh͜ ïrk y̌as amòn ark astïròng͜ esk
-                                 ɸɨɹ nem aɹx ɨɹk ɰas a.mɔn aɹk as.tɨ.ɹɔŋ esk
-                                 fear enemy DEFINITE ACCUSATIVE wise man.III DEFINITE-CLASS-3 strong III
+  imperial-trade                 istirong dhe moan fir aysi dhe nem
+                                 ïstïròng͜ dh͜é mòan ph͜ïr ay̌sï dh͜é nem
+                                 ɨs.tɨ.ɹɔŋ ðə mɔan ɸɨɹ aɰ.sɨ ðə nem
+                                 strong DEFINITE man fear wise DEFINITE enemy
 
-  provincial-trade               fir nem arh irh yas amon arh assirong esh
-                                 ph͜ïr nèm aṙkh͜ ïṙkh͜ y̌aṡh͜ amòn arkh͜ asṡh͜ïròng͜ èṡh͜kh͜
-                                 ɸɨɹ nɛm aɻx ɨɻx ɰaʂ a.mɔn aɹx as.ʂɨ.ɹɔŋ ɛʂx
-                                 fear enemy DEFINITE ACCUSATIVE wise man.III DEFINITE-CLASS-3 strong III
+  provincial-trade               issirong dhe moan fir aysi dhe nem
+                                 ïssïròng͜ dh͜é mòan ph͜ïṙ ay̌sï dh͜é nèm
+                                 ɨs.sɨ.ɹɔŋ ðə mɔan ɸɨɻ aɰ.sɨ ðə nɛm
+                                 strong DEFINITE man fear wise DEFINITE enemy
 
 
 
@@ -924,20 +920,20 @@ wh-how          ah              ah              ah
                                  æɹ'ʈɨx ɨɰ'ʈæ.kaɹ.kɨɻk eɹ'ʂɨ.keʂk æʂ'ʈaɹk
                                  burn.3SG forest.DEFINITE-CLASS-3.III.ACCUSATIVE dark.III fire.DEFINITE-CLASS-3.III
 
-  imperial-creole                eprina aforset ark irk taarka esk far ark
-                                 eprïna aph͜òrset ark ïṙk tåarka eṡh͜k ph͜ar ark
-                                 ep.ɹɨ.na a.ɸɔɹ.set aɹk ɨɻk tɒaɹ.ka eʂk ɸaɹ aɹk
-                                 burn forest.III DEFINITE-CLASS-3 ACCUSATIVE dark III fire.III DEFINITE-CLASS-3
+  imperial-creole                dhe far peren tarka dhe ofreoset
+                                 dh͜é ph͜ar peren ṫårka dh͜é òph͜reòṡh͜et
+                                 ðə ɸaɹ pe.ɹen ʈɒɹ.ka ðə ɔɸ.ɹeɔ.ʂet
+                                 DEFINITE fire burn dark DEFINITE forest
 
-  imperial-trade                 eprina aforset ark irk taarka esk far ark
-                                 eprïna aph͜òrset ark ïrk tåarka esk ph͜ar ark
-                                 ep.ɹɨ.na a.ɸɔɹ.set aɹk ɨɹk tɒaɹ.ka esk ɸaɹ aɹk
-                                 burn forest.III DEFINITE-CLASS-3 ACCUSATIVE dark III fire.III DEFINITE-CLASS-3
+  imperial-trade                 dhe far peren tarka dhe ofreoset
+                                 dh͜é ph͜ar peren tårka dh͜é òph͜reòset
+                                 ðə ɸaɹ pe.ɹen tɒɹ.ka ðə ɔɸ.ɹeɔ.set
+                                 DEFINITE fire burn dark DEFINITE forest
 
-  provincial-trade               efrina aforses arh irh saarha esh far arh
-                                 èph͜rïna aph͜òrsès arkh͜ ïṙkh͜ såarkh͜a èṡh͜kh͜ ph͜ar arkh͜
-                                 ɛɸ.ɹɨ.na a.ɸɔɹ.sɛs aɹx ɨɻx sɒaɹ.xa ɛʂx ɸaɹ aɹx
-                                 burn forest.III DEFINITE-CLASS-3 ACCUSATIVE dark III fire.III DEFINITE-CLASS-3
+  provincial-trade               dhe far feren sarha dhe ofreoses
+                                 dh͜é ph͜ar ph͜èrèn ṡh͜årkh͜a dh͜é òph͜rèòṡh͜ès
+                                 ðə ɸaɹ ɸɛ.ɹɛn ʂɒɹ.xa ðə ɔɸ.ɹɛɔ.ʂɛs
+                                 DEFINITE fire burn dark DEFINITE forest
 
 
 
@@ -953,20 +949,20 @@ wh-how          ah              ah              ah
                                  ɨɰ'ʂɒ.kɨx ɨɹ'taɨɻk æɻ'ʈɒk ɨ'ʈaɹk
                                  follow.3SG star.DEFINITE-CLASS-2.II.ACCUSATIVE bright.II child.DEFINITE-CLASS-3.III
 
-  imperial-creole                fal astoer a irk perat ak taslit ark
-                                 ph͜ål åṡh͜ṫòer a ïṙk peṙat åk ṫaslït ark
-                                 ɸɒl ɒʂ.ʈɔeɹ a ɨɻk pe.ɻat ɒk ʈas.lɨt aɹk
-                                 follow star.II DEFINITE-CLASS-2 ACCUSATIVE bright II child.III DEFINITE-CLASS-3
+  imperial-creole                dhe tasalti foal aparta dhe satar
+                                 dh͜é taṡh͜altï ph͜òål aparta dh͜é såtår
+                                 ðə ta.ʂal.tɨ ɸɔɒl a.paɹ.ta ðə sɒ.tɒɹ
+                                 DEFINITE child follow bright DEFINITE star
 
-  imperial-trade                 fal astoera irk peratak taslit ark
-                                 ph͜ål åstòera ïrk peratåk taslït ark
-                                 ɸɒl ɒs.tɔe.ɹa ɨɹk pe.ɹa.tɒk tas.lɨt aɹk
-                                 follow star.DEFINITE-CLASS-2.II ACCUSATIVE bright.II child.III DEFINITE-CLASS-3
+  imperial-trade                 dhe tasalti foal aparta dhe satar
+                                 dh͜é tasaltï ph͜òål aparta dh͜é såtår
+                                 ðə ta.sal.tɨ ɸɔɒl a.paɹ.ta ðə sɒ.tɒɹ
+                                 DEFINITE child follow bright DEFINITE star
 
-  provincial-trade               fal assoer a irh feras ah saslis arh
-                                 ph͜ål åṡh͜ṡh͜òèr a ïṙkh͜ ph͜èṙas åkh͜ ṡh͜aslïs arkh͜
-                                 ɸɒl ɒʂ.ʂɔɛɹ a ɨɻx ɸɛ.ɻas ɒx ʂas.lɨs aɹx
-                                 follow star.II DEFINITE-CLASS-2 ACCUSATIVE bright II child.III DEFINITE-CLASS-3
+  provincial-trade               dhe sasalsi foal afarsa dhe sasar
+                                 dh͜é saṡh͜alsï ph͜òål aph͜arsa dh͜é såsår
+                                 ðə sa.ʂal.sɨ ɸɔɒl a.ɸaɹ.sa ðə sɒ.sɒɹ
+                                 DEFINITE child follow bright DEFINITE star
 
 
 
@@ -982,20 +978,20 @@ wh-how          ah              ah              ah
                                  ɨ'sɨx aɻ'tɨ æɹ'kæ.kaɹ.kæʜk æɹ'kæ.ʂeʂk
                                  fall.3SG sword.DEFINITE-CLASS-1.I king.DEFINITE-CLASS-3.III.GENITIVE dead.III
 
-  imperial-creole                fol osrati arh iking ark ahk toat esk
-                                 ph͜òl òṡh͜ratï aṙkh͜ ïkïng͜ ark ahk tòat eṡh͜k
-                                 ɸɔl ɔʂ.ɹa.tɨ aɻx ɨ.kɨŋ aɹk aʜk tɔat eʂk
-                                 fall sword DEFINITE king.III DEFINITE-CLASS-3 GENITIVE dead III
+  imperial-creole                tota dhe kingz dhe osrat fol
+                                 tòta dh͜é kïng͜z dh͜é òṡh͜ṙåṫ ph͜òl
+                                 tɔ.ta ðə kɨŋz ðə ɔʂ.ɻɒʈ ɸɔl
+                                 dead DEFINITE.GENITIVE king DEFINITE sword fall
 
-  imperial-trade                 fol osrati arh iking ark ahk toat esk
-                                 ph͜òl òsratï arkh͜ ïkïng͜ ark ahk tòat esk
-                                 ɸɔl ɔs.ɹa.tɨ aɹx ɨ.kɨŋ aɹk aʜk tɔat esk
-                                 fall sword DEFINITE king.III DEFINITE-CLASS-3 GENITIVE dead III
+  imperial-trade                 tota dhe kingz dhe osrat fol
+                                 tòta dh͜é kïng͜z dh͜é òsråt ph͜òl
+                                 tɔ.ta ðə kɨŋz ðə ɔs.ɹɒt ɸɔl
+                                 dead DEFINITE.GENITIVE king DEFINITE sword fall
 
-  provincial-trade               fol osrasi arh ihing arh ahh soas esh
-                                 ph͜òl òṡh͜rasï aṙkh͜ ïkh͜ïng͜ arkh͜ ahkh͜ sòas èṡh͜kh͜
-                                 ɸɔl ɔʂ.ɹa.sɨ aɻx ɨ.xɨŋ aɹx aʜx sɔas ɛʂx
-                                 fall sword DEFINITE king.III DEFINITE-CLASS-3 GENITIVE dead III
+  provincial-trade               sosa dhe hingz dhe osras fol
+                                 sòsa dh͜é kh͜ïng͜z dh͜é òṡh͜ṙåṡh͜ ph͜òl
+                                 sɔ.sa ðə xɨŋz ðə ɔʂ.ɻɒʂ ɸɔl
+                                 dead DEFINITE.GENITIVE king DEFINITE sword fall
 
 
 
@@ -1011,20 +1007,20 @@ wh-how          ah              ah              ah
                                  æ'xex.kɨx ɨs'ʈæ.ɹaɹ.kɨɻk æɰ'kæʜ.kɨɰ.ʈæ.kaɹk ɨʂ'teʂk
                                  find.3SG path.DEFINITE-CLASS-3.III.ACCUSATIVE wolf.DEFINITE-CLASS-3.III blind.III
 
-  imperial-creole                afnat pos arh irk yilef ark palnit esk
-                                 aph͜nat pòṡh͜ aṙkh͜ ïṙk y̌ïleph͜ ark palnït eṡh͜k
-                                 aɸ.nat pɔʂ aɻx ɨɻk ɰɨ.leɸ aɹk pal.nɨt eʂk
-                                 find path DEFINITE ACCUSATIVE wolf.III DEFINITE-CLASS-3 blind III
+  imperial-creole                palnat dhe yilfe afnat dhe pos
+                                 palnaṫ dh͜é y̌ïlph͜e aph͜nat dh͜é pòs
+                                 pal.naʈ ðə ɰɨl.ɸe aɸ.nat ðə pɔs
+                                 blind DEFINITE wolf find DEFINITE path
 
-  imperial-trade                 afnat pos arh irk yilef ark palnit esk
-                                 aph͜nat pòs arkh͜ ïrk y̌ïleph͜ ark palnït esk
-                                 aɸ.nat pɔs aɹx ɨɹk ɰɨ.leɸ aɹk pal.nɨt esk
-                                 find path DEFINITE ACCUSATIVE wolf.III DEFINITE-CLASS-3 blind III
+  imperial-trade                 palnat dhe yilfe afnat dhe pos
+                                 palnat dh͜é y̌ïlph͜e aph͜nat dh͜é pòs
+                                 pal.nat ðə ɰɨl.ɸe aɸ.nat ðə pɔs
+                                 blind DEFINITE wolf find DEFINITE path
 
-  provincial-trade               afnas fos arh irh yilef arh falnis esh
-                                 aph͜nas ph͜òṡh͜ aṙkh͜ ïṙkh͜ y̌ïlèph͜ arkh͜ ph͜alnïs èṡh͜kh͜
-                                 aɸ.nas ɸɔʂ aɻx ɨɻx ɰɨ.lɛɸ aɹx ɸal.nɨs ɛʂx
-                                 find path DEFINITE ACCUSATIVE wolf.III DEFINITE-CLASS-3 blind III
+  provincial-trade               falnas dhe yilfe afnas dhe fos
+                                 ph͜alnaṡh͜ dh͜é y̌ïlph͜è aph͜nas dh͜é ph͜òs
+                                 ɸal.naʂ ðə ɰɨl.ɸɛ aɸ.nas ðə ɸɔs
+                                 blind DEFINITE wolf find DEFINITE path
 
 
 
@@ -1040,20 +1036,20 @@ wh-how          ah              ah              ah
                                  ɨ'ʈa.ʂæɹx æ'ʈæ.ʜaɹ.kɨɻk ɨɰ'taɹk æt æx'kæɰ.ʜaɹk
                                  rule.3PL people.DEFINITE-CLASS-3.III.ACCUSATIVE blood.DEFINITE-CLASS-3.III AND gold.DEFINITE-CLASS-3.III
 
-  imperial-creole                aril ippel arh irk aplot arh at eklat arh
-                                 arïl ïppel aṙkh͜ ïṙk aplòt aṙkh͜ at eklat aṙkh͜
-                                 a.ɹɨl ɨp.pel aɻx ɨɻk ap.lɔt aɻx at ek.lat aɻx
-                                 rule people DEFINITE ACCUSATIVE blood DEFINITE AND gold DEFINITE
+  imperial-creole                dhe aplot end dhe kilet ril dhe ippel
+                                 dh͜é aplòt änd dh͜é kïlet ṙïl dh͜é ïppel
+                                 ðə ap.lɔt ænd ðə kɨ.let ɻɨl ðə ɨp.pel
+                                 DEFINITE blood AND DEFINITE gold rule DEFINITE people
 
-  imperial-trade                 aril ippel arh irk aplot arh at eklat arh
-                                 arïl ïppel arkh͜ ïrk aplòt arkh͜ at eklat arkh͜
-                                 a.ɹɨl ɨp.pel aɹx ɨɹk ap.lɔt aɹx at ek.lat aɹx
-                                 rule people DEFINITE ACCUSATIVE blood DEFINITE AND gold DEFINITE
+  imperial-trade                 dhe aplot end dhe kilet ril dhe ippel
+                                 dh͜é aplòt änd dh͜é kïlet rïl dh͜é ïppel
+                                 ðə ap.lɔt ænd ðə kɨ.let ɹɨl ðə ɨp.pel
+                                 DEFINITE blood AND DEFINITE gold rule DEFINITE people
 
-  provincial-trade               aril iffel arh irh aflos arh as ehlas arh
-                                 arïl ïph͜ph͜èl aṙkh͜ ïṙkh͜ aph͜lòs aṙkh͜ as èkh͜las aṙkh͜
-                                 a.ɹɨl ɨɸ.ɸɛl aɻx ɨɻx aɸ.lɔs aɻx as ɛx.las aɻx
-                                 rule people DEFINITE ACCUSATIVE blood DEFINITE AND gold DEFINITE
+  provincial-trade               dhe aflos end dhe hiles ril dhe iffel
+                                 dh͜é aph͜lòs änd dh͜é kh͜ïlès ṙïl dh͜é ïph͜ph͜èl
+                                 ðə aɸ.lɔs ænd ðə xɨ.lɛs ɻɨl ðə ɨɸ.ɸɛl
+                                 DEFINITE blood AND DEFINITE gold rule DEFINITE people
 
 
 
@@ -1069,20 +1065,20 @@ wh-how          ah              ah              ah
                                  ɨɻ'ʜɨx ɒʜ'kæɰ.kaɹk æ'ʜe.ɹeʂk
                                  come.3SG wind.DEFINITE-CLASS-3.III bitter.III
 
-  imperial-creole                kom oyinte ark ipteer esk
-                                 kòm òy̌ïnte ark ïpteer eṡh͜k
-                                 kɔm ɔ.ɰɨn.te aɹk ɨp.teeɹ eʂk
-                                 come wind.III DEFINITE-CLASS-3 bitter III
+  imperial-creole                iptera dhe yinot kom
+                                 ïpṫera dh͜é y̌ïnòt kòm
+                                 ɨp.ʈe.ɹa ðə ɰɨ.nɔt kɔm
+                                 bitter DEFINITE wind come
 
-  imperial-trade                 kom oyinte ark ipteer esk
-                                 kòm òy̌ïnte ark ïpteer esk
-                                 kɔm ɔ.ɰɨn.te aɹk ɨp.teeɹ esk
-                                 come wind.III DEFINITE-CLASS-3 bitter III
+  imperial-trade                 iptera dhe yinot kom
+                                 ïptera dh͜é y̌ïnòt kòm
+                                 ɨp.te.ɹa ðə ɰɨ.nɔt kɔm
+                                 bitter DEFINITE wind come
 
-  provincial-trade               hom oyinse arh ifseer esh
-                                 kh͜òm òy̌ïnsè arkh͜ ïph͜sèèr èṡh͜kh͜
-                                 xɔm ɔ.ɰɨn.sɛ aɹx ɨɸ.sɛɛɹ ɛʂx
-                                 come wind.III DEFINITE-CLASS-3 bitter III
+  provincial-trade               ifsera dhe yinos hom
+                                 ïph͜ṡh͜èra dh͜é y̌ïnòs kh͜òm
+                                 ɨɸ.ʂɛ.ɹa ðə ɰɨ.nɔs xɔm
+                                 bitter DEFINITE wind come
 
 
 
@@ -1098,20 +1094,20 @@ wh-how          ah              ah              ah
                                  eʈ' ak'ɨx ɒɻ'xæ.ɰaɹ.kɨɻk ɨʜ'taɹk ɒxk'æɹ
                                  live fear death.DEFINITE-CLASS-3.III.ACCUSATIVE man.DEFINITE-CLASS-3.III never
 
-  imperial-creole                lif fir tois arh irk amon ark nofre
-                                 lïph͜ ph͜ïr tòïs aṙkh͜ ïṙk amòn ark nòph͜ṙe
-                                 lɨɸ ɸɨɹ tɔɨs aɻx ɨɻk a.mɔn aɹk nɔɸ.ɻe
-                                 live fear death DEFINITE ACCUSATIVE man.III DEFINITE-CLASS-3 never
+  imperial-creole                nofer dhe moan hu fir dhe otsa lif
+                                 nòph͜er dh͜é mòan hu ph͜ïṙ dh͜é òtṡh͜a lïph͜
+                                 nɔ.ɸeɹ ðə mɔan hu ɸɨɻ ðə ɔt.ʂa lɨɸ
+                                 never DEFINITE man RELATIVE fear DEFINITE death live
 
-  imperial-trade                 lif fir tois arh irk amon ark nofre
-                                 lïph͜ ph͜ïr tòïs arkh͜ ïrk amòn ark nòph͜re
-                                 lɨɸ ɸɨɹ tɔɨs aɹx ɨɹk a.mɔn aɹk nɔɸ.ɹe
-                                 live fear death DEFINITE ACCUSATIVE man.III DEFINITE-CLASS-3 never
+  imperial-trade                 nofer dhe moan hu fir dhe otsa lif
+                                 nòph͜er dh͜é mòan hu ph͜ïr dh͜é òtsa lïph͜
+                                 nɔ.ɸeɹ ðə mɔan hu ɸɨɹ ðə ɔt.sa lɨɸ
+                                 never DEFINITE man RELATIVE fear DEFINITE death live
 
-  provincial-trade               lif fir sois arh irh amon arh nofre
-                                 lïph͜ ph͜ïr sòïs aṙkh͜ ïṙkh͜ amòn arkh͜ nòph͜ṙè
-                                 lɨɸ ɸɨɹ sɔɨs aɻx ɨɻx a.mɔn aɹx nɔɸ.ɻɛ
-                                 live fear death DEFINITE ACCUSATIVE man.III DEFINITE-CLASS-3 never
+  provincial-trade               nofer dhe moan hu fir dhe ossa lif
+                                 nòph͜èr dh͜é mòan hu ph͜ïṙ dh͜é òsṡh͜a lïph͜
+                                 nɔ.ɸɛɹ ðə mɔan hu ɸɨɻ ðə ɔs.ʂa lɨɸ
+                                 never DEFINITE man RELATIVE fear DEFINITE death live
 
 
 
@@ -1127,20 +1123,20 @@ wh-how          ah              ah              ah
                                  æɹ'ʂæ.kex aɻ'tɨ ɨɻ'ʂɒɰk e.ɹɨ'ɹɨs.taɹk e.ɹɨɹ'kaɰ.keʂk
                                  good.COMPARATIVE sword.DEFINITE-CLASS-1.I sharp.I tongue.DEFINITE-CLASS-3.III.COMP-STANDARD wise.III
 
-  imperial-creole                kit eh osrati arh asrap er tong ark yas esk
-                                 kïṫ ekh͜ òṡh͜ratï aṙkh͜ åsråp er tòng͜ ark y̌aṡh͜ eṡh͜k
-                                 kɨʈ ex ɔʂ.ɹa.tɨ aɻx ɒs.ɹɒp eɹ tɔŋ aɹk ɰaʂ eʂk
-                                 good COMPARATIVE sword DEFINITE sharp COMP-STANDARD tongue.III DEFINITE-CLASS-3 wise III
+  imperial-creole                isarap dhe osrat mor kit dhen aysi dhe atong
+                                 ïsårap dh͜é òṡh͜ṙåṫ mòr kïṫ dh͜än ay̌sï dh͜é atòng͜
+                                 ɨ.sɒ.ɹap ðə ɔʂ.ɻɒʈ mɔɹ kɨʈ ðæn aɰ.sɨ ðə a.tɔŋ
+                                 sharp DEFINITE sword COMPARATIVE good COMP-STANDARD wise DEFINITE tongue
 
-  imperial-trade                 kiteh osrati arh asrap er tong ark yas esk
-                                 kïtekh͜ òsratï arkh͜ åsråp er tòng͜ ark y̌as esk
-                                 kɨ.tex ɔs.ɹa.tɨ aɹx ɒs.ɹɒp eɹ tɔŋ aɹk ɰas esk
-                                 good.COMPARATIVE sword DEFINITE sharp COMP-STANDARD tongue.III DEFINITE-CLASS-3 wise III
+  imperial-trade                 isarap dhe osrat mor kit dhen aysi dhe atong
+                                 ïsårap dh͜é òsråt mòr kït dh͜än ay̌sï dh͜é atòng͜
+                                 ɨ.sɒ.ɹap ðə ɔs.ɹɒt mɔɹ kɨt ðæn aɰ.sɨ ðə a.tɔŋ
+                                 sharp DEFINITE sword COMPARATIVE good COMP-STANDARD wise DEFINITE tongue
 
-  provincial-trade               his eh osrasi arh asraf ersong erarh eryas eresh
-                                 kh͜ïṡh͜ èkh͜ òṡh͜rasï aṙkh͜ åsråph͜ èrsòng͜ èrarkh͜ èry̌aṡh͜ èrèṡh͜kh͜
-                                 xɨʂ ɛx ɔʂ.ɹa.sɨ aɻx ɒs.ɹɒɸ ɛɹ.sɔŋ ɛ.ɹaɹx ɛɹ.ɰaʂ ɛ.ɹɛʂx
-                                 good COMPARATIVE sword DEFINITE sharp tongue.III.COMP-STANDARD DEFINITE-CLASS-3 wise III
+  provincial-trade               isaraf dhe osras mor his dhen aysi dhe asong
+                                 ïsåraph͜ dh͜é òṡh͜ṙåṡh͜ mòr kh͜ïṡh͜ dh͜än ay̌sï dh͜é asòng͜
+                                 ɨ.sɒ.ɹaɸ ðə ɔʂ.ɻɒʂ mɔɹ xɨʂ ðæn aɰ.sɨ ðə a.sɔŋ
+                                 sharp DEFINITE sword COMPARATIVE good COMP-STANDARD wise DEFINITE tongue
 
 
 
@@ -1156,20 +1152,20 @@ wh-how          ah              ah              ah
                                  ɒɻ'xæ.ɰaɹk ɨɹʜ'ɒɰ
                                  death.DEFINITE-CLASS-3.III silent
 
-  imperial-creole                tois arh salnet
-                                 tòïs aṙkh͜ salnet
-                                 tɔɨs aɻx sal.net
-                                 death DEFINITE silent
+  imperial-creole                dhe otsa iz asalnet
+                                 dh͜é òtṡh͜a ìz aṡh͜alnet
+                                 ðə ɔt.ʂa ɪz a.ʂal.net
+                                 DEFINITE death COP silent
 
-  imperial-trade                 tois arh salnet
-                                 tòïs arkh͜ salnet
-                                 tɔɨs aɹx sal.net
-                                 death DEFINITE silent
+  imperial-trade                 dhe otsa iz asalnet
+                                 dh͜é òtsa ìz asalnet
+                                 ðə ɔt.sa ɪz a.sal.net
+                                 DEFINITE death COP silent
 
-  provincial-trade               sois arh salnes
-                                 sòïs aṙkh͜ salnès
-                                 sɔɨs aɻx sal.nɛs
-                                 death DEFINITE silent
+  provincial-trade               dhe ossa iz asalnes
+                                 dh͜é òsṡh͜a ìz aṡh͜alnès
+                                 ðə ɔs.ʂa ɪz a.ʂal.nɛs
+                                 DEFINITE death COP silent
 
 
 
@@ -1185,20 +1181,20 @@ wh-how          ah              ah              ah
                                  a'kɨ.xeʜ.tæɹs eɹ'ʂɨ.kaɹ.kɨɻk
                                  fear.NEGATION.IMPERATIVE dark.DEFINITE-CLASS-3.III.ACCUSATIVE
 
-  imperial-creole                fir ars eht taarka arh irk
-                                 ph͜ïr ars eht tåarka aṙkh͜ ïṙk
-                                 ɸɨɹ aɹs eʜt tɒaɹ.ka aɻx ɨɻk
-                                 fear IMPERATIVE NEGATION dark DEFINITE ACCUSATIVE
+  imperial-creole                nat fir dhe tarka
+                                 nát ph͜ïṙ dh͜é ṫårka
+                                 nɑt ɸɨɻ ðə ʈɒɹ.ka
+                                 NEGATION fear DEFINITE dark
 
-  imperial-trade                 fireht ars taarka arh irk
-                                 ph͜ïreht ars tåarka arkh͜ ïrk
-                                 ɸɨ.ɹeʜt aɹs tɒaɹ.ka aɹx ɨɹk
-                                 fear.NEGATION IMPERATIVE dark DEFINITE ACCUSATIVE
+  imperial-trade                 nat fir dhe tarka
+                                 nát ph͜ïr dh͜é tårka
+                                 nɑt ɸɨɹ ðə tɒɹ.ka
+                                 NEGATION fear DEFINITE dark
 
-  provincial-trade               fir ars ehs saarha arh irh
-                                 ph͜ïr ars èhs såarkh͜a aṙkh͜ ïṙkh͜
-                                 ɸɨɹ aɹs ɛʜs sɒaɹ.xa aɻx ɨɻx
-                                 fear IMPERATIVE NEGATION dark DEFINITE ACCUSATIVE
+  provincial-trade               nas fir dhe sarha
+                                 nás ph͜ïṙ dh͜é ṡh͜årkh͜a
+                                 nɑs ɸɨɻ ðə ʂɒɹ.xa
+                                 NEGATION fear DEFINITE dark
 
 
 
@@ -1214,20 +1210,20 @@ wh-how          ah              ah              ah
                                  ɒɹ.tɨɻ'ʜɨx æɰ'kæʜ.kɨɰ.ʈæ.kaɹk ɒɻ'ʂɨx æɰ'kæʜ.kaɹk
                                  come.3SG.TEMPORAL-BEFORE wolf.DEFINITE-CLASS-3.III sleep.3SG dog.DEFINITE-CLASS-3.III
 
-  imperial-creole                art kom yilef ark aslip tok ark
-                                 årt kòm y̌ïleph͜ ark åslïp ṫòk ark
-                                 ɒɹt kɔm ɰɨ.leɸ aɹk ɒs.lɨp ʈɔk aɹk
-                                 TEMPORAL-BEFORE come wolf.III DEFINITE-CLASS-3 sleep dog.III DEFINITE-CLASS-3
+  imperial-creole                bifor dhe yilfe kom dhe itok oslip
+                                 bìfòr dh͜é y̌ïlph͜e kòm dh͜é ïtòk òslïp
+                                 bɪ.fɔɹ ðə ɰɨl.ɸe kɔm ðə ɨ.tɔk ɔs.lɨp
+                                 TEMPORAL-BEFORE DEFINITE wolf come DEFINITE dog sleep
 
-  imperial-trade                 art kom yilef ark aslip tok ark
-                                 årt kòm y̌ïleph͜ ark åslïp tòk ark
-                                 ɒɹt kɔm ɰɨ.leɸ aɹk ɒs.lɨp tɔk aɹk
-                                 TEMPORAL-BEFORE come wolf.III DEFINITE-CLASS-3 sleep dog.III DEFINITE-CLASS-3
+  imperial-trade                 bifor dhe yilfe kom dhe itok oslip
+                                 bìfòr dh͜é y̌ïlph͜e kòm dh͜é ïtòk òslïp
+                                 bɪ.fɔɹ ðə ɰɨl.ɸe kɔm ðə ɨ.tɔk ɔs.lɨp
+                                 TEMPORAL-BEFORE DEFINITE wolf come DEFINITE dog sleep
 
-  provincial-trade               arshom yilef arh aslif soh arh
-                                 årskh͜òm y̌ïlèph͜ arkh͜ åslïph͜ ṡh͜òkh͜ arkh͜
-                                 ɒɹs.xɔm ɰɨ.lɛɸ aɹx ɒs.lɨɸ ʂɔx aɹx
-                                 come.TEMPORAL-BEFORE wolf.III DEFINITE-CLASS-3 sleep dog.III DEFINITE-CLASS-3
+  provincial-trade               bifor dhe yilfe hom dhe isoh oslif
+                                 bìfòr dh͜é y̌ïlph͜è kh͜òm dh͜é ïsòkh͜ òslïph͜
+                                 bɪ.fɔɹ ðə ɰɨl.ɸɛ xɔm ðə ɨ.sɔx ɔs.lɨɸ
+                                 TEMPORAL-BEFORE DEFINITE wolf come DEFINITE dog sleep
 
 
 
@@ -1243,20 +1239,20 @@ wh-how          ah              ah              ah
                                  ɨʂ' ɒɻʂ' æɰ'kæʜ.kɨɰ.ʈæ.kaɹ.kɨɹ ɨʜ'taɹk ɨɰ'taɹ.kɨɹ
                                  rise sleep wolf.DEFINITE-CLASS-3.III.WITH man.DEFINITE-CLASS-3.III blood.DEFINITE-CLASS-3.III.WITH
 
-  imperial-creole                ras aslip yilef ark ir amon ark aplot arh ir
-                                 ras åslïp y̌ïleph͜ ark ïr amòn ark aplòt aṙkh͜ ïr
-                                 ɹas ɒs.lɨp ɰɨ.leɸ aɹk ɨɹ a.mɔn aɹk ap.lɔt aɻx ɨɹ
-                                 rise sleep wolf.III DEFINITE-CLASS-3 WITH man.III DEFINITE-CLASS-3 blood DEFINITE WITH
+  imperial-creole                dhe moan hu oslip with dhe yilfe ras with dhe aplot
+                                 dh͜é mòan hu òslïp wìth͜ dh͜é y̌ïlph͜e ṙaṡh͜ wìth͜ dh͜é aplòt
+                                 ðə mɔan hu ɔs.lɨp wɪθ ðə ɰɨl.ɸe ɻaʂ wɪθ ðə ap.lɔt
+                                 DEFINITE man RELATIVE sleep WITH DEFINITE wolf rise WITH DEFINITE blood
 
-  imperial-trade                 ras aslip yilef ark ir amon ark aplot arh ir
-                                 ras åslïp y̌ïleph͜ ark ïr amòn ark aplòt arkh͜ ïr
-                                 ɹas ɒs.lɨp ɰɨ.leɸ aɹk ɨɹ a.mɔn aɹk ap.lɔt aɹx ɨɹ
-                                 rise sleep wolf.III DEFINITE-CLASS-3 WITH man.III DEFINITE-CLASS-3 blood DEFINITE WITH
+  imperial-trade                 dhe moan hu oslip with dhe yilfe ras with dhe aplot
+                                 dh͜é mòan hu òslïp wìth͜ dh͜é y̌ïlph͜e ras wìth͜ dh͜é aplòt
+                                 ðə mɔan hu ɔs.lɨp wɪθ ðə ɰɨl.ɸe ɹas wɪθ ðə ap.lɔt
+                                 DEFINITE man RELATIVE sleep WITH DEFINITE wolf rise WITH DEFINITE blood
 
-  provincial-trade               ras aslif yilefir arh amon arh aflosir arh
-                                 ras åslïph͜ y̌ïlèph͜ïr arkh͜ amòn arkh͜ aph͜lòsïr aṙkh͜
-                                 ɹas ɒs.lɨɸ ɰɨ.lɛ.ɸɨɹ aɹx a.mɔn aɹx aɸ.lɔ.sɨɹ aɻx
-                                 rise sleep wolf.III.WITH DEFINITE-CLASS-3 man.III DEFINITE-CLASS-3 blood.WITH DEFINITE
+  provincial-trade               dhe moan hu oslif withdhe yilfe ras withdhe aflos
+                                 dh͜é mòan hu òslïph͜ wìth͜dh͜é y̌ïlph͜è ṙaṡh͜ wìth͜dh͜é aph͜lòs
+                                 ðə mɔan hu ɔs.lɨɸ wɪθ.ðə ɰɨl.ɸɛ ɻaʂ wɪθ.ðə aɸ.lɔs
+                                 DEFINITE man RELATIVE sleep DEFINITE.WITH wolf rise DEFINITE.WITH blood
 
 
 
@@ -1272,20 +1268,20 @@ wh-how          ah              ah              ah
                                  a'kɨ.xɨx eɹ'ʂɨ.kaɹ.kɨɻk ɨɻ'taɻx
                                  fear.3SG dark-ness.DEFINITE-CLASS-3.III.ACCUSATIVE hunt-er.DEFINITE
 
-  imperial-creole                fir taarka arh irk PINpel arh
-                                 ph͜ïr tåarka aṙkh͜ ïṙk PÏNpel aṙkh͜
-                                 ɸɨɹ tɒaɹ.ka aɻx ɨɻk pɨn'pel aɻx
-                                 fear dark-ness DEFINITE ACCUSATIVE hunt-er DEFINITE
+  imperial-creole                dhe hoanteer fir dhe tarka
+                                 dh͜é hòanteér ph͜ïṙ dh͜é ṫårka
+                                 ðə ʜɔan.teəɹ ɸɨɻ ðə ʈɒɹ.ka
+                                 DEFINITE hunt-er fear DEFINITE dark-ness
 
-  imperial-trade                 fir taarka arh irk PINpel arh
-                                 ph͜ïr tåarka arkh͜ ïrk PÏNpel arkh͜
-                                 ɸɨɹ tɒaɹ.ka aɹx ɨɹk pɨn'pel aɹx
-                                 fear dark-ness DEFINITE ACCUSATIVE hunt-er DEFINITE
+  imperial-trade                 dhe hoanteer fir dhe tarka
+                                 dh͜é hòanteér ph͜ïr dh͜é tårka
+                                 ðə ʜɔan.teəɹ ɸɨɹ ðə tɒɹ.ka
+                                 DEFINITE hunt-er fear DEFINITE dark-ness
 
-  provincial-trade               fir saarha arh irh FINfel arh
-                                 ph͜ïr såarkh͜a aṙkh͜ ïṙkh͜ PH͜ÏNph͜èl aṙkh͜
-                                 ɸɨɹ sɒaɹ.xa aɻx ɨɻx ɸɨn'ɸɛl aɻx
-                                 fear dark-ness DEFINITE ACCUSATIVE hunt-er DEFINITE
+  provincial-trade               dhe hoanseer fir dhe sarha
+                                 dh͜é hòansèér ph͜ïṙ dh͜é ṡh͜årkh͜a
+                                 ðə ʜɔan.sɛəɹ ɸɨɻ ðə ʂɒɹ.xa
+                                 DEFINITE hunt-er fear DEFINITE dark-ness
 
 
 
@@ -1301,20 +1297,20 @@ wh-how          ah              ah              ah
                                  ɨ'ʈa.ʂɨx æɹ'kæ.kɨɰ.taɹk ɨɹ'kaɰ.kæʂk
                                  rule.3SG blood-king.DEFINITE-CLASS-3.III wise-ly
 
-  imperial-creole                aril ikingaplot ark yas ask
-                                 arïl ïkïng͜aplòt ark y̌aṡh͜ aṡh͜k
-                                 a.ɹɨl ɨ.kɨ.ŋap.lɔt aɹk ɰaʂ aʂk
-                                 rule blood-king.III DEFINITE-CLASS-3 wise-ly
+  imperial-creole                aysili dhe aplotking ril
+                                 ay̌sïli dh͜é aplòtkïng͜ ṙïl
+                                 aɰ.sɨ.li ðə ap.lɔt.kɨŋ ɻɨl
+                                 wise-ly DEFINITE blood-king rule
 
-  imperial-trade                 aril ikingaplot ark yas
-                                 arïl ïkïng͜aplòt ark y̌as
-                                 a.ɹɨl ɨ.kɨ.ŋap.lɔt aɹk ɰas
-                                 rule blood-king.III DEFINITE-CLASS-3 wise-ly
+  imperial-trade                 aysili dhe aplotking ril
+                                 ay̌sïli dh͜é aplòtkïng͜ rïl
+                                 aɰ.sɨ.li ðə ap.lɔt.kɨŋ ɹɨl
+                                 wise-ly DEFINITE blood-king rule
 
-  provincial-trade               aril ihingaflos arh yas
-                                 arïl ïkh͜ïng͜aph͜lòs arkh͜ y̌aṡh͜
-                                 a.ɹɨl ɨ.xɨ.ŋaɸ.lɔs aɹx ɰaʂ
-                                 rule blood-king.III DEFINITE-CLASS-3 wise-ly
+  provincial-trade               aysili dhe afloshing ril
+                                 ay̌sïli dh͜é aph͜lòskh͜ïng͜ ṙïl
+                                 aɰ.sɨ.li ðə aɸ.lɔs.xɨŋ ɻɨl
+                                 wise-ly DEFINITE blood-king rule
 
 
 
@@ -1330,20 +1326,20 @@ wh-how          ah              ah              ah
                                  ex'tæs.kaɹk ɨɹ'kaɰ.kæs.kaɹk ɨʜ'taɹ.kæʜk aʜ'ʈɨ.seʂk
                                  strong-ness.DEFINITE-CLASS-3.III wise-ness.DEFINITE-CLASS-3.III man.DEFINITE-CLASS-3.III.GENITIVE brave.III
 
-  imperial-creole                astirong ask arh yas ask arh amon ark ahk perfa esk
-                                 asṫïròng͜ ask aṙkh͜ y̌aṡh͜ ask aṙkh͜ amòn ark ahk perph͜a eṡh͜k
-                                 as.ʈɨ.ɹɔŋ ask aɻx ɰaʂ ask aɻx a.mɔn aɹk aʜk peɹ.ɸa eʂk
-                                 strong-ness DEFINITE NOUN-FROM-ADJ wise-ness DEFINITE NOUN-FROM-ADJ man.III DEFINITE-CLASS-3 GENITIVE brave III
+  imperial-creole                dhe istirongnes iz paref dhe moanz dhe aysines
+                                 dh͜é ïstïròng͜nés ìz pareph͜ dh͜é mòanz dh͜é ay̌sïnés
+                                 ðə ɨs.tɨ.ɹɔŋ.nəs ɪz pa.ɹeɸ ðə mɔanz ðə aɰ.sɨ.nəs
+                                 DEFINITE strong-ness COP brave DEFINITE.GENITIVE man DEFINITE wise-ness
 
-  imperial-trade                 astirong arh yas arh amon ark ahk perfa esk
-                                 astïròng͜ arkh͜ y̌as arkh͜ amòn ark ahk perph͜a esk
-                                 as.tɨ.ɹɔŋ aɹx ɰas aɹx a.mɔn aɹk aʜk peɹ.ɸa esk
-                                 strong-ness DEFINITE wise-ness DEFINITE man.III DEFINITE-CLASS-3 GENITIVE brave III
+  imperial-trade                 dhe istirongnes iz paref dhe moanz dhe aysines
+                                 dh͜é ïstïròng͜nés ìz pareph͜ dh͜é mòanz dh͜é ay̌sïnés
+                                 ðə ɨs.tɨ.ɹɔŋ.nəs ɪz pa.ɹeɸ ðə mɔanz ðə aɰ.sɨ.nəs
+                                 DEFINITE strong-ness COP brave DEFINITE.GENITIVE man DEFINITE wise-ness
 
-  provincial-trade               assirong arh yas arh amon arh ahh ferfa esh
-                                 asṡh͜ïròng͜ aṙkh͜ y̌aṡh͜ aṙkh͜ amòn arkh͜ ahkh͜ ph͜èrph͜a èṡh͜kh͜
-                                 as.ʂɨ.ɹɔŋ aɻx ɰaʂ aɻx a.mɔn aɹx aʜx ɸɛɹ.ɸa ɛʂx
-                                 strong-ness DEFINITE wise-ness DEFINITE man.III DEFINITE-CLASS-3 GENITIVE brave III
+  provincial-trade               dhe issirongnes iz faref dhe moanz dhe aysines
+                                 dh͜é ïssïròng͜nés ìz ph͜arèph͜ dh͜é mòanz dh͜é ay̌sïnés
+                                 ðə ɨs.sɨ.ɹɔŋ.nəs ɪz ɸa.ɹɛɸ ðə mɔanz ðə aɰ.sɨ.nəs
+                                 DEFINITE strong-ness COP brave DEFINITE.GENITIVE man DEFINITE wise-ness
 
 
 
@@ -1359,20 +1355,20 @@ wh-how          ah              ah              ah
                                  ex'tæ.sɨx e'ʜeʂ.kaɹ.kɨɻk æɹ.sæʜ.kaɻ'taɹk
                                  end.3SG silence.DEFINITE-CLASS-3.III.ACCUSATIVE sword-song.DEFINITE-CLASS-3.III
 
-  imperial-creole                not aslenaes arh irk songosrati ark
-                                 nòt aṡh͜lenaeṡh͜ aṙkh͜ ïṙk sòng͜òṡh͜ratï ark
-                                 nɔt aʂ.le.naeʂ aɻx ɨɻk sɔ.ŋɔʂ.ɹa.tɨ aɹk
-                                 end silence DEFINITE ACCUSATIVE sword-song.III DEFINITE-CLASS-3
+  imperial-creole                dhe osratsonga not dhe saalnes
+                                 dh͜é òṡh͜ṙåṫṡh͜òng͜å nòṫ dh͜é saalneṡh͜
+                                 ðə ɔʂ.ɻɒʈ.ʂɔ.ŋɒ nɔʈ ðə saal.neʂ
+                                 DEFINITE sword-song end DEFINITE silence
 
-  imperial-trade                 not aslenaes arh irk songosrati ark
-                                 nòt aslenaes arkh͜ ïrk sòng͜òsratï ark
-                                 nɔt as.le.naes aɹx ɨɹk sɔ.ŋɔs.ɹa.tɨ aɹk
-                                 end silence DEFINITE ACCUSATIVE sword-song.III DEFINITE-CLASS-3
+  imperial-trade                 dhe osratsonga not dhe saalnes
+                                 dh͜é òsråtsòng͜å nòt dh͜é saalnes
+                                 ðə ɔs.ɹɒt.sɔ.ŋɒ nɔt ðə saal.nes
+                                 DEFINITE sword-song end DEFINITE silence
 
-  provincial-trade               nos aslenaes arh irh songosrasi arh
-                                 nòs aṡh͜lènaèṡh͜ aṙkh͜ ïṙkh͜ sòng͜òṡh͜rasï arkh͜
-                                 nɔs aʂ.lɛ.naɛʂ aɻx ɨɻx sɔ.ŋɔʂ.ɹa.sɨ aɹx
-                                 end silence DEFINITE ACCUSATIVE sword-song.III DEFINITE-CLASS-3
+  provincial-trade               dhe osrassonga nos dhe saalnes
+                                 dh͜é òṡh͜ṙåṡh͜ṡh͜òng͜å nòṡh͜ dh͜é saalnèṡh͜
+                                 ðə ɔʂ.ɻɒʂ.ʂɔ.ŋɒ nɔʂ ðə saal.nɛʂ
+                                 DEFINITE sword-song end DEFINITE silence
 
 
 
@@ -1388,20 +1384,20 @@ wh-how          ah              ah              ah
                                  e.sa'kɨx æʜ.ʈɨʜ'taɹ.kɨɻk
                                  fear.1SG man.DEFINITE-CLASS-3.III.ACCUSATIVE.NEGATION
 
-  imperial-creole                fir aht amon ark irk a
-                                 ph͜ïr ahṫ amòn ark ïṙk a
-                                 ɸɨɹ aʜʈ a.mɔn aɹk ɨɻk a
-                                 fear NEGATION man.III DEFINITE-CLASS-3 ACCUSATIVE 1SG
+  imperial-creole                a fir nat dhe moan
+                                 a ph͜ïṙ nát dh͜é mòan
+                                 a ɸɨɻ nɑt ðə mɔan
+                                 1SG fear NEGATION DEFINITE man
 
-  imperial-trade                 fir aht amon ark irk a
-                                 ph͜ïr aht amòn ark ïrk a
-                                 ɸɨɹ aʜt a.mɔn aɹk ɨɹk a
-                                 fear NEGATION man.III DEFINITE-CLASS-3 ACCUSATIVE 1SG
+  imperial-trade                 a fir nat dhe moan
+                                 a ph͜ïr nát dh͜é mòan
+                                 a ɸɨɹ nɑt ðə mɔan
+                                 1SG fear NEGATION DEFINITE man
 
-  provincial-trade               fir ahsamon arh irh a
-                                 ph͜ïr ahṡh͜amòn arkh͜ ïṙkh͜ a
-                                 ɸɨɹ aʜ.ʂa.mɔn aɹx ɨɻx a
-                                 fear man.III.NEGATION DEFINITE-CLASS-3 ACCUSATIVE 1SG
+  provincial-trade               a fir nas dhe moan
+                                 a ph͜ïṙ nás dh͜é mòan
+                                 a ɸɨɻ nɑs ðə mɔan
+                                 1SG fear NEGATION DEFINITE man
 
 
 
@@ -1417,20 +1413,20 @@ wh-how          ah              ah              ah
                                  ɒ.ʈɒ'ɻæɹk aɻ'kæʂ.kaɹ.kɨɻk
                                  speak.2SG truth.DEFINITE-CLASS-3.III.ACCUSATIVE
 
-  imperial-creole                sapik etris ark irk yi
-                                 ṡh͜apïk etṙïs ark ïṙk y̌ï
-                                 ʂa.pɨk et.ɻɨs aɹk ɨɻk ɰɨ
-                                 speak truth.III DEFINITE-CLASS-3 ACCUSATIVE 2SG
+  imperial-creole                iy sapik dhe itris
+                                 ïy̌ ṡh͜apïk dh͜é ïtṙïs
+                                 ɨɰ ʂa.pɨk ðə ɨt.ɻɨs
+                                 2SG speak DEFINITE truth
 
-  imperial-trade                 sapik etris ark irk yi
-                                 sapïk etrïs ark ïrk y̌ï
-                                 sa.pɨk et.ɹɨs aɹk ɨɹk ɰɨ
-                                 speak truth.III DEFINITE-CLASS-3 ACCUSATIVE 2SG
+  imperial-trade                 iy sapik dhe itris
+                                 ïy̌ sapïk dh͜é ïtrïs
+                                 ɨɰ sa.pɨk ðə ɨt.ɹɨs
+                                 2SG speak DEFINITE truth
 
-  provincial-trade               safih esris arh irh yi
-                                 ṡh͜aph͜ïkh͜ èsṙïs arkh͜ ïṙkh͜ y̌ï
-                                 ʂa.ɸɨx ɛs.ɻɨs aɹx ɨɻx ɰɨ
-                                 speak truth.III DEFINITE-CLASS-3 ACCUSATIVE 2SG
+  provincial-trade               iy safih dhe isris
+                                 ïy̌ ṡh͜aph͜ïkh͜ dh͜é ïsṙïs
+                                 ɨɰ ʂa.ɸɨx ðə ɨs.ɻɨs
+                                 2SG speak DEFINITE truth
 
 
 
@@ -1446,20 +1442,20 @@ wh-how          ah              ah              ah
                                  ɨɻ'tɨsk æɰ'kæʜ.kɨɰ.ʈæ.kaɹ.kɨɻk
                                  hunt.1PL wolf.DEFINITE-CLASS-3.III.ACCUSATIVE
 
-  imperial-creole                honata yilef ark irk eyi rat
-                                 hònåta y̌ïleph͜ ark ïṙk ey̌ï ṙat
-                                 ʜɔ.nɒ.ta ɰɨ.leɸ aɹk ɨɻk e.ɰɨ ɻat'
-                                 hunt wolf.III DEFINITE-CLASS-3 ACCUSATIVE 1PL PL.Q
+  imperial-creole                iy hoante dhe yilfe
+                                 ïy̌ hòante dh͜é y̌ïlph͜e
+                                 ɨɰ ʜɔan.te ðə ɰɨl.ɸe
+                                 1PL hunt DEFINITE wolf
 
-  imperial-trade                 honata yilef ark irk eyi rat
-                                 hònåta y̌ïleph͜ ark ïrk ey̌ï rat
-                                 ʜɔ.nɒ.ta ɰɨ.leɸ aɹk ɨɹk e.ɰɨ ɹat'
-                                 hunt wolf.III DEFINITE-CLASS-3 ACCUSATIVE 1PL PL.Q
+  imperial-trade                 iy hoante dhe yilfe
+                                 ïy̌ hòante dh͜é y̌ïlph͜e
+                                 ɨɰ ʜɔan.te ðə ɰɨl.ɸe
+                                 1PL hunt DEFINITE wolf
 
-  provincial-trade               honasa yilef arh irh eyi ras
-                                 hònåsa y̌ïlèph͜ arkh͜ ïṙkh͜ èy̌ï ṙas
-                                 ʜɔ.nɒ.sa ɰɨ.lɛɸ aɹx ɨɻx ɛ.ɰɨ ɻas'
-                                 hunt wolf.III DEFINITE-CLASS-3 ACCUSATIVE 1PL PL.Q
+  provincial-trade               iy hoanse dhe yilfe
+                                 ïy̌ hòansè dh͜é y̌ïlph͜è
+                                 ɨɰ ʜɔan.sɛ ðə ɰɨl.ɸɛ
+                                 1PL hunt DEFINITE wolf
 
 
 
@@ -1475,20 +1471,20 @@ wh-how          ah              ah              ah
                                  ɨ'ʈa.ʂæɹx æ'sæ.ɰaɹ.kɨɹ
                                  rule.3PL iron.DEFINITE-CLASS-3.III.WITH
 
-  imperial-creole                aril se rat ran arh ir
-                                 arïl se ṙat ran aṙkh͜ ïr
-                                 a.ɹɨl se ɻat' ɹan aɻx ɨɹ
-                                 rule 3PL PL.Q iron DEFINITE WITH
+  imperial-creole                se ril with dhe arin
+                                 se ṙïl wìth͜ dh͜é arïn
+                                 se ɻɨl wɪθ ðə a.ɹɨn
+                                 3PL rule WITH DEFINITE iron
 
-  imperial-trade                 aril se rat ran arh ir
-                                 arïl se rat ran arkh͜ ïr
-                                 a.ɹɨl se ɹat' ɹan aɹx ɨɹ
-                                 rule 3PL PL.Q iron DEFINITE WITH
+  imperial-trade                 se ril with dhe arin
+                                 se rïl wìth͜ dh͜é arïn
+                                 se ɹɨl wɪθ ðə a.ɹɨn
+                                 3PL rule WITH DEFINITE iron
 
-  provincial-trade               aril se ras ranir arh
-                                 arïl sè ṙas ranïr aṙkh͜
-                                 a.ɹɨl sɛ ɻas' ɹa.nɨɹ aɻx
-                                 rule 3PL PL.Q iron.WITH DEFINITE
+  provincial-trade               se ril withdhe arin
+                                 sè ṙïl wìth͜dh͜é arïn
+                                 sɛ ɻɨl wɪθ.ðə a.ɹɨn
+                                 3PL rule DEFINITE.WITH iron
 
 
 
@@ -1504,20 +1500,20 @@ wh-how          ah              ah              ah
                                  e'sɒɰ.kaɹk æ'tɨ.sæʜk æɰk'æʜk
                                  mother.DEFINITE-CLASS-3.III 2SG.GENITIVE dog
 
-  imperial-creole                mosre ark yi ahk tok
-                                 mòṡh͜re ark y̌ï ahk ṫòk
-                                 mɔʂ.ɹe aɹk ɰɨ aʜk ʈɔk
-                                 mother.III DEFINITE-CLASS-3 2SG GENITIVE dog
+  imperial-creole                iyz dhe omser iz e itok
+                                 ïy̌z dh͜é òmser ìz é ïtòk
+                                 ɨɰz ðə ɔm.seɹ ɪz ə ɨ.tɔk
+                                 2SG.GENITIVE DEFINITE mother COP INDEFINITE dog
 
-  imperial-trade                 mosre ark yi ahk tok
-                                 mòsre ark y̌ï ahk tòk
-                                 mɔs.ɹe aɹk ɰɨ aʜk tɔk
-                                 mother.III DEFINITE-CLASS-3 2SG GENITIVE dog
+  imperial-trade                 iyz dhe omser iz e itok
+                                 ïy̌z dh͜é òmser ìz é ïtòk
+                                 ɨɰz ðə ɔm.seɹ ɪz ə ɨ.tɔk
+                                 2SG.GENITIVE DEFINITE mother COP INDEFINITE dog
 
-  provincial-trade               mosre arh yi ahh soh
-                                 mòṡh͜rè arkh͜ y̌ï ahkh͜ ṡh͜òkh͜
-                                 mɔʂ.ɹɛ aɹx ɰɨ aʜx ʂɔx
-                                 mother.III DEFINITE-CLASS-3 2SG GENITIVE dog
+  provincial-trade               iyz dhe omser iz e isoh
+                                 ïy̌z dh͜é òmsèr ìz é ïsòkh͜
+                                 ɨɰz ðə ɔm.sɛɹ ɪz ə ɨ.sɔx
+                                 2SG.GENITIVE DEFINITE mother COP INDEFINITE dog
 
 
 
@@ -1533,20 +1529,20 @@ wh-how          ah              ah              ah
                                  ɒ'ɻæɹ.kæɹs æx'kæx.taɹ.kɨɻk
                                  speak.IMPERATIVE friend.DEFINITE-CLASS-3.III.ACCUSATIVE
 
-  imperial-creole                sapik ars faroanta arh irk
-                                 ṡh͜apïk ars ph͜aṙòånṫa aṙkh͜ ïṙk
-                                 ʂa.pɨk aɹs ɸaɻ.ɔɒn.ʈa aɻx ɨɻk
-                                 speak IMPERATIVE friend DEFINITE ACCUSATIVE
+  imperial-creole                sapik dhe foirniat
+                                 ṡh͜apïk dh͜é ph͜òïrnïat
+                                 ʂa.pɨk ðə ɸɔɨɹ.nɨat
+                                 speak DEFINITE friend
 
-  imperial-trade                 sapik ars faroanta arh irk
-                                 sapïk ars ph͜aròånta arkh͜ ïrk
-                                 sa.pɨk aɹs ɸaɹ.ɔɒn.ta aɹx ɨɹk
-                                 speak IMPERATIVE friend DEFINITE ACCUSATIVE
+  imperial-trade                 sapik dhe foirniat
+                                 sapïk dh͜é ph͜òïrnïat
+                                 sa.pɨk ðə ɸɔɨɹ.nɨat
+                                 speak DEFINITE friend
 
-  provincial-trade               safih ars faroansa arh irh
-                                 ṡh͜aph͜ïkh͜ ars ph͜aṙòånṡh͜a aṙkh͜ ïṙkh͜
-                                 ʂa.ɸɨx aɹs ɸaɻ.ɔɒn.ʂa aɻx ɨɻx
-                                 speak IMPERATIVE friend DEFINITE ACCUSATIVE
+  provincial-trade               safih dhe foirnias
+                                 ṡh͜aph͜ïkh͜ dh͜é ph͜òïrnïas
+                                 ʂa.ɸɨx ðə ɸɔɨɹ.nɨas
+                                 speak DEFINITE friend
 
 
 
@@ -1562,20 +1558,20 @@ wh-how          ah              ah              ah
                                  e.sɨɻx' æ'tɨ.sɨɻk
                                  fight.1SG 2SG.ACCUSATIVE
 
-  imperial-creole                fat yi irk a
-                                 ph͜at y̌ï ïṙk a
-                                 ɸat ɰɨ ɨɻk a
-                                 fight 2SG ACCUSATIVE 1SG
+  imperial-creole                a fate iy
+                                 a ph͜ate ïy̌
+                                 a ɸa.te ɨɰ
+                                 1SG fight 2SG
 
-  imperial-trade                 fat yi irk a
-                                 ph͜at y̌ï ïrk a
-                                 ɸat ɰɨ ɨɹk a
-                                 fight 2SG ACCUSATIVE 1SG
+  imperial-trade                 a fate iy
+                                 a ph͜ate ïy̌
+                                 a ɸa.te ɨɰ
+                                 1SG fight 2SG
 
-  provincial-trade               fas yi irh a
-                                 ph͜as y̌ï ïṙkh͜ a
-                                 ɸas ɰɨ ɨɻx a
-                                 fight 2SG ACCUSATIVE 1SG
+  provincial-trade               a fase iy
+                                 a ph͜asè ïy̌
+                                 a ɸa.sɛ ɨɰ
+                                 1SG fight 2SG
 
 
 
@@ -1591,18 +1587,18 @@ wh-how          ah              ah              ah
                                  e.sɨɻx' ɨ'ta.ɹɨɻk
                                  fight.1SG 2PL.ACCUSATIVE
 
-  imperial-creole                fat iy irk rat a
-                                 ph͜at ïy̌ ïṙk ṙat a
-                                 ɸat ɨɰ ɨɻk ɻat' a
-                                 fight 2PL ACCUSATIVE PL.Q 1SG
+  imperial-creole                a fate yi ol
+                                 a ph͜ate y̌ï òl
+                                 a ɸa.te ɰɨ ɔl
+                                 1SG fight 2PL PL.Q
 
-  imperial-trade                 fat iy irk rat a
-                                 ph͜at ïy̌ ïrk rat a
-                                 ɸat ɨɰ ɨɹk ɹat' a
-                                 fight 2PL ACCUSATIVE PL.Q 1SG
+  imperial-trade                 a fate yi ol
+                                 a ph͜ate y̌ï òl
+                                 a ɸa.te ɰɨ ɔl
+                                 1SG fight 2PL PL.Q
 
-  provincial-trade               fas iy irh ras a
-                                 ph͜as ïy̌ ïṙkh͜ ṙas a
-                                 ɸas ɨɰ ɨɻx ɻas' a
-                                 fight 2PL ACCUSATIVE PL.Q 1SG
+  provincial-trade               a fase yi ol
+                                 a ph͜asè y̌ï òl
+                                 a ɸa.sɛ ɰɨ ɔl
+                                 1SG fight 2PL PL.Q
 
