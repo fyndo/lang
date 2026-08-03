@@ -804,20 +804,20 @@ plural-quantifier ol              ol              ol
                                  ɨɻ'tɨx æɹ'kæ.kaɹ.kɨɻk æɰ'kæʜ.kɨɰ.ʈæ.kaɹk ɨɹ'kaɰ.keʂk
                                  hunt.3SG king.DEFINITE-CLASS-3.III.ACCUSATIVE wolf.DEFINITE-CLASS-3.III wise.III
 
-  imperial-creole                aysi dhe yilfe hoante dhe king
-                                 ay̌sï dh͜é y̌ïlph͜e hòante dh͜é kïng͜
-                                 aɰ.sɨ ðə ɰɨl.ɸe ʜɔan.te ðə kɨŋ
-                                 wise DEFINITE wolf hunt DEFINITE king
+  imperial-creole                dhe aysi yilfe hoante dhe king
+                                 dh͜é ay̌sï y̌ïlph͜e hòante dh͜é kïng͜
+                                 ðə aɰ.sɨ ɰɨl.ɸe ʜɔan.te ðə kɨŋ
+                                 DEFINITE wise wolf hunt DEFINITE king
 
-  imperial-trade                 aysi dhe yilfe hoante dhe king
-                                 ay̌sï dh͜é y̌ïlph͜e hòante dh͜é kïng͜
-                                 aɰ.sɨ ðə ɰɨl.ɸe ʜɔan.te ðə kɨŋ
-                                 wise DEFINITE wolf hunt DEFINITE king
+  imperial-trade                 dhe aysi yilfe hoante dhe king
+                                 dh͜é ay̌sï y̌ïlph͜e hòante dh͜é kïng͜
+                                 ðə aɰ.sɨ ɰɨl.ɸe ʜɔan.te ðə kɨŋ
+                                 DEFINITE wise wolf hunt DEFINITE king
 
-  provincial-trade               aysi dhe yilfe hoanse dhe hing
-                                 ay̌sï dh͜é y̌ïlph͜è hòansè dh͜é kh͜ïng͜
-                                 aɰ.sɨ ðə ɰɨl.ɸɛ ʜɔan.sɛ ðə xɨŋ
-                                 wise DEFINITE wolf hunt DEFINITE king
+  provincial-trade               dhe aysi yilfe hoanse dhe hing
+                                 dh͜é ay̌sï y̌ïlph͜è hòansè dh͜é kh͜ïng͜
+                                 ðə aɰ.sɨ ɰɨl.ɸɛ ʜɔan.sɛ ðə xɨŋ
+                                 DEFINITE wise wolf hunt DEFINITE king
 
 
 
@@ -833,20 +833,20 @@ plural-quantifier ol              ol              ol
                                  eɰ'sɨx aɻ'tɨ æ'ke.ɹɒɰk
                                  break.3SG sword.DEFINITE-CLASS-1.I old.I
 
-  imperial-creole                lit dhe osrat perek
-                                 lït dh͜é òṡh͜ṙåṫ perek
-                                 lɨt ðə ɔʂ.ɻɒʈ pe.ɹek
-                                 old DEFINITE sword break
+  imperial-creole                dhe lit osrat perek
+                                 dh͜é lït òṡh͜ṙåṫ perek
+                                 ðə lɨt ɔʂ.ɻɒʈ pe.ɹek
+                                 DEFINITE old sword break
 
-  imperial-trade                 lit dhe osrat perek
-                                 lït dh͜é òsråt perek
-                                 lɨt ðə ɔs.ɹɒt pe.ɹek
-                                 old DEFINITE sword break
+  imperial-trade                 dhe lit osrat perek
+                                 dh͜é lït òsråt perek
+                                 ðə lɨt ɔs.ɹɒt pe.ɹek
+                                 DEFINITE old sword break
 
-  provincial-trade               lis dhe osras fereh
-                                 lïs dh͜é òṡh͜ṙåṡh͜ ph͜èrèkh͜
-                                 lɨs ðə ɔʂ.ɻɒʂ ɸɛ.ɹɛx
-                                 old DEFINITE sword break
+  provincial-trade               dhe lis osras fereh
+                                 dh͜é lïs òṡh͜ṙåṡh͜ ph͜èrèkh͜
+                                 ðə lɨs ɔʂ.ɻɒʂ ɸɛ.ɹɛx
+                                 DEFINITE old sword break
 
 
 
@@ -891,20 +891,20 @@ plural-quantifier ol              ol              ol
                                  a'kɨ.xɨx æʜ'kɨɰ.kaɹ.kɨɻk ɨɹ'kaɰ.keʂk ɨʜ'taɹk ex'teʂk
                                  fear.3SG enemy.DEFINITE-CLASS-3.III.ACCUSATIVE wise.III man.DEFINITE-CLASS-3.III strong.III
 
-  imperial-creole                istirong dhe moan fir aysi dhe nem
-                                 ïstïròng͜ dh͜é mòan ph͜ïṙ ay̌sï dh͜é nem
-                                 ɨs.tɨ.ɹɔŋ ðə mɔan ɸɨɻ aɰ.sɨ ðə nem
-                                 strong DEFINITE man fear wise DEFINITE enemy
+  imperial-creole                dhe istirong moan fir dhe aysi nem
+                                 dh͜é ïstïròng͜ mòan ph͜ïṙ dh͜é ay̌sï nem
+                                 ðə ɨs.tɨ.ɹɔŋ mɔan ɸɨɻ ðə aɰ.sɨ nem
+                                 DEFINITE strong man fear DEFINITE wise enemy
 
-  imperial-trade                 istirong dhe moan fir aysi dhe nem
-                                 ïstïròng͜ dh͜é mòan ph͜ïr ay̌sï dh͜é nem
-                                 ɨs.tɨ.ɹɔŋ ðə mɔan ɸɨɹ aɰ.sɨ ðə nem
-                                 strong DEFINITE man fear wise DEFINITE enemy
+  imperial-trade                 dhe istirong moan fir dhe aysi nem
+                                 dh͜é ïstïròng͜ mòan ph͜ïr dh͜é ay̌sï nem
+                                 ðə ɨs.tɨ.ɹɔŋ mɔan ɸɨɹ ðə aɰ.sɨ nem
+                                 DEFINITE strong man fear DEFINITE wise enemy
 
-  provincial-trade               issirong dhe moan fir aysi dhe nem
-                                 ïssïròng͜ dh͜é mòan ph͜ïṙ ay̌sï dh͜é nèm
-                                 ɨs.sɨ.ɹɔŋ ðə mɔan ɸɨɻ aɰ.sɨ ðə nɛm
-                                 strong DEFINITE man fear wise DEFINITE enemy
+  provincial-trade               dhe issirong moan fir dhe aysi nem
+                                 dh͜é ïssïròng͜ mòan ph͜ïṙ dh͜é ay̌sï nèm
+                                 ðə ɨs.sɨ.ɹɔŋ mɔan ɸɨɻ ðə aɰ.sɨ nɛm
+                                 DEFINITE strong man fear DEFINITE wise enemy
 
 
 
@@ -920,20 +920,20 @@ plural-quantifier ol              ol              ol
                                  æɹ'ʈɨx ɨɰ'ʈæ.kaɹ.kɨɻk eɹ'ʂɨ.keʂk æʂ'ʈaɹk
                                  burn.3SG forest.DEFINITE-CLASS-3.III.ACCUSATIVE dark.III fire.DEFINITE-CLASS-3.III
 
-  imperial-creole                dhe far peren tarka dhe ofreoset
-                                 dh͜é ph͜ar peren ṫårka dh͜é òph͜reòṡh͜et
-                                 ðə ɸaɹ pe.ɹen ʈɒɹ.ka ðə ɔɸ.ɹeɔ.ʂet
-                                 DEFINITE fire burn dark DEFINITE forest
+  imperial-creole                dhe far peren dhe tarka ofreoset
+                                 dh͜é ph͜ar peren dh͜é ṫårka òph͜reòṡh͜et
+                                 ðə ɸaɹ pe.ɹen ðə ʈɒɹ.ka ɔɸ.ɹeɔ.ʂet
+                                 DEFINITE fire burn DEFINITE dark forest
 
-  imperial-trade                 dhe far peren tarka dhe ofreoset
-                                 dh͜é ph͜ar peren tårka dh͜é òph͜reòset
-                                 ðə ɸaɹ pe.ɹen tɒɹ.ka ðə ɔɸ.ɹeɔ.set
-                                 DEFINITE fire burn dark DEFINITE forest
+  imperial-trade                 dhe far peren dhe tarka ofreoset
+                                 dh͜é ph͜ar peren dh͜é tårka òph͜reòset
+                                 ðə ɸaɹ pe.ɹen ðə tɒɹ.ka ɔɸ.ɹeɔ.set
+                                 DEFINITE fire burn DEFINITE dark forest
 
-  provincial-trade               dhe far feren sarha dhe ofreoses
-                                 dh͜é ph͜ar ph͜èrèn ṡh͜årkh͜a dh͜é òph͜rèòṡh͜ès
-                                 ðə ɸaɹ ɸɛ.ɹɛn ʂɒɹ.xa ðə ɔɸ.ɹɛɔ.ʂɛs
-                                 DEFINITE fire burn dark DEFINITE forest
+  provincial-trade               dhe far feren dhe sarha ofreoses
+                                 dh͜é ph͜ar ph͜èrèn dh͜é ṡh͜årkh͜a òph͜rèòṡh͜ès
+                                 ðə ɸaɹ ɸɛ.ɹɛn ðə ʂɒɹ.xa ɔɸ.ɹɛɔ.ʂɛs
+                                 DEFINITE fire burn DEFINITE dark forest
 
 
 
@@ -949,20 +949,20 @@ plural-quantifier ol              ol              ol
                                  ɨɰ'ʂɒ.kɨx ɨɹ'taɨɻk æɻ'ʈɒk ɨ'ʈaɹk
                                  follow.3SG star.DEFINITE-CLASS-2.II.ACCUSATIVE bright.II child.DEFINITE-CLASS-3.III
 
-  imperial-creole                dhe tasalti foal aparta dhe satar
-                                 dh͜é taṡh͜altï ph͜òål aparta dh͜é såtår
-                                 ðə ta.ʂal.tɨ ɸɔɒl a.paɹ.ta ðə sɒ.tɒɹ
-                                 DEFINITE child follow bright DEFINITE star
+  imperial-creole                dhe tasalti foal dhe aparta satar
+                                 dh͜é taṡh͜altï ph͜òål dh͜é aparta såtår
+                                 ðə ta.ʂal.tɨ ɸɔɒl ðə a.paɹ.ta sɒ.tɒɹ
+                                 DEFINITE child follow DEFINITE bright star
 
-  imperial-trade                 dhe tasalti foal aparta dhe satar
-                                 dh͜é tasaltï ph͜òål aparta dh͜é såtår
-                                 ðə ta.sal.tɨ ɸɔɒl a.paɹ.ta ðə sɒ.tɒɹ
-                                 DEFINITE child follow bright DEFINITE star
+  imperial-trade                 dhe tasalti foal dhe aparta satar
+                                 dh͜é tasaltï ph͜òål dh͜é aparta såtår
+                                 ðə ta.sal.tɨ ɸɔɒl ðə a.paɹ.ta sɒ.tɒɹ
+                                 DEFINITE child follow DEFINITE bright star
 
-  provincial-trade               dhe sasalsi foal afarsa dhe sasar
-                                 dh͜é saṡh͜alsï ph͜òål aph͜arsa dh͜é såsår
-                                 ðə sa.ʂal.sɨ ɸɔɒl a.ɸaɹ.sa ðə sɒ.sɒɹ
-                                 DEFINITE child follow bright DEFINITE star
+  provincial-trade               dhe sasalsi foal dhe afarsa sasar
+                                 dh͜é saṡh͜alsï ph͜òål dh͜é aph͜arsa såsår
+                                 ðə sa.ʂal.sɨ ɸɔɒl ðə a.ɸaɹ.sa sɒ.sɒɹ
+                                 DEFINITE child follow DEFINITE bright star
 
 
 
@@ -978,20 +978,20 @@ plural-quantifier ol              ol              ol
                                  ɨ'sɨx aɻ'tɨ æɹ'kæ.kaɹ.kæʜk æɹ'kæ.ʂeʂk
                                  fall.3SG sword.DEFINITE-CLASS-1.I king.DEFINITE-CLASS-3.III.GENITIVE dead.III
 
-  imperial-creole                tota dhe kingz dhe osrat fol
-                                 tòta dh͜é kïng͜z dh͜é òṡh͜ṙåṫ ph͜òl
-                                 tɔ.ta ðə kɨŋz ðə ɔʂ.ɻɒʈ ɸɔl
-                                 dead DEFINITE.GENITIVE king DEFINITE sword fall
+  imperial-creole                dhe tota kingz dhe osrat fol
+                                 dh͜é tòta kïng͜z dh͜é òṡh͜ṙåṫ ph͜òl
+                                 ðə tɔ.ta kɨŋz ðə ɔʂ.ɻɒʈ ɸɔl
+                                 DEFINITE dead king.GENITIVE DEFINITE sword fall
 
-  imperial-trade                 tota dhe kingz dhe osrat fol
-                                 tòta dh͜é kïng͜z dh͜é òsråt ph͜òl
-                                 tɔ.ta ðə kɨŋz ðə ɔs.ɹɒt ɸɔl
-                                 dead DEFINITE.GENITIVE king DEFINITE sword fall
+  imperial-trade                 dhe tota kingz dhe osrat fol
+                                 dh͜é tòta kïng͜z dh͜é òsråt ph͜òl
+                                 ðə tɔ.ta kɨŋz ðə ɔs.ɹɒt ɸɔl
+                                 DEFINITE dead king.GENITIVE DEFINITE sword fall
 
-  provincial-trade               sosa dhe hingz dhe osras fol
-                                 sòsa dh͜é kh͜ïng͜z dh͜é òṡh͜ṙåṡh͜ ph͜òl
-                                 sɔ.sa ðə xɨŋz ðə ɔʂ.ɻɒʂ ɸɔl
-                                 dead DEFINITE.GENITIVE king DEFINITE sword fall
+  provincial-trade               dhe sosa hingz dhe osras fol
+                                 dh͜é sòsa kh͜ïng͜z dh͜é òṡh͜ṙåṡh͜ ph͜òl
+                                 ðə sɔ.sa xɨŋz ðə ɔʂ.ɻɒʂ ɸɔl
+                                 DEFINITE dead king.GENITIVE DEFINITE sword fall
 
 
 
@@ -1007,20 +1007,20 @@ plural-quantifier ol              ol              ol
                                  æ'xex.kɨx ɨs'ʈæ.ɹaɹ.kɨɻk æɰ'kæʜ.kɨɰ.ʈæ.kaɹk ɨʂ'teʂk
                                  find.3SG path.DEFINITE-CLASS-3.III.ACCUSATIVE wolf.DEFINITE-CLASS-3.III blind.III
 
-  imperial-creole                palnat dhe yilfe afnat dhe pos
-                                 palnaṫ dh͜é y̌ïlph͜e aph͜nat dh͜é pòs
-                                 pal.naʈ ðə ɰɨl.ɸe aɸ.nat ðə pɔs
-                                 blind DEFINITE wolf find DEFINITE path
+  imperial-creole                dhe palnat yilfe afnat dhe pos
+                                 dh͜é palnaṫ y̌ïlph͜e aph͜nat dh͜é pòs
+                                 ðə pal.naʈ ɰɨl.ɸe aɸ.nat ðə pɔs
+                                 DEFINITE blind wolf find DEFINITE path
 
-  imperial-trade                 palnat dhe yilfe afnat dhe pos
-                                 palnat dh͜é y̌ïlph͜e aph͜nat dh͜é pòs
-                                 pal.nat ðə ɰɨl.ɸe aɸ.nat ðə pɔs
-                                 blind DEFINITE wolf find DEFINITE path
+  imperial-trade                 dhe palnat yilfe afnat dhe pos
+                                 dh͜é palnat y̌ïlph͜e aph͜nat dh͜é pòs
+                                 ðə pal.nat ɰɨl.ɸe aɸ.nat ðə pɔs
+                                 DEFINITE blind wolf find DEFINITE path
 
-  provincial-trade               falnas dhe yilfe afnas dhe fos
-                                 ph͜alnaṡh͜ dh͜é y̌ïlph͜è aph͜nas dh͜é ph͜òs
-                                 ɸal.naʂ ðə ɰɨl.ɸɛ aɸ.nas ðə ɸɔs
-                                 blind DEFINITE wolf find DEFINITE path
+  provincial-trade               dhe falnas yilfe afnas dhe fos
+                                 dh͜é ph͜alnaṡh͜ y̌ïlph͜è aph͜nas dh͜é ph͜òs
+                                 ðə ɸal.naʂ ɰɨl.ɸɛ aɸ.nas ðə ɸɔs
+                                 DEFINITE blind wolf find DEFINITE path
 
 
 
@@ -1065,20 +1065,20 @@ plural-quantifier ol              ol              ol
                                  ɨɻ'ʜɨx ɒʜ'kæɰ.kaɹk æ'ʜe.ɹeʂk
                                  come.3SG wind.DEFINITE-CLASS-3.III bitter.III
 
-  imperial-creole                iptera dhe yinot kom
-                                 ïpṫera dh͜é y̌ïnòt kòm
-                                 ɨp.ʈe.ɹa ðə ɰɨ.nɔt kɔm
-                                 bitter DEFINITE wind come
+  imperial-creole                dhe iptera yinot kom
+                                 dh͜é ïpṫera y̌ïnòt kòm
+                                 ðə ɨp.ʈe.ɹa ɰɨ.nɔt kɔm
+                                 DEFINITE bitter wind come
 
-  imperial-trade                 iptera dhe yinot kom
-                                 ïptera dh͜é y̌ïnòt kòm
-                                 ɨp.te.ɹa ðə ɰɨ.nɔt kɔm
-                                 bitter DEFINITE wind come
+  imperial-trade                 dhe iptera yinot kom
+                                 dh͜é ïptera y̌ïnòt kòm
+                                 ðə ɨp.te.ɹa ɰɨ.nɔt kɔm
+                                 DEFINITE bitter wind come
 
-  provincial-trade               ifsera dhe yinos hom
-                                 ïph͜ṡh͜èra dh͜é y̌ïnòs kh͜òm
-                                 ɨɸ.ʂɛ.ɹa ðə ɰɨ.nɔs xɔm
-                                 bitter DEFINITE wind come
+  provincial-trade               dhe ifsera yinos hom
+                                 dh͜é ïph͜ṡh͜èra y̌ïnòs kh͜òm
+                                 ðə ɨɸ.ʂɛ.ɹa ɰɨ.nɔs xɔm
+                                 DEFINITE bitter wind come
 
 
 
@@ -1123,20 +1123,20 @@ plural-quantifier ol              ol              ol
                                  æɹ'ʂæ.kex aɻ'tɨ ɨɻ'ʂɒɰk e.ɹɨ'ɹɨs.taɹk e.ɹɨɹ'kaɰ.keʂk
                                  good.COMPARATIVE sword.DEFINITE-CLASS-1.I sharp.I tongue.DEFINITE-CLASS-3.III.COMP-STANDARD wise.III
 
-  imperial-creole                isarap dhe osrat mor kit dhen aysi dhe atong
-                                 ïsårap dh͜é òṡh͜ṙåṫ mòr kïṫ dh͜än ay̌sï dh͜é atòng͜
-                                 ɨ.sɒ.ɹap ðə ɔʂ.ɻɒʈ mɔɹ kɨʈ ðæn aɰ.sɨ ðə a.tɔŋ
-                                 sharp DEFINITE sword COMPARATIVE good COMP-STANDARD wise DEFINITE tongue
+  imperial-creole                dhe isarap osrat mor kit dhen dhe aysi atong
+                                 dh͜é ïsårap òṡh͜ṙåṫ mòr kïṫ dh͜än dh͜é ay̌sï atòng͜
+                                 ðə ɨ.sɒ.ɹap ɔʂ.ɻɒʈ mɔɹ kɨʈ ðæn ðə aɰ.sɨ a.tɔŋ
+                                 DEFINITE sharp sword COMPARATIVE good COMP-STANDARD DEFINITE wise tongue
 
-  imperial-trade                 isarap dhe osrat mor kit dhen aysi dhe atong
-                                 ïsårap dh͜é òsråt mòr kït dh͜än ay̌sï dh͜é atòng͜
-                                 ɨ.sɒ.ɹap ðə ɔs.ɹɒt mɔɹ kɨt ðæn aɰ.sɨ ðə a.tɔŋ
-                                 sharp DEFINITE sword COMPARATIVE good COMP-STANDARD wise DEFINITE tongue
+  imperial-trade                 dhe isarap osrat mor kit dhen dhe aysi atong
+                                 dh͜é ïsårap òsråt mòr kït dh͜än dh͜é ay̌sï atòng͜
+                                 ðə ɨ.sɒ.ɹap ɔs.ɹɒt mɔɹ kɨt ðæn ðə aɰ.sɨ a.tɔŋ
+                                 DEFINITE sharp sword COMPARATIVE good COMP-STANDARD DEFINITE wise tongue
 
-  provincial-trade               isaraf dhe osras mor his dhen aysi dhe asong
-                                 ïsåraph͜ dh͜é òṡh͜ṙåṡh͜ mòr kh͜ïṡh͜ dh͜än ay̌sï dh͜é asòng͜
-                                 ɨ.sɒ.ɹaɸ ðə ɔʂ.ɻɒʂ mɔɹ xɨʂ ðæn aɰ.sɨ ðə a.sɔŋ
-                                 sharp DEFINITE sword COMPARATIVE good COMP-STANDARD wise DEFINITE tongue
+  provincial-trade               dhe isaraf osras mor his dhen dhe aysi asong
+                                 dh͜é ïsåraph͜ òṡh͜ṙåṡh͜ mòr kh͜ïṡh͜ dh͜än dh͜é ay̌sï asòng͜
+                                 ðə ɨ.sɒ.ɹaɸ ɔʂ.ɻɒʂ mɔɹ xɨʂ ðæn ðə aɰ.sɨ a.sɔŋ
+                                 DEFINITE sharp sword COMPARATIVE good COMP-STANDARD DEFINITE wise tongue
 
 
 
@@ -1326,20 +1326,20 @@ plural-quantifier ol              ol              ol
                                  ex'tæs.kaɹk ɨɹ'kaɰ.kæs.kaɹk ɨʜ'taɹ.kæʜk aʜ'ʈɨ.seʂk
                                  strong-ness.DEFINITE-CLASS-3.III wise-ness.DEFINITE-CLASS-3.III man.DEFINITE-CLASS-3.III.GENITIVE brave.III
 
-  imperial-creole                dhe istirongnes iz paref dhe moanz dhe aysines
-                                 dh͜é ïstïròng͜nés ìz pareph͜ dh͜é mòanz dh͜é ay̌sïnés
-                                 ðə ɨs.tɨ.ɹɔŋ.nəs ɪz pa.ɹeɸ ðə mɔanz ðə aɰ.sɨ.nəs
-                                 DEFINITE strong-ness COP brave DEFINITE.GENITIVE man DEFINITE wise-ness
+  imperial-creole                dhe istirongnes iz dhe paref moanz dhe aysines
+                                 dh͜é ïstïròng͜nés ìz dh͜é pareph͜ mòanz dh͜é ay̌sïnés
+                                 ðə ɨs.tɨ.ɹɔŋ.nəs ɪz ðə pa.ɹeɸ mɔanz ðə aɰ.sɨ.nəs
+                                 DEFINITE strong-ness COP DEFINITE brave man.GENITIVE DEFINITE wise-ness
 
-  imperial-trade                 dhe istirongnes iz paref dhe moanz dhe aysines
-                                 dh͜é ïstïròng͜nés ìz pareph͜ dh͜é mòanz dh͜é ay̌sïnés
-                                 ðə ɨs.tɨ.ɹɔŋ.nəs ɪz pa.ɹeɸ ðə mɔanz ðə aɰ.sɨ.nəs
-                                 DEFINITE strong-ness COP brave DEFINITE.GENITIVE man DEFINITE wise-ness
+  imperial-trade                 dhe istirongnes iz dhe paref moanz dhe aysines
+                                 dh͜é ïstïròng͜nés ìz dh͜é pareph͜ mòanz dh͜é ay̌sïnés
+                                 ðə ɨs.tɨ.ɹɔŋ.nəs ɪz ðə pa.ɹeɸ mɔanz ðə aɰ.sɨ.nəs
+                                 DEFINITE strong-ness COP DEFINITE brave man.GENITIVE DEFINITE wise-ness
 
-  provincial-trade               dhe issirongnes iz faref dhe moanz dhe aysines
-                                 dh͜é ïssïròng͜nés ìz ph͜arèph͜ dh͜é mòanz dh͜é ay̌sïnés
-                                 ðə ɨs.sɨ.ɹɔŋ.nəs ɪz ɸa.ɹɛɸ ðə mɔanz ðə aɰ.sɨ.nəs
-                                 DEFINITE strong-ness COP brave DEFINITE.GENITIVE man DEFINITE wise-ness
+  provincial-trade               dhe issirongnes iz dhe faref moanz dhe aysines
+                                 dh͜é ïssïròng͜nés ìz dh͜é ph͜arèph͜ mòanz dh͜é ay̌sïnés
+                                 ðə ɨs.sɨ.ɹɔŋ.nəs ɪz ðə ɸa.ɹɛɸ mɔanz ðə aɰ.sɨ.nəs
+                                 DEFINITE strong-ness COP DEFINITE brave man.GENITIVE DEFINITE wise-ness
 
 
 
