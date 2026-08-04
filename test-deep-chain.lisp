@@ -75,10 +75,12 @@
           ;; the gnomish influx defines middle imperial
           (format t "~%--- middle-imperial: loan influx from proto-gnomish ---~%")
           (borrow-words middle gnomish *deep-influx-glosses* :schedule schedule)
-          ;; multiple possible sources: audition donors, keep the best match
-          (format t "~%--- middle-imperial borrows 'moon': best of dwarvish/gnomish/orcish ---~%")
+          ;; multiple possible sources: audition donors in priority order —
+          ;; gnomish first (the influx language middle-imperial defaults to);
+          ;; a lower-priority donor must fit substantially better to win.
+          (format t "~%--- middle-imperial borrows 'moon': gnomish default, dwarvish/orcish challengers ---~%")
           (multiple-value-bind (entry distance donor)
-              (borrow-word-from-best middle (list dwarvish gnomish orcish) "moon"
+              (borrow-word-from-best middle (list gnomish dwarvish orcish) "moon"
                                      :schedule schedule)
             (declare (ignore distance))
             (assert entry () "borrow-word-from-best found no source for 'moon'")

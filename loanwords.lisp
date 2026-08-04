@@ -358,29 +358,37 @@
         (values entry distance)))))
 
 (defun borrow-word-from-best (target-language donors gloss
-                              &key (schedule (default-anneal-schedule)) (restarts 1))
-  "Audition each of DONORS as the source for GLOSS: adapt each donor's word
-   into TARGET-LANGUAGE and install only the adaptation that survived most
-   faithfully (smallest adaptation distance).  Donors lacking the gloss are
-   skipped.  The winning donor is recorded in the borrow ledger, so replays
-   keep the chosen etymology.  Returns (values entry distance donor)."
-  (let ((best nil) (best-distance nil) (best-donor nil))
-    (dolist (donor donors)
+                              &key (schedule (default-anneal-schedule)) (restarts 1)
+                                (preference 3.0))
+  "Audition each of DONORS as the source for GLOSS and install the winner.
+   DONORS is in priority order: the first is the language TARGET-LANGUAGE
+   borrows from by default (its main contact/prestige language), and each
+   step down the list adds PREFERENCE to a donor's effective distance — a
+   lower-priority donor only steals the word by adapting that much more
+   faithfully.  PREFERENCE 0 makes it a pure phonological contest.  Donors
+   lacking the gloss are skipped.  The winning donor is recorded in the
+   borrow ledger, so replays keep the chosen etymology.
+   Returns (values entry distance donor)."
+  (let ((best nil) (best-distance nil) (best-effective nil) (best-donor nil))
+    (iter (for donor in donors)
+      (for rank from 0)
       (when (lookup-word donor gloss)
         (multiple-value-bind (entry distance)
             (borrow-word target-language donor gloss
                          :schedule schedule :restarts restarts :install nil)
-          (when (or (null best-distance) (< distance best-distance))
-            (setf best entry
-                  best-distance distance
-                  best-donor donor)))))
+          (let ((effective (+ distance (* preference rank))))
+            (when (or (null best-effective) (< effective best-effective))
+              (setf best entry
+                    best-distance distance
+                    best-effective effective
+                    best-donor donor))))))
     (when best
       (push best (lexicon target-language))
       (setf (borrowings target-language)
             (append (borrowings target-language)
                     (list (cons best-donor gloss))))
-      (format t "  best source for ~s: ~a (~,2f)~%"
-              gloss (lang-name best-donor) best-distance))
+      (format t "  best source for ~s: ~a (~,2f raw, ~,2f with preference)~%"
+              gloss (lang-name best-donor) best-distance best-effective))
     (values best best-distance best-donor)))
 
 (defun borrow-words (target-language donor-language glosses
