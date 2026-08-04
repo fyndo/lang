@@ -455,7 +455,10 @@
 (defclass language ()
   ((name    :accessor lang-name :initarg :name    :initform nil)
    (lexicon :accessor lexicon   :initarg :lexicon :initform nil)
-   (grammar :accessor grammar   :initarg :grammar :initform nil)))
+   (grammar :accessor grammar   :initarg :grammar :initform nil)
+   ;; Chronological ledger of (donor-language . gloss) borrow events, so
+   ;; loans can be replayed after this language's lexicon is rebuilt.
+   (borrowings :accessor borrowings :initarg :borrowings :initform nil)))
 
 (defclass proto-language (language)
   ((consonant-frequencies :accessor consonant-frequencies :initarg :consonant-frequencies)

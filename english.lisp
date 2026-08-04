@@ -506,10 +506,11 @@
 
 ;;; Re-deriving after the root lexicon changes
 
-(defun refresh-derived-lexicon (derived)
+(defun refresh-derived-lexicon (derived &key (schedule (default-anneal-schedule)))
   "Recompute DERIVED's lexicon from its source using its stored transformers,
-   leaving its grammar untouched.  Words DERIVED acquired on its own (e.g.
-   post-split loans) are dropped — re-borrow them afterwards if needed."
+   leaving its grammar untouched, then replay DERIVED's recorded borrow
+   events (re-adapting each loan from its donor's current lexicon, using
+   SCHEDULE for the adaptation annealing)."
   (setf (lexicon derived)
         (iter (for entry in (lexicon (source derived)))
           (collect (make-instance 'lexical-entry
@@ -525,15 +526,20 @@
                                                   (evolve (transformers derived)
                                                           (cdr pair))))
                                           (inflected-forms entry))))))
+  (replay-borrowings derived :schedule schedule)
   derived)
 
-(defun refresh-derivation-chain (lang)
+(defun refresh-derivation-chain (lang &key (schedule (default-anneal-schedule)))
   "Refresh the lexicon of every derived language from LANG's chain root down
-   to LANG itself, in root-to-leaf order.  Call after editing the root
-   lexicon (e.g. via RETROFIT-ENGLISH-LEXICON).  Returns LANG."
+   to LANG itself, in root-to-leaf order, replaying each stage's recorded
+   loans.  Call after editing the root lexicon (e.g. via
+   RETROFIT-ENGLISH-LEXICON).  Loans whose donors sit on other branches are
+   re-adapted from the donors' current lexicons — refresh those branches
+   first if they changed too.  Returns LANG."
   (labels ((path (l)
              (if (typep l 'derived-language)
                  (append (path (source l)) (list l))
                  nil)))
-    (mapc #'refresh-derived-lexicon (path lang)))
+    (dolist (l (path lang))
+      (refresh-derived-lexicon l :schedule schedule)))
   lang)

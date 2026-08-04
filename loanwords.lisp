@@ -298,10 +298,12 @@
               (loanword-similarity-max-consonants (flatten evolved) flat-target)))))
 
 (fmakunbound 'find-loanword)
-(defgeneric find-loanword (loanword language))
+(defgeneric find-loanword (loanword language &key schedule))
 
-(defmethod find-loanword (loanword (language proto-language))
-  (multiple-value-bind (word evolved distance) (back-form-word loanword language)
+(defmethod find-loanword (loanword (language proto-language)
+                          &key (schedule (default-anneal-schedule)))
+  (multiple-value-bind (word evolved distance)
+      (back-form-word loanword language :schedule schedule)
     (declare (ignore evolved))
     (format t "~a ~a ~f~%"
             (alt-print-word word)
@@ -309,8 +311,10 @@
             distance)
     word))
 
-(defmethod find-loanword (loanword (lang derived-language))
-  (multiple-value-bind (word evolved distance) (back-form-word loanword lang)
+(defmethod find-loanword (loanword (lang derived-language)
+                          &key (schedule (default-anneal-schedule)))
+  (multiple-value-bind (word evolved distance)
+      (back-form-word loanword lang :schedule schedule)
     (declare (ignore word))
     (format t "~a ~a ~f~%"
             (alt-print-word evolved)
@@ -318,17 +322,47 @@
             distance)
     evolved))
 
-(defun borrow-word (target-language donor-language gloss)
+(defun borrow-word (target-language donor-language gloss
+                    &key (schedule (default-anneal-schedule)) (record t))
+  "Adapt DONOR-LANGUAGE's word for GLOSS into TARGET-LANGUAGE's phonology
+   and push it onto the target's lexicon.  Records the borrow event in the
+   target's ledger (unless RECORD is NIL, as during replay) so it can be
+   re-run after a lexicon refresh."
   (let* ((donor-entry (lookup-word donor-language gloss))
          (donor-form (form donor-entry))
-         (adapted (find-loanword donor-form target-language))
+         (adapted (find-loanword donor-form target-language :schedule schedule))
          (entry (make-instance 'lexical-entry
                                :gloss gloss
                                :form adapted
                                :category (category donor-entry)
                                :origin (cons :loan (lang-name donor-language)))))
     (push entry (lexicon target-language))
+    (when record
+      (setf (borrowings target-language)
+            (append (borrowings target-language)
+                    (list (cons donor-language gloss)))))
     entry))
+
+(defun borrow-words (target-language donor-language glosses
+                     &key (schedule (default-anneal-schedule)))
+  "Borrow each of GLOSSES from DONOR-LANGUAGE into TARGET-LANGUAGE — a loan
+   influx.  Glosses the donor lacks are skipped with a warning."
+  (iter (for gloss in glosses)
+    (if (lookup-word donor-language gloss)
+        (collect (borrow-word target-language donor-language gloss
+                              :schedule schedule))
+        (warn "~a has no word for ~s; skipping borrow."
+              (lang-name donor-language) gloss))))
+
+(defun replay-borrowings (lang &key (schedule (default-anneal-schedule)))
+  "Re-run LANG's recorded borrow events in order, re-adapting each loan from
+   the donor's CURRENT lexicon.  Call after rebuilding LANG's lexicon; if
+   donors changed too, refresh them first so the replay sees current forms."
+  (iter (for (donor . gloss) in (borrowings lang))
+    (if (lookup-word donor gloss)
+        (borrow-word lang donor gloss :schedule schedule :record nil)
+        (warn "Replay: ~a no longer has ~s; loan dropped."
+              (lang-name donor) gloss))))
 
 (defun borrow-missing-words (lang-a lang-b)
   "Find words each language has that the other lacks, and borrow them."
