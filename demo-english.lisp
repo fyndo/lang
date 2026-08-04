@@ -92,6 +92,7 @@
 (defun run-english (&key (seed 42)
                       (glosses (english-glosses))
                       (schedule (default-anneal-schedule :stages 25 :steps 5000))
+                      (restarts 1)
                       (phrases (demo-phrases)))
   "Build the imperial chain, back-form English targets into the creole,
    re-derive the daughters, and translate PHRASES across the whole family.
@@ -106,7 +107,7 @@
     (english-coverage-report imperial)
     (format t "~%=== Back-forming ~a English targets through ~a ===~%"
             (length glosses) (lang-name imperial))
-    (retrofit-english-lexicon imperial glosses :schedule schedule)
+    (retrofit-english-lexicon imperial glosses :schedule schedule :restarts restarts)
     (finish-creole-lexicon creole :exclude glosses)
     (refresh-derivation-chain imperial)
     (refresh-derivation-chain provincial)

@@ -75,6 +75,15 @@
           ;; the gnomish influx defines middle imperial
           (format t "~%--- middle-imperial: loan influx from proto-gnomish ---~%")
           (borrow-words middle gnomish *deep-influx-glosses* :schedule schedule)
+          ;; multiple possible sources: audition donors, keep the best match
+          (format t "~%--- middle-imperial borrows 'moon': best of dwarvish/gnomish/orcish ---~%")
+          (multiple-value-bind (entry distance donor)
+              (borrow-word-from-best middle (list dwarvish gnomish orcish) "moon"
+                                     :schedule schedule)
+            (declare (ignore distance))
+            (assert entry () "borrow-word-from-best found no source for 'moon'")
+            (assert (member donor (list dwarvish gnomish orcish)) ()
+                    "winning donor not among the candidates"))
           (let ((trade (derive-language middle
                                         '((C :place uvular -> :place velar))
                                         :name "imperial-trade"
@@ -116,6 +125,11 @@
                 (show-word (format nil "trade  ~a" gloss) trade gloss)))
             (assert (lookup-word trade "iron") () "imperial-trade lost 'iron'")
             (show-word "trade iron (post-refresh)" trade "iron")
+            ;; the multi-source loan must survive refresh with its chosen donor
+            (let ((moon (lookup-word middle "moon")))
+              (assert (and moon (eql (car (origin moon)) :loan)) ()
+                      "middle-imperial lost multi-source loan 'moon'")
+              (show-word "middle moon (post-refresh)" middle "moon"))
             (format t "~%DEEP CHAIN OK~%")
             (list trade middle early creole late-river marsh river
                   halfling dwarvish orcish gnomish)))))))

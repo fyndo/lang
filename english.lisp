@@ -473,7 +473,7 @@
           entry))))
 
 (defun retrofit-english-lexicon (lang glosses &key (schedule (default-anneal-schedule))
-                                                debug (verbose t))
+                                                (restarts 1) debug (verbose t))
   "Back-form an English-like word for each of GLOSSES through LANG's
    derivation chain and install the results in the chain root's lexicon,
    so that the root form legitimately evolves into an English-like surface
@@ -488,7 +488,8 @@
         (if (null target)
             (warn "No English IPA target for ~s; skipping." gloss)
             (multiple-value-bind (root-word evolved distance)
-                (back-form-word target lang :schedule schedule :debug debug)
+                (back-form-word target lang :schedule schedule :debug debug
+                                            :restarts restarts)
               (install-root-word root gloss root-word
                                  :category (let ((old (lookup-word root gloss)))
                                              (if old (category old) 'noun))
