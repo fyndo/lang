@@ -455,7 +455,10 @@
 (defclass language ()
   ((name    :accessor lang-name :initarg :name    :initform nil)
    (lexicon :accessor lexicon   :initarg :lexicon :initform nil)
-   (grammar :accessor grammar   :initarg :grammar :initform nil)))
+   (grammar :accessor grammar   :initarg :grammar :initform nil)
+   ;; Chronological ledger of (donor-language . gloss) borrow events, so
+   ;; loans can be replayed after this language's lexicon is rebuilt.
+   (borrowings :accessor borrowings :initarg :borrowings :initform nil)))
 
 (defclass proto-language (language)
   ((consonant-frequencies :accessor consonant-frequencies :initarg :consonant-frequencies)
@@ -1279,7 +1282,7 @@ and uses familiar digraphs."
                  (values l acc))))
     (recur lang nil)))
 
-(defun derive-language (parent transformer-specs &key name)
+(defun derive-language (parent transformer-specs &key name (cliticization-rate 0.15))
   (let* ((transformers (mapcar #'list (parse-transformer transformer-specs)))
          (derived (make-instance 'derived-language
                                  :name name
@@ -1302,7 +1305,8 @@ and uses familiar digraphs."
                                             (inflected-forms entry))))))
     (when (grammar parent)
       (setf (grammar derived)
-            (evolve-grammar (grammar parent) transformers))
+            (evolve-grammar (grammar parent) transformers
+                            :cliticization-rate cliticization-rate))
       ;; Regenerate paradigms — strategy drift may have created new bound morphemes
       (generate-paradigms derived)
       ;; Disambiguate marker collisions, regenerate if needed
@@ -2023,7 +2027,9 @@ Falls back to a full syllable if no distinct short marker is found."
       (push (strip-markers syl) *marker-phones*)
       (serialize-form syl))))
 
-(defun generate-morphology (language typology &key question-strategy modal-strategy exclamation-strategy noun-classes head-final-p morphology-overrides)
+(defun generate-morphology (language typology &key question-strategy modal-strategy exclamation-strategy noun-classes head-final-p morphology-overrides
+                                                (agreement-type nil agreement-type-supplied-p)
+                                                (articles nil articles-supplied-p))
   (let* ((base-features '((:accusative :noun)
                            (:genitive   :noun)
                            (:plural     :noun)
@@ -2064,13 +2070,15 @@ Falls back to a full syllable if no distinct short marker is found."
                            (:concessive :clause)
                            (:nominalization :verb)
                            (:counterfactual :clause)))
-         ;; Agreement type
+         ;; Agreement type (overridable via generate-grammar :features :agreement-type)
          (agr-roll (random 1.0))
-         (agreement-type (cond ((< agr-roll 0.20) :none)
-                                ((< agr-roll 0.45) :number-only)
-                                ((< agr-roll 0.55) :person-only)
-                                ((< agr-roll 0.90) :full)
-                                (t :partial)))
+         (agreement-type (if agreement-type-supplied-p
+                             agreement-type
+                             (cond ((< agr-roll 0.20) :none)
+                                   ((< agr-roll 0.45) :number-only)
+                                   ((< agr-roll 0.55) :person-only)
+                                   ((< agr-roll 0.90) :full)
+                                   (t :partial))))
          (agreement-features
            (case agreement-type
              (:none nil)
@@ -2090,13 +2098,19 @@ Falls back to a full syllable if no distinct short marker is found."
                          (:agr-3 :verb)
                          (:agr-1pl :verb)
                          (:agr-2pl :verb)))))
-         ;; Article systems: ~40% no articles, ~35% definite only, ~25% both
+         ;; Article systems: ~40% no articles, ~35% definite only, ~25% both.
+         ;; Overridable via generate-grammar :features :articles
+         ;; (:none / :definite / :both).
          (article-roll (random 1.0))
-         (article-features (cond
-                             ((< article-roll 0.40) nil)
-                             ((< article-roll 0.75) '((:definite :noun)))
-                             (t '((:definite   :noun)
-                                  (:indefinite :noun)))))
+         (article-features (case (if articles-supplied-p
+                                     articles
+                                     (cond ((< article-roll 0.40) :none)
+                                           ((< article-roll 0.75) :definite)
+                                           (t :both)))
+                             (:none nil)
+                             (:definite '((:definite :noun)))
+                             (:both '((:definite   :noun)
+                                      (:indefinite :noun)))))
          ;; Derivational features — each has ~20% chance of :none (unproductive)
          (derivation-features
            (iter (for (feat-name applies-to) in '((:adverbialize :adjective)
@@ -2506,6 +2520,14 @@ Falls back to a full syllable if no distinct short marker is found."
           :compound-order order
           :compound-linker linker)))
 
+(defun random-possessive-grammar (&optional overrides)
+  "Possessive determiner behavior: :independent (head noun keeps its own
+   article — 'the sword of the king') or :complementary (the possessor
+   phrase fills the determiner slot — 'the king's sword').  Defaults to
+   :independent; override via :features :possessive-determiner."
+  (list :possessive-determiner
+        (override-or overrides :possessive-determiner :independent)))
+
 (defun random-pronoun-grammar (head-final-p &optional overrides)
   "Generate pronoun grammar: collapse, plural-pronoun-strategy."
   (let* ((collapse (override-or overrides :pronoun-collapse
@@ -2563,29 +2585,33 @@ Falls back to a full syllable if no distinct short marker is found."
           :noun-classes classes
           :noun-class-scheme scheme)))
 
-(defun generate-info-structure (language typology adposition-strategy)
+(defun generate-info-structure (language typology adposition-strategy
+                                &optional overrides)
   "Generate info-structure: promote/demote strategies, activate passive if needed."
   (let* ((has-case (eql adposition-strategy :case-marking))
          (has-pro-drop (gfeature language :pro-drop))
-         (promote-strategy (random-biased (if has-case 0.65 0.35)
-                                          :fronting :particle))
-         (topic-particle (when (eql promote-strategy :particle)
-                           (generate-marker language)))
+         (promote-strategy (override-or overrides :promote-strategy
+                             (random-biased (if has-case 0.65 0.35)
+                                            :fronting :particle)))
+         (topic-particle (override-or overrides :topic-particle
+                           (when (eql promote-strategy :particle)
+                             (generate-marker language))))
          (demote-roll (random 1.0))
          (demote-strategy
-           (cond
-             (has-pro-drop
-              (cond ((< demote-roll 0.60) :pro-drop)
-                    ((< demote-roll 0.85) :impersonal)
-                    (t :verb-morphology)))
-             ((eql typology :synthetic)
-              (cond ((< demote-roll 0.40) :verb-morphology)
-                    ((< demote-roll 0.75) :impersonal)
-                    (t :pro-drop)))
-             (t
-              (cond ((< demote-roll 0.35) :impersonal)
-                    ((< demote-roll 0.70) :pro-drop)
-                    (t :verb-morphology))))))
+           (override-or overrides :demote-strategy
+             (cond
+               (has-pro-drop
+                (cond ((< demote-roll 0.60) :pro-drop)
+                      ((< demote-roll 0.85) :impersonal)
+                      (t :verb-morphology)))
+               ((eql typology :synthetic)
+                (cond ((< demote-roll 0.40) :verb-morphology)
+                      ((< demote-roll 0.75) :impersonal)
+                      (t :pro-drop)))
+               (t
+                (cond ((< demote-roll 0.35) :impersonal)
+                      ((< demote-roll 0.70) :pro-drop)
+                      (t :verb-morphology)))))))
     (when (eql demote-strategy :verb-morphology)
       (let ((passive-rule (find-morpheme-rule language :passive :verb)))
         (when passive-rule
@@ -2690,6 +2716,7 @@ feature name, value is a plist with :STRATEGY and/or :MARKER).
              (random-wh-grammar head-final-p features)
              (random-complement-grammar head-final-p features)
              (random-compound-grammar language head-final-p features)
+             (random-possessive-grammar features)
              (random-pronoun-grammar head-final-p features)
              noun-class-feat
              question-feat
@@ -2697,25 +2724,33 @@ feature name, value is a plist with :STRATEGY and/or :MARKER).
              exclamation-feat))
       ;; Generate morphology (depends on question/modal/exclamation strategies and noun classes)
       (multiple-value-bind (morphology agr-type)
-          (generate-morphology language typology
-                               :question-strategy (getf question-feat :question-strategy)
-                               :modal-strategy (getf modal-feat :modal-strategy)
-                               :exclamation-strategy (getf exclamation-feat :exclamation-strategy)
-                               :noun-classes noun-classes
-                               :head-final-p head-final-p
-                               :morphology-overrides (getf features :morphology))
+          (apply #'generate-morphology language typology
+                 :question-strategy (getf question-feat :question-strategy)
+                 :modal-strategy (getf modal-feat :modal-strategy)
+                 :exclamation-strategy (getf exclamation-feat :exclamation-strategy)
+                 :noun-classes noun-classes
+                 :head-final-p head-final-p
+                 :morphology-overrides (getf features :morphology)
+                 (append
+                  (when (feature-supplied-p features :agreement-type)
+                    (list :agreement-type (getf features :agreement-type)))
+                  (when (feature-supplied-p features :articles)
+                    (list :articles (getf features :articles)))))
         (setf (gfeature language :morphology) morphology)
         (setf (gfeature language :agreement-type) agr-type)
         (setf (gfeature language :pro-drop)
-              (case agr-type
-                (:full (< (random 1.0) 0.7))
-                (:partial (< (random 1.0) 0.5))
-                (:person-only (< (random 1.0) 0.25))
-                (t nil)))
+              (override-or features :pro-drop
+                (case agr-type
+                  (:full (< (random 1.0) 0.7))
+                  (:partial (< (random 1.0) 0.5))
+                  (:person-only (< (random 1.0) 0.25))
+                  (t nil))))
         (generate-info-structure language typology
-                                 (getf adposition-feat :adposition-strategy))
+                                 (getf adposition-feat :adposition-strategy)
+                                 features)
         ;; Generate topic-drop profile (depends on morphology being set)
-        (let ((topic-drop (random-topic-drop-profile language typology)))
+        (let ((topic-drop (override-or features :topic-drop
+                            (random-topic-drop-profile language typology))))
           (when topic-drop
             (setf (gfeature language :topic-drop) topic-drop)))))))
 
@@ -2945,8 +2980,10 @@ feature name, value is a plist with :STRATEGY and/or :MARKER).
      (evolve transformers
             (reanalyze (mapcar #'ensure-phone marker))))))
 
-(defun evolve-grammar (grammar transformers)
-  "Evolve all marker forms in a grammar through sound changes."
+(defun evolve-grammar (grammar transformers &key (cliticization-rate 0.15))
+  "Evolve all marker forms in a grammar through sound changes.
+   CLITICIZATION-RATE controls random particle→affix drift; pass 0 to keep
+   a hand-built grammar's strategies fixed."
   (let ((result (copy-list grammar)))
     (setf (getf result :morphology)
           (mapcar (lambda (rule)
@@ -2997,7 +3034,7 @@ feature name, value is a plist with :STRATEGY and/or :MARKER).
       (setf (getf result :distributive-marker)
             (evolve-marker (getf result :distributive-marker) transformers)))
     ;; Grammaticalization: particles may cliticize into affixes
-    (drift-grammar-strategies result)
+    (drift-grammar-strategies result :cliticization-rate cliticization-rate)
     result))
 
 (defun topic-drop-protected-p (rule grammar)

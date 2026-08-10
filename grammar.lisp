@@ -538,20 +538,53 @@ If not, create a fresh scope so register-referent/register-tense work."
                         (setf words (apply-inflection words rule)))))
                   words)))))))
 
+(defun np-determiner-rule (lang noun def)
+  "The morpheme rule marking definiteness DEF on NOUN — the class-specific
+   rule when the noun has a class, else the base rule."
+  (let* ((entry (lookup-word lang (name noun)))
+         (nc (when entry (noun-class entry)))
+         (class-feat (when nc
+                       (intern (format nil "~a-~a" (symbol-name def)
+                                       (symbol-name nc))
+                               :keyword))))
+    (or (when class-feat (find-morpheme-rule lang class-feat :noun))
+        (find-morpheme-rule lang def :noun))))
+
 (defmethod render ((lang language) (np noun-phrase) &key features gloss)
   (let* ((np-order (gfeature lang :np-order))
          (parts (components np))
          (noun-part (find-if (lambda (c) (typep c 'noun-like)) parts))
          (adjs (remove-if-not (lambda (c) (typep c 'adjective)) parts))
-         (noun-words (render lang noun-part :features features :gloss gloss))
-         (nc (when (typep noun-part 'noun-like)
-               (extract-noun-class lang noun-part)))
-         (adj-features (when nc (list nc)))
-         (adj-words (iter (for a in adjs)
-                      (appending (render lang a :features adj-features :gloss gloss)))))
-    (linearize np-order
-               (list :adjective adj-words
-                     :noun noun-words))))
+         ;; A particle determiner scopes over the whole NP: suppress it on
+         ;; the noun and attach it at the phrase edge, so adjectives fall
+         ;; inside it ("the wise wolf", not "wise the wolf").  Affix
+         ;; determiners stay on the noun.
+         (det (when (and adjs (typep noun-part 'noun))
+                (definiteness noun-part)))
+         (det-rule (when det (np-determiner-rule lang noun-part det)))
+         (lift-det (and det det-rule (particle-strategy-p det-rule))))
+    (when lift-det
+      (setf (definiteness noun-part) nil))
+    (unwind-protect
+         (let* ((noun-words (render lang noun-part :features features :gloss gloss))
+                (nc (when (typep noun-part 'noun-like)
+                      (extract-noun-class lang noun-part)))
+                (adj-features (when nc (list nc)))
+                (adj-words (iter (for a in adjs)
+                             (appending (render lang a :features adj-features :gloss gloss))))
+                (phrase (linearize np-order
+                                   (list :adjective adj-words
+                                         :noun noun-words))))
+           (if lift-det
+               (let ((det-words (if gloss
+                                    (list (symbol-name (mrule-feature det-rule)))
+                                    (list (deserialize-form (mrule-marker det-rule))))))
+                 (if (eql (mrule-strategy det-rule) :particle-before)
+                     (append det-words phrase)
+                     (append phrase det-words)))
+               phrase))
+      (when lift-det
+        (setf (definiteness noun-part) det)))))
 
 (defmethod render ((lang language) (a adjective) &key features gloss)
   (if gloss
@@ -591,20 +624,41 @@ If not, create a fresh scope so register-referent/register-tense work."
                (list :adverb adv-words
                      :verb verb-words))))
 
+(defun head-noun (part)
+  "The head noun of PART: PART itself if a noun, the noun inside a
+   noun-phrase, else NIL."
+  (cond ((typep part 'noun) part)
+        ((typep part 'noun-phrase)
+         (find-if (lambda (c) (typep c 'noun)) (components part)))
+        (t nil)))
+
 (defmethod render ((lang language) (p possessive) &key features gloss)
   (let* ((gen-order (gfeature lang :gen-order))
          (topic-drop (gfeature lang :topic-drop))
-         (possessor-words (render lang (possessor p) :features '(:genitive) :gloss gloss))
-         (possessed-words (render lang (possessed p) :features features :gloss gloss)))
-    ;; Possessor-pronoun drop: elide coreferent possessor pronoun
-    (when (and (getf topic-drop :possessor-pronoun)
-               (typep (possessor p) 'pronoun)
-               (referent-established-p (pronoun-person (possessor p))
-                                       (pro-number (possessor p))))
-      (setf possessor-words nil))
-    (if (eql gen-order :possessor-first)
-        (append possessor-words possessed-words)
-        (append possessed-words possessor-words))))
+         ;; Determiner–genitive complementarity (:possessive-determiner
+         ;; :complementary): the possessor phrase fills the head noun's
+         ;; determiner slot — "the king's sword", never "the king's the
+         ;; sword".  The default (:independent / unset) keeps the head
+         ;; noun's own article, as in "the sword of the king" languages.
+         (head (when (eql (gfeature lang :possessive-determiner) :complementary)
+                 (head-noun (possessed p))))
+         (saved-def (when head (definiteness head))))
+    (when saved-def
+      (setf (definiteness head) nil))
+    (unwind-protect
+         (let ((possessor-words (render lang (possessor p) :features '(:genitive) :gloss gloss))
+               (possessed-words (render lang (possessed p) :features features :gloss gloss)))
+           ;; Possessor-pronoun drop: elide coreferent possessor pronoun
+           (when (and (getf topic-drop :possessor-pronoun)
+                      (typep (possessor p) 'pronoun)
+                      (referent-established-p (pronoun-person (possessor p))
+                                              (pro-number (possessor p))))
+             (setf possessor-words nil))
+           (if (eql gen-order :possessor-first)
+               (append possessor-words possessed-words)
+               (append possessed-words possessor-words)))
+      (when saved-def
+        (setf (definiteness head) saved-def)))))
 
 (defmethod render ((lang language) (neg negation) &key features gloss)
   (let* ((tgt (target neg))

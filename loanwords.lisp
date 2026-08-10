@@ -253,59 +253,164 @@
           language
           :debug debug :fitness-fn fitness-fn)))
 
-(fmakunbound 'find-loanword)
-(defgeneric find-loanword (loanword language))
+(defun default-anneal-schedule (&key (stages 41) (steps 25000))
+  "Annealing schedule: STAGES exponentially-cooling temperature stages of
+   STEPS Metropolis steps each."
+  (iter (for i from 0 below stages)
+    (collect (cons steps (* 10 (exp (- (/ i 2))))))))
 
-(defmethod find-loanword (loanword (language proto-language))
-  (let* ((flat-loanword (flatten loanword))
-         (result
-           (anneal (iter (for i from 0 to 40)
-                     (collect (cons 25000 (* 10 (exp (- (/ i 2)))))))
-                   flat-loanword
-                   (list (deconstructed-syllable language))
-                   language))
-         (word (reanalyze result)))
+(defun back-form-word (target-form lang &key (schedule (default-anneal-schedule))
+                                          debug (restarts 1))
+  "Search the root of LANG's derivation chain for a form that evolves into
+   something close to TARGET-FORM in LANG.  Returns
+   (values root-word evolved-word distance); for a proto-language (empty
+   chain) root-word and evolved-word are the same word.  This is the core of
+   both loanword adaptation and English-target back-formation: the annealer
+   proposes root-language words, but fitness is measured on the surface form
+   after running the whole chain of sound changes forward.  The anneal is
+   stochastic — RESTARTS > 1 runs it that many times and keeps the best
+   result (each restart costs a full SCHEDULE run)."
+  (multiple-value-bind (root chain) (collect-derivation-chain lang)
+    (let* ((flat-target (flatten target-form))
+           (evolve-candidate
+             (lambda (candidate)
+               (if chain
+                   (evolve chain (mapcar #'ensure-phone-point (flatten candidate)))
+                   (flatten candidate))))
+           (best-root nil) (best-evolved nil) (best-distance nil))
+      (iter (repeat (max 1 restarts))
+        (let* ((result
+                 (anneal schedule
+                         flat-target
+                         (list (deconstructed-syllable root))
+                         root
+                         :debug debug
+                         ;; A candidate that evolves to nothing would score 0
+                         ;; against any vowel-only target — reject it outright.
+                         :fitness-fn (lambda (candidate)
+                                       (let ((surface (flatten (funcall evolve-candidate candidate))))
+                                         (if (remove-if-not #'phone-p surface)
+                                             (loanword-similarity-max-consonants
+                                              flat-target surface)
+                                             most-positive-fixnum)))))
+               (root-word (reanalyze result))
+               (evolved (if chain
+                            (funcall evolve-candidate result)
+                            root-word))
+               (distance (loanword-similarity-max-consonants
+                          (flatten evolved) flat-target)))
+          (when (or (null best-distance) (< distance best-distance))
+            (setf best-root root-word
+                  best-evolved evolved
+                  best-distance distance))
+          (until (zerop best-distance))))
+      (values best-root best-evolved best-distance))))
+
+(fmakunbound 'find-loanword)
+(defgeneric find-loanword (loanword language &key schedule restarts))
+
+(defmethod find-loanword (loanword (language proto-language)
+                          &key (schedule (default-anneal-schedule)) (restarts 1))
+  (multiple-value-bind (word evolved distance)
+      (back-form-word loanword language :schedule schedule :restarts restarts)
+    (declare (ignore evolved))
     (format t "~a ~a ~f~%"
             (alt-print-word word)
             (alt-print-word loanword)
-            (loanword-similarity-max-consonants (flatten result) flat-loanword))
-    word))
+            distance)
+    (values word distance)))
 
-(defmethod find-loanword (loanword (lang derived-language))
-  (multiple-value-bind (proto chain) (collect-derivation-chain lang)
-    (let* ((flat-loanword (flatten loanword))
-           (evolve-candidate (lambda (candidate)
-                               (evolve chain
-                                       (mapcar #'ensure-phone-point
-                                               (flatten candidate)))))
-           (result
-             (anneal (iter (for i from 0 to 40)
-                       (collect (cons 25000 (* 10 (exp (- (/ i 2)))))))
-                     flat-loanword
-                     (list (deconstructed-syllable proto))
-                     proto
-                     :fitness-fn (lambda (candidate)
-                                   (loanword-similarity-max-consonants
-                                    flat-loanword
-                                    (flatten (funcall evolve-candidate candidate))))))
-           (evolved (funcall evolve-candidate result)))
-      (format t "~a ~a ~f~%"
-              (alt-print-word evolved)
-              (alt-print-word loanword)
-              (loanword-similarity-max-consonants (flatten evolved) flat-loanword))
-      evolved)))
+(defmethod find-loanword (loanword (lang derived-language)
+                          &key (schedule (default-anneal-schedule)) (restarts 1))
+  (multiple-value-bind (word evolved distance)
+      (back-form-word loanword lang :schedule schedule :restarts restarts)
+    (declare (ignore word))
+    (format t "~a ~a ~f~%"
+            (alt-print-word evolved)
+            (alt-print-word loanword)
+            distance)
+    (values evolved distance)))
 
-(defun borrow-word (target-language donor-language gloss)
+(defun borrow-word (target-language donor-language gloss
+                    &key (schedule (default-anneal-schedule)) (restarts 1)
+                      (record t) (install t))
+  "Adapt DONOR-LANGUAGE's word for GLOSS into TARGET-LANGUAGE's phonology.
+   With INSTALL (the default), push it onto the target's lexicon and record
+   the borrow event in the target's ledger (unless RECORD is NIL, as during
+   replay) so it can be re-run after a lexicon refresh.  Returns
+   (values entry adaptation-distance)."
   (let* ((donor-entry (lookup-word donor-language gloss))
-         (donor-form (form donor-entry))
-         (adapted (find-loanword donor-form target-language))
-         (entry (make-instance 'lexical-entry
-                               :gloss gloss
-                               :form adapted
-                               :category (category donor-entry)
-                               :origin (cons :loan (lang-name donor-language)))))
-    (push entry (lexicon target-language))
-    entry))
+         (donor-form (form donor-entry)))
+    (multiple-value-bind (adapted distance)
+        (find-loanword donor-form target-language
+                       :schedule schedule :restarts restarts)
+      (let ((entry (make-instance 'lexical-entry
+                                  :gloss gloss
+                                  :form adapted
+                                  :category (category donor-entry)
+                                  :origin (cons :loan (lang-name donor-language)))))
+        (when install
+          (push entry (lexicon target-language))
+          (when record
+            (setf (borrowings target-language)
+                  (append (borrowings target-language)
+                          (list (cons donor-language gloss))))))
+        (values entry distance)))))
+
+(defun borrow-word-from-best (target-language donors gloss
+                              &key (schedule (default-anneal-schedule)) (restarts 1)
+                                (preference 3.0))
+  "Audition each of DONORS as the source for GLOSS and install the winner.
+   DONORS is in priority order: the first is the language TARGET-LANGUAGE
+   borrows from by default (its main contact/prestige language), and each
+   step down the list adds PREFERENCE to a donor's effective distance — a
+   lower-priority donor only steals the word by adapting that much more
+   faithfully.  PREFERENCE 0 makes it a pure phonological contest.  Donors
+   lacking the gloss are skipped.  The winning donor is recorded in the
+   borrow ledger, so replays keep the chosen etymology.
+   Returns (values entry distance donor)."
+  (let ((best nil) (best-distance nil) (best-effective nil) (best-donor nil))
+    (iter (for donor in donors)
+      (for rank from 0)
+      (when (lookup-word donor gloss)
+        (multiple-value-bind (entry distance)
+            (borrow-word target-language donor gloss
+                         :schedule schedule :restarts restarts :install nil)
+          (let ((effective (+ distance (* preference rank))))
+            (when (or (null best-effective) (< effective best-effective))
+              (setf best entry
+                    best-distance distance
+                    best-effective effective
+                    best-donor donor))))))
+    (when best
+      (push best (lexicon target-language))
+      (setf (borrowings target-language)
+            (append (borrowings target-language)
+                    (list (cons best-donor gloss))))
+      (format t "  best source for ~s: ~a (~,2f raw, ~,2f with preference)~%"
+              gloss (lang-name best-donor) best-distance best-effective))
+    (values best best-distance best-donor)))
+
+(defun borrow-words (target-language donor-language glosses
+                     &key (schedule (default-anneal-schedule)))
+  "Borrow each of GLOSSES from DONOR-LANGUAGE into TARGET-LANGUAGE — a loan
+   influx.  Glosses the donor lacks are skipped with a warning."
+  (iter (for gloss in glosses)
+    (if (lookup-word donor-language gloss)
+        (collect (borrow-word target-language donor-language gloss
+                              :schedule schedule))
+        (warn "~a has no word for ~s; skipping borrow."
+              (lang-name donor-language) gloss))))
+
+(defun replay-borrowings (lang &key (schedule (default-anneal-schedule)))
+  "Re-run LANG's recorded borrow events in order, re-adapting each loan from
+   the donor's CURRENT lexicon.  Call after rebuilding LANG's lexicon; if
+   donors changed too, refresh them first so the replay sees current forms."
+  (iter (for (donor . gloss) in (borrowings lang))
+    (if (lookup-word donor gloss)
+        (borrow-word lang donor gloss :schedule schedule :record nil)
+        (warn "Replay: ~a no longer has ~s; loan dropped."
+              (lang-name donor) gloss))))
 
 (defun borrow-missing-words (lang-a lang-b)
   "Find words each language has that the other lacks, and borrow them."

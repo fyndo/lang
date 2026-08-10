@@ -13,4 +13,5 @@
                (:file "loanwords")
                (:file "semantics")
                (:file "grammar")
-               (:file "vocabulary")))
+               (:file "vocabulary")
+               (:file "english")))
