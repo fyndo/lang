@@ -299,7 +299,8 @@
 (defgeneric sonority (p))
 
 (defmethod sonority ((p vowel))
-  (cdr (assoc (height p) *vowel-sonority*)))
+  (or (cdr (assoc (height p) *vowel-sonority*))
+      (error "No sonority defined for vowel height ~a (~a)" (height p) (ipa p))))
 
 (defmethod sonority ((c consonant))
   (let ((method (manner c))
@@ -308,11 +309,17 @@
      (cdr (assoc method *consonant-sonority*))
      (case method
        ((lateral-fricative fricative) (if voiced 7 6))
-       (plosive (if voiced 5 4))
+       ;; Affricates rank with the plosives, the way lateral fricatives rank
+       ;; with the plain ones above.  consonants.csv has no affricates today,
+       ;; but the wider IPA tables in the repo do.
+       ((affricate lateral-affricate plosive) (if voiced 5 4))
        (stop 3)
        ((implosive) 2)
        ((fricative-approximant lateral-flap) 1)
-       ((lateral-click click fricative-release) 0)))))
+       ((lateral-click click fricative-release) 0))
+     ;; Falling through to NIL here surfaces as a bare type error inside the
+     ;; SORT in ONSET/CODA, which says nothing about the offending phone.
+     (error "No sonority defined for manner ~a (~a)" method (ipa c)))))
 
 
 (defun peak (in)
