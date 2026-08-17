@@ -49,6 +49,15 @@ SBCL (the demos use `sb-ext:seed-random-state`), ASDF, and these libraries:
 Every entry point takes `:seed` and reseeds the RNG, so runs are reproducible.
 `demo-output.txt` and `english-demo-output.txt` are captured runs.
 
+## Tests
+
+```lisp
+(asdf:test-system :lang)      ; borrowing and marker-disambiguation checks
+```
+
+They assert rather than report, so a failure signals. `test-deep-chain.lisp` is
+a manual driver with no assertions — load it and call `run-deep-chain`.
+
 ## Layout
 
 | File | Contents |
