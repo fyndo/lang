@@ -117,6 +117,10 @@
 (defparameter *consonants* nil)
 (defparameter *phones* nil)
 (defparameter *safe-consonants* nil)
+;; Filled in by INITIALIZE-FREQUENCIES (freq.lisp), which loads after this
+;; file; declared here so the uses below compile against a known special.
+(defparameter *consonant-frequencies* nil)
+(defparameter *vowel-frequencies* nil)
 (defparameter *no-replacement-seen* (make-hash-table :test #'equal))
 
 (defun fix-place (p)
@@ -138,10 +142,15 @@
 (defun symbolize (str)
   (intern (string-upcase (substitute #\- #\  str))))
 
+(defun data-file (name)
+  "Locate a phone-inventory CSV next to the system definition, so INITIALIZE
+   works regardless of the current directory."
+  (asdf:system-relative-pathname :lang name))
+
 (defun alt-load-consonants ()
   (setf *consonants* nil)
   (iter
-    (for l in (fare-csv:read-csv-file "consonants.csv"))
+    (for l in (fare-csv:read-csv-file (data-file "consonants.csv")))
     (pushnew (make-instance 'consonant
                             :num (parse-integer (nth 0 l))
                             :ipa (nth 1 l)
@@ -154,7 +163,7 @@
 (defun alt-load-vowels ()
   (setf *vowels* nil)
   (iter
-    (for l in (fare-csv:read-csv-file "vowels.csv"))
+    (for l in (fare-csv:read-csv-file (data-file "vowels.csv")))
     (pushnew (make-instance 'vowel
                             :num (parse-integer (nth 0 l))
                             :ipa (nth 1 l)
