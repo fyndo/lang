@@ -38,7 +38,7 @@ IPA_Number,Symbol,Symbol_Name,Description,Voicing,Place_of_Articulation,Manner_o
 137,ʐ,right-tail Z,,voiced,retroflex,fricative,,,,,0290,E2CA
 138,ç,C cedilla,,voiceless,palatal,fricative,,,,,00E7,E2DA
 139,ʝ,curly-tail J,,voiced,palatal,fricative,,,,,029D,E2F3
-140,x,lower-case X,,voiceless,palatal,fricative,,,,,0078,E2E0
+140,x,lower-case X,,voiceless,velar,fricative,,,,,0078,E2E0
 141,ɣ,gamma,,voiced,velar,fricative,,,,,0263,E2E1
 142,χ,chi,,voiceless,uvular,fricative,,,,,03C7,E2E8
 143,ʁ,inverted small capital R,,voiced,uvular,fricative,,,,,0281,E2E9

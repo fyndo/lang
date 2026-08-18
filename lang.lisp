@@ -83,36 +83,6 @@
 (defmethod phone-p ((p phone-point))
   t)
 
-(defun consonant-properties (l)
-  (list (nth 4 l)
-        (nth 5 l)
-        (nth 6 l)))
-
-(defun vowel-properties (l)
-  (list (nth 7 l)
-        (nth 8 l)
-        (nth 9 l)))
-
-(defun describes-vowel-p (l)
-  (and
-   (iter
-     (for p in (vowel-properties l))
-     (thereis (not (equal p ""))))
-   (not
-    (iter
-      (for p in (consonant-properties l))
-      (thereis (not (equal p "")))))))
-
-(defun describes-consonant-p (l)
-  (and
-   (iter
-     (for p in (consonant-properties l))
-     (thereis (not (equal p ""))))
-   (not
-    (iter
-      (for p in (vowel-properties l))
-      (thereis (not (equal p "")))))))
-
 (defparameter *vowels* nil)
 (defparameter *consonants* nil)
 (defparameter *phones* nil)
@@ -122,15 +92,6 @@
 (defparameter *consonant-frequencies* nil)
 (defparameter *vowel-frequencies* nil)
 (defparameter *no-replacement-seen* (make-hash-table :test #'equal))
-
-(defun fix-place (p)
-  (if (equal p "dental;alveolar")
-      "alveolar"
-      p))
-
-(defun read-place (l)
-  (let ((p (nth 1 (consonant-properties l))))
-    (fix-place p)))
 
 (defun remove-weird-consonants (x)
   (iter (for manner in '(click lateral-click fricative-release 
@@ -321,19 +282,6 @@
      ;; SORT in ONSET/CODA, which says nothing about the offending phone.
      (error "No sonority defined for manner ~a (~a)" method (ipa c)))))
 
-
-(defun peak (in)
-  (labels ((inner (l last max direction)
-             (cond
-               ((null l) max)
-               ((and (> direction 0) (>= (car l) last))
-                (inner (cdr l) (car l) (max (car l) max) direction))
-               ((and (< direction 0) (<= (car l) last))
-                (inner (cdr l) (car l) (max (car l) max) direction))
-               ((and (> direction 0) (< (car l) last))
-                (inner (cdr l) (car l) (max (car l) max) -1))
-               (t nil))))
-    (inner in -1 -1 1)))
 
 (defun freq-lookup (item flist)
   (let ((v (cdr (assoc item flist))))

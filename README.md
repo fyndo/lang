@@ -49,6 +49,19 @@ SBCL (the demos use `sb-ext:seed-random-state`), ASDF, and these libraries:
 Every entry point takes `:seed` and reseeds the RNG, so runs are reproducible.
 `demo-output.txt` and `english-demo-output.txt` are captured runs.
 
+## The phone inventory
+
+`consonants.csv` and `vowels.csv` are what the generator actually loads: 59
+consonants and 27 vowels, each with a romanization the full IPA chart does not
+carry. They were cut from `ipa-data.csv` — every row matches it by IPA number,
+modulo `dental;alveolar` collapsed to `alveolar` — and the 61 rows left behind
+are withdrawn, superseded, or non-IPA symbols plus the clicks, implosives, and
+releases that `remove-weird-consonants` strips at load time anyway. The unit
+affricate ligatures (ʦ ʣ ʧ ʤ ʨ ʥ) are among the superseded ones; modern IPA
+writes those as stop+fricative sequences, which is how `english.lisp` treats
+them. Keep `ipa-data.csv` for provenance; regenerate the inventory from it if
+you ever want a phone back, and re-add the romanization column by hand.
+
 ## Tests
 
 ```lisp
@@ -71,6 +84,7 @@ a manual driver with no assertions — load it and call `run-deep-chain`.
 | `english.lisp` | English-target back-formation by simulated annealing |
 | `demo.lisp`, `demo-english.lisp` | Demo drivers (loaded manually, not part of the system) |
 | `consonants.csv`, `vowels.csv` | The phone inventory the generator draws from |
+| `ipa-data.csv` | Full IPA chart the two inventory files were cut from; reference only, nothing loads it |
 
 ## License
 
