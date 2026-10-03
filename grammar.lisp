@@ -624,7 +624,9 @@ If not, create a fresh scope so register-referent/register-tense work."
                (list :adverb adv-words
                      :verb verb-words))))
 
-(defun head-noun (part)
+;;; NOTE: deliberately not called HEAD-NOUN — that name is the RELATIVE-CLAUSE
+;;; slot accessor from semantics.lisp, and a DEFUN here would clobber it.
+(defun np-head-noun (part)
   "The head noun of PART: PART itself if a noun, the noun inside a
    noun-phrase, else NIL."
   (cond ((typep part 'noun) part)
@@ -641,7 +643,7 @@ If not, create a fresh scope so register-referent/register-tense work."
          ;; sword".  The default (:independent / unset) keeps the head
          ;; noun's own article, as in "the sword of the king" languages.
          (head (when (eql (gfeature lang :possessive-determiner) :complementary)
-                 (head-noun (possessed p))))
+                 (np-head-noun (possessed p))))
          (saved-def (when head (definiteness head))))
     (when saved-def
       (setf (definiteness head) nil))

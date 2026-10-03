@@ -83,50 +83,15 @@
 (defmethod phone-p ((p phone-point))
   t)
 
-(defun consonant-properties (l)
-  (list (nth 4 l)
-        (nth 5 l)
-        (nth 6 l)))
-
-(defun vowel-properties (l)
-  (list (nth 7 l)
-        (nth 8 l)
-        (nth 9 l)))
-
-(defun describes-vowel-p (l)
-  (and
-   (iter
-     (for p in (vowel-properties l))
-     (thereis (not (equal p ""))))
-   (not
-    (iter
-      (for p in (consonant-properties l))
-      (thereis (not (equal p "")))))))
-
-(defun describes-consonant-p (l)
-  (and
-   (iter
-     (for p in (consonant-properties l))
-     (thereis (not (equal p ""))))
-   (not
-    (iter
-      (for p in (vowel-properties l))
-      (thereis (not (equal p "")))))))
-
 (defparameter *vowels* nil)
 (defparameter *consonants* nil)
 (defparameter *phones* nil)
 (defparameter *safe-consonants* nil)
+;; Filled in by INITIALIZE-FREQUENCIES (freq.lisp), which loads after this
+;; file; declared here so the uses below compile against a known special.
+(defparameter *consonant-frequencies* nil)
+(defparameter *vowel-frequencies* nil)
 (defparameter *no-replacement-seen* (make-hash-table :test #'equal))
-
-(defun fix-place (p)
-  (if (equal p "dental;alveolar")
-      "alveolar"
-      p))
-
-(defun read-place (l)
-  (let ((p (nth 1 (consonant-properties l))))
-    (fix-place p)))
 
 (defun remove-weird-consonants (x)
   (iter (for manner in '(click lateral-click fricative-release 
@@ -138,10 +103,15 @@
 (defun symbolize (str)
   (intern (string-upcase (substitute #\- #\  str))))
 
+(defun data-file (name)
+  "Locate a phone-inventory CSV next to the system definition, so INITIALIZE
+   works regardless of the current directory."
+  (asdf:system-relative-pathname :lang name))
+
 (defun alt-load-consonants ()
   (setf *consonants* nil)
   (iter
-    (for l in (fare-csv:read-csv-file "consonants.csv"))
+    (for l in (fare-csv:read-csv-file (data-file "consonants.csv")))
     (pushnew (make-instance 'consonant
                             :num (parse-integer (nth 0 l))
                             :ipa (nth 1 l)
@@ -154,7 +124,7 @@
 (defun alt-load-vowels ()
   (setf *vowels* nil)
   (iter
-    (for l in (fare-csv:read-csv-file "vowels.csv"))
+    (for l in (fare-csv:read-csv-file (data-file "vowels.csv")))
     (pushnew (make-instance 'vowel
                             :num (parse-integer (nth 0 l))
                             :ipa (nth 1 l)
@@ -290,7 +260,8 @@
 (defgeneric sonority (p))
 
 (defmethod sonority ((p vowel))
-  (cdr (assoc (height p) *vowel-sonority*)))
+  (or (cdr (assoc (height p) *vowel-sonority*))
+      (error "No sonority defined for vowel height ~a (~a)" (height p) (ipa p))))
 
 (defmethod sonority ((c consonant))
   (let ((method (manner c))
@@ -299,25 +270,18 @@
      (cdr (assoc method *consonant-sonority*))
      (case method
        ((lateral-fricative fricative) (if voiced 7 6))
-       (plosive (if voiced 5 4))
+       ;; Affricates rank with the plosives, the way lateral fricatives rank
+       ;; with the plain ones above.  consonants.csv has no affricates today,
+       ;; but the wider IPA tables in the repo do.
+       ((affricate lateral-affricate plosive) (if voiced 5 4))
        (stop 3)
        ((implosive) 2)
        ((fricative-approximant lateral-flap) 1)
-       ((lateral-click click fricative-release) 0)))))
+       ((lateral-click click fricative-release) 0))
+     ;; Falling through to NIL here surfaces as a bare type error inside the
+     ;; SORT in ONSET/CODA, which says nothing about the offending phone.
+     (error "No sonority defined for manner ~a (~a)" method (ipa c)))))
 
-
-(defun peak (in)
-  (labels ((inner (l last max direction)
-             (cond
-               ((null l) max)
-               ((and (> direction 0) (>= (car l) last))
-                (inner (cdr l) (car l) (max (car l) max) direction))
-               ((and (< direction 0) (<= (car l) last))
-                (inner (cdr l) (car l) (max (car l) max) direction))
-               ((and (> direction 0) (< (car l) last))
-                (inner (cdr l) (car l) (max (car l) max) -1))
-               (t nil))))
-    (inner in -1 -1 1)))
 
 (defun freq-lookup (item flist)
   (let ((v (cdr (assoc item flist))))
